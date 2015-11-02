@@ -7,3 +7,4 @@
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import <KINWebBrowser/KINWebBrowserViewController.h>
 #import <AdstirAds/AdstirAds.h>
+#import "AdstirInterstitial.h"

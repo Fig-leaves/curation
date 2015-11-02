@@ -20,6 +20,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 //        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
+        
+        let myNativeBoundSize: CGSize = UIScreen.mainScreen().nativeBounds.size
+        var storyboard : UIStoryboard!
+        
+        print(myNativeBoundSize.width)
+        if myNativeBoundSize.width == 640 {
+            storyboard =  UIStoryboard(name: "Main",bundle:nil)
+        } else if myNativeBoundSize.width == 750 {
+            storyboard =  UIStoryboard(name: "iphone6",bundle:nil)
+        } else {
+            storyboard =  UIStoryboard(name: "iphone6plus",bundle:nil)
+        }
+        
+        var viewController:UIViewController
+
+        viewController = storyboard.instantiateViewControllerWithIdentifier("Main")
+        self.window?.rootViewController = viewController
+        
         return true
     }
     

@@ -19,6 +19,9 @@
 		5E161A831AC2C9F600B039F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E161A821AC2C9F600B039F8 /* Foundation.framework */; };
 		5E161A851AC2C9FC00B039F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E161A841AC2C9FC00B039F8 /* UIKit.framework */; };
 		5E2959D51AAD3FC4009872AF /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2959D41AAD3FC4009872AF /* NewsViewController.swift */; };
+		5E2CEE211BE6F99600A0CD04 /* iphone6.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2CEE201BE6F99600A0CD04 /* iphone6.storyboard */; };
+		5E2CEE231BE700A000A0CD04 /* iphone6plus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2CEE221BE700A000A0CD04 /* iphone6plus.storyboard */; };
+		5E2CEE261BE7069D00A0CD04 /* libAdstirAds-LegacyInterstitial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2CEE251BE7069D00A0CD04 /* libAdstirAds-LegacyInterstitial.a */; };
 		5E56E6F61AB7C22F00FA6753 /* more23.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E56E6F51AB7C22F00FA6753 /* more23.png */; };
 		5E56E6F81AB7C26F00FA6753 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E56E6F71AB7C26F00FA6753 /* OtherViewController.swift */; };
 		5E56E6FB1AB859E800FA6753 /* OtherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E56E6F91AB859E800FA6753 /* OtherTableViewCell.swift */; };
@@ -31,8 +34,8 @@
 		5E56E7081ABA8CE200FA6753 /* newspaper11 (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 5E56E7071ABA8CE200FA6753 /* newspaper11 (2).png */; };
 		5E56E70E1ABA961A00FA6753 /* ima.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E56E70D1ABA961A00FA6753 /* ima.png */; };
 		5E56E7101ABA965D00FA6753 /* ima2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E56E70F1ABA965D00FA6753 /* ima2.png */; };
-		5E5D9D941BCFD40B0028ED75 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5D9D931BCFD40B0028ED75 /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		5E9A6E321BCFC0210076C91A /* AdstirAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9A6E311BCFC0210076C91A /* AdstirAds.framework */; settings = {ASSET_TAGS = (); }; };
+		5E5D9D941BCFD40B0028ED75 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5D9D931BCFD40B0028ED75 /* Launch Screen.storyboard */; };
+		5E9A6E321BCFC0210076C91A /* AdstirAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9A6E311BCFC0210076C91A /* AdstirAds.framework */; };
 		5E9A6E341BCFC7380076C91A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9A6E331BCFC7380076C91A /* libPods.a */; };
 		5E9F62671AE542D400C72ED4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9F62661AE542D400C72ED4 /* Constants.swift */; };
 		5EA67BF21ACC1BAB0021A1E8 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA67BF01ACC1BAB0021A1E8 /* EmptyTableViewCell.swift */; };
@@ -55,10 +58,10 @@
 		5ED4C0E71AB2CA0900D2BF8A /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ED4C0E51AB2CA0900D2BF8A /* NewsTableViewCell.xib */; };
 		5ED4C0EA1AB2CC4E00D2BF8A /* YoutubeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED4C0E81AB2CC4E00D2BF8A /* YoutubeTableViewCell.swift */; };
 		5ED4C0EB1AB2CC4E00D2BF8A /* YoutubeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ED4C0E91AB2CC4E00D2BF8A /* YoutubeTableViewCell.xib */; };
-		5EF013FE1BDF7922002DB31B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF013FD1BDF7922002DB31B /* WebViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		5EF014001BDF7A13002DB31B /* logo95.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EF013FF1BDF7A13002DB31B /* logo95.png */; settings = {ASSET_TAGS = (); }; };
+		5EF013FE1BDF7922002DB31B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF013FD1BDF7922002DB31B /* WebViewController.swift */; };
+		5EF014001BDF7A13002DB31B /* logo95.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EF013FF1BDF7A13002DB31B /* logo95.png */; };
 		5EFE7D481B972233006D43E3 /* Snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFE7D471B972233006D43E3 /* Snippet.swift */; };
-		5EFEE2D71BD292FB00A18582 /* 100px-Ruby_logo.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFEE2D61BD292FB00A18582 /* 100px-Ruby_logo.svg.png */; settings = {ASSET_TAGS = (); }; };
+		5EFEE2D71BD292FB00A18582 /* 100px-Ruby_logo.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFEE2D61BD292FB00A18582 /* 100px-Ruby_logo.svg.png */; };
 		AA8AA144194362C900C3888B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8AA143194362C900C3888B /* logo.png */; };
 		AAC02B19193DEEFE003997F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC02B18193DEEFE003997F3 /* AppDelegate.swift */; };
 		AAC02B1B193DEEFE003997F3 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC02B1A193DEEFE003997F3 /* BlogViewController.swift */; };
@@ -91,6 +94,10 @@
 		5E161A821AC2C9F600B039F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5E161A841AC2C9FC00B039F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5E2959D41AAD3FC4009872AF /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		5E2CEE201BE6F99600A0CD04 /* iphone6.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iphone6.storyboard; sourceTree = "<group>"; };
+		5E2CEE221BE700A000A0CD04 /* iphone6plus.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iphone6plus.storyboard; sourceTree = "<group>"; };
+		5E2CEE241BE7066100A0CD04 /* AdstirInterstitial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AdstirInterstitial.h; path = RSSReader/AdstirInterstitial.h; sourceTree = "<group>"; };
+		5E2CEE251BE7069D00A0CD04 /* libAdstirAds-LegacyInterstitial.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libAdstirAds-LegacyInterstitial.a"; sourceTree = "<group>"; };
 		5E56E6F51AB7C22F00FA6753 /* more23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more23.png; sourceTree = "<group>"; };
 		5E56E6F71AB7C26F00FA6753 /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		5E56E6F91AB859E800FA6753 /* OtherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherTableViewCell.swift; sourceTree = "<group>"; };
@@ -158,6 +165,7 @@
 				5E161A7C1AC2C99B00B039F8 /* Security.framework in Frameworks */,
 				5E161A7B1AC2C98300B039F8 /* ImageIO.framework in Frameworks */,
 				5E9A6E321BCFC0210076C91A /* AdstirAds.framework in Frameworks */,
+				5E2CEE261BE7069D00A0CD04 /* libAdstirAds-LegacyInterstitial.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +260,8 @@
 		70FA9D20B8584551BECCAF8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E2CEE241BE7066100A0CD04 /* AdstirInterstitial.h */,
+				5E2CEE251BE7069D00A0CD04 /* libAdstirAds-LegacyInterstitial.a */,
 				5E9A6E331BCFC7380076C91A /* libPods.a */,
 				5E9A6E311BCFC0210076C91A /* AdstirAds.framework */,
 				5E161A841AC2C9FC00B039F8 /* UIKit.framework */,
@@ -294,6 +304,8 @@
 				5ECD67731AB6BF2E009F5CCF /* image */,
 				5ED4C0DB1AB2C9C300D2BF8A /* cell */,
 				AAC02B18193DEEFE003997F3 /* AppDelegate.swift */,
+				5E2CEE201BE6F99600A0CD04 /* iphone6.storyboard */,
+				5E2CEE221BE700A000A0CD04 /* iphone6plus.storyboard */,
 				AAC02B1C193DEEFE003997F3 /* Main.storyboard */,
 				AAC02B1F193DEEFE003997F3 /* Images.xcassets */,
 				AAC02B16193DEEFE003997F3 /* Supporting Files */,
@@ -444,6 +456,8 @@
 				5E56E7061ABA8CDD00FA6753 /* blog1 (1).png in Resources */,
 				5E56E7101ABA965D00FA6753 /* ima2.png in Resources */,
 				5E56E6FC1AB859E800FA6753 /* OtherTableViewCell.xib in Resources */,
+				5E2CEE231BE700A000A0CD04 /* iphone6plus.storyboard in Resources */,
+				5E2CEE211BE6F99600A0CD04 /* iphone6.storyboard in Resources */,
 				5ED4C0E71AB2CA0900D2BF8A /* NewsTableViewCell.xib in Resources */,
 				5E15FDD91AB1983E005BD1B4 /* movie43.png in Resources */,
 				5ECD67751AB6BF5E009F5CCF /* ticket3.png in Resources */,
@@ -673,6 +687,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/build/Release-iphoneos",
+					"$(PROJECT_DIR)",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Curation;
@@ -703,6 +718,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/build/Release-iphoneos",
+					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = Curation;
 				PROVISIONING_PROFILE = "";

@@ -16,6 +16,8 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
     final let WORD:String = Constants.youtube.WORD
     var loading = false
     var nextPageToken:NSString!
+    var inter: AdstirInterstitial? = nil
+    var click_count = 0;
 
     var adView: AdstirMraidView? = nil
     deinit {
@@ -28,6 +30,11 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "とぅるさま"
+        
+        self.inter = AdstirInterstitial()
+        self.inter!.media = Constants.inter_ad.id
+        self.inter!.spot = Constants.inter_ad.spot
+        self.inter!.load()
         
         
         // 広告表示位置: タブバーの下でセンタリング、広告サイズ: 320,50 の場合
@@ -120,6 +127,10 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let item = self.items[indexPath.row] as! NSDictionary
 
+        if click_count % Constants.inter_ad.click_count == 0 {
+            self.inter!.showTypeB(self)
+        }
+        click_count++;
         self.navigationController?.pushViewController(Snippet.setTapAction(item, mode: "movie"), animated: true)
     }
 }

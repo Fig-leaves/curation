@@ -18,7 +18,9 @@ class ChannelViewController: UIViewController, UITableViewDataSource, UITableVie
     final let CHANNEL_ID:String = Constants.youtube.CHANNEL
     var loading = false
     var nextPageToken:NSString!
-    
+    var inter: AdstirInterstitial? = nil
+    var click_count = 0;
+
     var adView: AdstirMraidView? = nil
     deinit {
         // デリゲートを解放します。解放を忘れるとクラッシュする可能性があります。
@@ -31,7 +33,11 @@ class ChannelViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "内さま"
-        
+        self.inter = AdstirInterstitial()
+        self.inter!.media = Constants.inter_ad.id
+        self.inter!.spot = Constants.inter_ad.spot
+        self.inter!.load()
+
         // 広告表示位置: タブバーの下でセンタリング、広告サイズ: 320,50 の場合
         let originY = self.view.frame.height
         let originX = (self.view.frame.size.width - kAdstirAdSize320x50.size.width) / 2
@@ -183,6 +189,11 @@ class ChannelViewController: UIViewController, UITableViewDataSource, UITableVie
         let youtube_url = "https://www.youtube.com/watch?v=" + (item[Constants.article_data.VIDEO_ID] as! String)
         let URL = NSURL(string: youtube_url)
         con.loadURL(URL)
+        if click_count % Constants.inter_ad.click_count == 3 {
+            self.inter!.showTypeB(self)
+        }
+        click_count++;
+
         self.navigationController?.pushViewController(con, animated: true)
     }
   

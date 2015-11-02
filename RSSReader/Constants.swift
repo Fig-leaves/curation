@@ -22,6 +22,11 @@ struct Constants {
         static let id = "MEDIA-8f52fd45"
         static let spot:UInt = 1
     }
+    struct inter_ad {
+        static let id = "MEDIA-d44aad3b"
+        static let spot:UInt = 1
+        static let click_count = 12
+    }
     
     struct blog {
         static let OFFICIAL_URL = "https://www.kimonolabs.com/api/7yus8l2u?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
