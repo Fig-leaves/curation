@@ -15,7 +15,7 @@ class RadioViewController: UIViewController , UITableViewDataSource, UITableView
     final let WORD:String = Constants.youtube.RADIO
     var loading = false
     var nextPageToken:NSString!
-    @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     var inter: AdstirInterstitial? = nil
     var click_count = 0;
     
@@ -61,13 +61,13 @@ class RadioViewController: UIViewController , UITableViewDataSource, UITableView
 
         items = NSMutableArray()
         let nibName = UINib(nibName: "YoutubeTableViewCell", bundle:nil)
-        table.registerNib(nibName, forCellReuseIdentifier: "Cell")
-        table.delegate = self
-        table.dataSource = self
+        tableView.registerNib(nibName, forCellReuseIdentifier: "Cell")
+        tableView.delegate = self
+        tableView.dataSource = self
         self.refresh = UIRefreshControl()
         self.refresh.attributedTitle = NSAttributedString(string: Constants.message.UPDATING)
         self.refresh.addTarget(self, action: "viewWillAppear:", forControlEvents: UIControlEvents.ValueChanged)
-        self.table.addSubview(refresh)
+        self.tableView.addSubview(refresh)
         
         // NADViewクラスを生成
 //        nadView = NADView(frame: CGRect(x: Constants.frame.X,
@@ -144,12 +144,12 @@ class RadioViewController: UIViewController , UITableViewDataSource, UITableView
                 self.items.addObject(content)
             }
         })
-        self.table.reloadData()
+        self.tableView.reloadData()
         self.loading = false
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        if(self.table.contentOffset.y >= (self.table.contentSize.height - self.table.bounds.size.height)
+        if(self.tableView.contentOffset.y >= (self.tableView.contentSize.height - self.tableView.bounds.size.height)
             && self.nextPageToken != nil
             && loading == false) {
             loading = true
@@ -180,7 +180,7 @@ class RadioViewController: UIViewController , UITableViewDataSource, UITableView
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = self.table.dequeueReusableCellWithIdentifier("Cell") as! YoutubeTableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! YoutubeTableViewCell
         let item = self.items[indexPath.row] as! NSDictionary
         let date = item[Constants.article_data.PUBLISH_AT] as! String
         let length = date.characters.count

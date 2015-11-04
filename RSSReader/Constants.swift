@@ -10,7 +10,7 @@ import Foundation
 
 struct Constants {
     struct article_url {
-        static let NEWS_SITE1 = "https://www.kimonolabs.com/api/3jmilwhs?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let NEWS_SITE1 = "https://www.kimonolabs.com/api/d55vqhbw?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
         static let NEWS_SITE2 = ""
         static let NEWS_SITE3 = ""
     }
@@ -23,9 +23,9 @@ struct Constants {
         static let spot:UInt = 1
     }
     struct inter_ad {
-        static let id = "MEDIA-d44aad3b"
+        static let id = "MEDIA-cef73fb7"
         static let spot:UInt = 1
-        static let click_count = 12
+        static let click_count = 7
     }
     
     struct blog {
@@ -36,14 +36,16 @@ struct Constants {
         static let TICKET_URL = "https://www.kimonolabs.com/api/6atq0zuo?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
     }
     
-    struct youtube {
-        static let API_KEY = "AIzaSyCcfEgQ_6qLIV5STXnZnLo040NzEmZuVZ4"
-        static let WORD = "とぅるるさまぁ〜ず"
-        static let RADIO = "さまーず"
-        static let CHANNEL = "UCwyUEH1pnZHfmLnXuFFB-pA"
+    struct board_site {
+        static let URL = "https://www.kimonolabs.com/api/3nq0ehse?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
     }
     
-    
+    struct youtube {
+        static let API_KEY = "AIzaSyCcfEgQ_6qLIV5STXnZnLo040NzEmZuVZ4"
+        static let WORD = "ムシキング　動画"
+        static let RADIO = "さまーず"
+        static let CHANNEL = "UCoObuRNP0OjE5ILcOAhXZIg"
+    }
     
     
     
@@ -81,6 +83,14 @@ struct Constants {
         static let IMAGE_URL = "image_url"
         static let VIDEO_ID = "videoId"
         static let PUBLISH_AT = "publishAt"
+    }
+    
+    struct board {
+        static let TITLE = "title"
+        static let POST = "post"
+        static let LAST = "last"
+        static let LINK = "link"
+
     }
 
 

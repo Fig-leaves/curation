@@ -15,6 +15,8 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var refresh: UIRefreshControl!
     var loading = false
     @IBOutlet weak var table: UITableView!
+    var inter: AdstirInterstitial? = nil
+    var click_count = 1
     
     var adView: AdstirMraidView? = nil
     deinit {
@@ -26,6 +28,12 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.inter = AdstirInterstitial()
+        self.inter!.media = Constants.inter_ad.id
+        self.inter!.spot = Constants.inter_ad.spot
+        self.inter?.delegate = nil
+        self.inter!.load()
 
         
         // 広告表示位置: タブバーの下でセンタリング、広告サイズ: 320,50 の場合
@@ -42,7 +50,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.view.addSubview(adView)
         self.adView = adView
         
-        self.navigationController?.navigationBar.barTintColor = UIColor.blackColor()
+        self.navigationController?.navigationBar.barTintColor = UIColor(netHex: 0x397234)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
@@ -55,21 +63,6 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         table.dataSource = self
         self.refresh = UIRefreshControl()
         self.refresh.attributedTitle = NSAttributedString(string: Constants.message.UPDATING)
-
-//        // NADViewクラスを生成
-//        nadView = NADView(frame: CGRect(x: Constants.frame.X,
-//            y: Constants.frame.Y,
-//            width: Constants.frame.WIDTH,
-//            height: Constants.frame.HEIGHT))
-//        // 広告枠のapikey/spotidを設定(必須)
-//        nadView.setNendID(Constants.nend_id.API_ID, spotID: Constants.nend_id.SPOT_ID)
-//        // nendSDKログ出力の設定(任意)
-//        nadView.isOutputLog = true
-//        // delegateを受けるオブジェクトを指定(必須)
-//        nadView.delegate = self
-        // 読み込み開始(必須)
-//        nadView.load()
-//        view.addSubview(nadView)
         
         self.title = Constants.title.NEWS
     }
@@ -148,7 +141,12 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let item = self.articles[indexPath.row] as! NSDictionary
-        
+        table.deselectRowAtIndexPath(indexPath, animated: true)
+        if click_count % Constants.inter_ad.click_count == 0 {
+            self.inter!.showTypeC(self)
+        }
+        click_count++;
+
         self.navigationController?.pushViewController( Snippet.setTapAction(item, mode: "blog"), animated: true)
     }
     

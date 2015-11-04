@@ -105,7 +105,7 @@ class Snippet {
     class func normalizeDateFormat1(day: String, callback:(NSDate, String?, String?) -> Void) {
         var yyy = day.componentsSeparatedByString("年")
         if(yyy.count == 1) {
-            callback(NSDate(), nil,"error")
+            callback( NSDate(), nil, "error")
         } else {
             var mmm = yyy[1].componentsSeparatedByString("月")
             var ddd = mmm[1].componentsSeparatedByString("日")
@@ -150,21 +150,31 @@ class Snippet {
     
     // mm月dd日 -> yyyy-MM-dd
     class func normalizeDateFormat4(day: String, callback: (NSDate, String?, String?) -> Void) {
-        let now = NSDate() // 現在日時の取得
-        let normalizeDateFormat = NSDateFormatter()
-        normalizeDateFormat.dateFormat = "yyyy" // 日付フォーマットの設定
-         var yyy = day.componentsSeparatedByString("月")
+        let now = NSDate()
+        var yyy = day.componentsSeparatedByString("月")
         if(yyy.count == 1) {
             callback(NSDate(), nil,"error")
         } else {
-            var ddd = yyy[1].componentsSeparatedByString("日")
-            let created_at:String = normalizeDateFormat.stringFromDate(now) + "-" + (yyy[0] as String) + "-" + (ddd[0] as String)
-            let dateFormatter = NSDateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd";
-            let dateOf2015_01_01_12_34_56 = dateFormatter.dateFromString(created_at as String)!;
-            callback(NSDate(timeInterval: 60, sinceDate: dateOf2015_01_01_12_34_56), day, nil)
+            var check = yyy[0].componentsSeparatedByString("年")
+            print(check)
+            if(check.count > 1) {
+                 callback(NSDate(), nil, "error")
+            } else {
+                
+                var ddd = yyy[1].componentsSeparatedByString("日")
+                let normalizeDateFormat = NSDateFormatter()
+                normalizeDateFormat.dateFormat = "yyyy" // 日付フォーマットの設定
+                let created_at:String = normalizeDateFormat.stringFromDate(now) + "-" + (yyy[0] as String) + "-" + (ddd[0] as String)
+
+                let dateFormatter = NSDateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd";
+                let dateOf = dateFormatter.dateFromString(created_at as String)!;
+                callback(NSDate(timeInterval: 60, sinceDate: dateOf), day, nil)
+
+            }
         }
     }
+    
     class func isIncludeWord(search: NSMutableArray, word: NSString) -> Bool {
         for item in search {
             if(item[Constants.article_data.TITLE] as! NSString == word) {

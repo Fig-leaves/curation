@@ -22,6 +22,13 @@
 		5E2CEE211BE6F99600A0CD04 /* iphone6.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2CEE201BE6F99600A0CD04 /* iphone6.storyboard */; };
 		5E2CEE231BE700A000A0CD04 /* iphone6plus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2CEE221BE700A000A0CD04 /* iphone6plus.storyboard */; };
 		5E2CEE261BE7069D00A0CD04 /* libAdstirAds-LegacyInterstitial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2CEE251BE7069D00A0CD04 /* libAdstirAds-LegacyInterstitial.a */; };
+		5E2CEE281BE72B2100A0CD04 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CEE271BE72B2100A0CD04 /* BoardViewController.swift */; };
+		5E2CEE2A1BE7373A00A0CD04 /* blackboard14.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E2CEE291BE7373A00A0CD04 /* blackboard14.png */; };
+		5E2CEE2C1BE7373F00A0CD04 /* soccer72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E2CEE2B1BE7373F00A0CD04 /* soccer72.png */; };
+		5E2CEE2E1BE737D700A0CD04 /* stag.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E2CEE2D1BE737D700A0CD04 /* stag.png */; };
+		5E2CEE301BE73D5A00A0CD04 /* UIColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CEE2F1BE73D5A00A0CD04 /* UIColorExtention.swift */; };
+		5E2CEE321BE740DF00A0CD04 /* blackboard14 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 5E2CEE311BE740DF00A0CD04 /* blackboard14 (1).png */; };
+		5E2CEE341BE749F800A0CD04 /* blackboard14 (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 5E2CEE331BE749F800A0CD04 /* blackboard14 (2).png */; };
 		5E56E6F61AB7C22F00FA6753 /* more23.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E56E6F51AB7C22F00FA6753 /* more23.png */; };
 		5E56E6F81AB7C26F00FA6753 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E56E6F71AB7C26F00FA6753 /* OtherViewController.swift */; };
 		5E56E6FB1AB859E800FA6753 /* OtherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E56E6F91AB859E800FA6753 /* OtherTableViewCell.swift */; };
@@ -98,6 +105,13 @@
 		5E2CEE221BE700A000A0CD04 /* iphone6plus.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iphone6plus.storyboard; sourceTree = "<group>"; };
 		5E2CEE241BE7066100A0CD04 /* AdstirInterstitial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AdstirInterstitial.h; path = RSSReader/AdstirInterstitial.h; sourceTree = "<group>"; };
 		5E2CEE251BE7069D00A0CD04 /* libAdstirAds-LegacyInterstitial.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libAdstirAds-LegacyInterstitial.a"; sourceTree = "<group>"; };
+		5E2CEE271BE72B2100A0CD04 /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		5E2CEE291BE7373A00A0CD04 /* blackboard14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackboard14.png; sourceTree = "<group>"; };
+		5E2CEE2B1BE7373F00A0CD04 /* soccer72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soccer72.png; sourceTree = "<group>"; };
+		5E2CEE2D1BE737D700A0CD04 /* stag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stag.png; sourceTree = "<group>"; };
+		5E2CEE2F1BE73D5A00A0CD04 /* UIColorExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtention.swift; sourceTree = "<group>"; };
+		5E2CEE311BE740DF00A0CD04 /* blackboard14 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackboard14 (1).png"; sourceTree = "<group>"; };
+		5E2CEE331BE749F800A0CD04 /* blackboard14 (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackboard14 (2).png"; sourceTree = "<group>"; };
 		5E56E6F51AB7C22F00FA6753 /* more23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more23.png; sourceTree = "<group>"; };
 		5E56E6F71AB7C26F00FA6753 /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		5E56E6F91AB859E800FA6753 /* OtherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherTableViewCell.swift; sourceTree = "<group>"; };
@@ -186,7 +200,12 @@
 				5E56E70F1ABA965D00FA6753 /* ima2.png */,
 				5E56E70D1ABA961A00FA6753 /* ima.png */,
 				5E56E7071ABA8CE200FA6753 /* newspaper11 (2).png */,
+				5E2CEE2B1BE7373F00A0CD04 /* soccer72.png */,
 				5E56E7051ABA8CDD00FA6753 /* blog1 (1).png */,
+				5E2CEE2D1BE737D700A0CD04 /* stag.png */,
+				5E2CEE291BE7373A00A0CD04 /* blackboard14.png */,
+				5E2CEE311BE740DF00A0CD04 /* blackboard14 (1).png */,
+				5E2CEE331BE749F800A0CD04 /* blackboard14 (2).png */,
 				5EFEE2D61BD292FB00A18582 /* 100px-Ruby_logo.svg.png */,
 				5E56E7031ABA8CD700FA6753 /* film51.png */,
 				5E56E7011AB9922100FA6753 /* No_Image_Available.png */,
@@ -242,6 +261,7 @@
 				AAC02B1A193DEEFE003997F3 /* BlogViewController.swift */,
 				5EC073741B9E9E87006D425D /* ChannelViewController.swift */,
 				5EC0D4651BA8253F004221F8 /* MultiViewController.swift */,
+				5E2CEE271BE72B2100A0CD04 /* BoardViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -250,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				5E9F62661AE542D400C72ED4 /* Constants.swift */,
+				5E2CEE2F1BE73D5A00A0CD04 /* UIColorExtention.swift */,
 				5EFE7D471B972233006D43E3 /* Snippet.swift */,
 				5EC0D4671BA82B59004221F8 /* CellPreference.swift */,
 				5EC0D4691BA8311C004221F8 /* Request.swift */,
@@ -443,6 +464,7 @@
 				5E5D9D941BCFD40B0028ED75 /* Launch Screen.storyboard in Resources */,
 				5EC073791B9EB269006D425D /* technology34 (1).png in Resources */,
 				5ECD677F1AB6C9D8009F5CCF /* TicketTableViewCell.xib in Resources */,
+				5E2CEE2C1BE7373F00A0CD04 /* soccer72.png in Resources */,
 				5EC0737B1B9EB288006D425D /* technology34.png in Resources */,
 				5E15FDDF1AB198FC005BD1B4 /* blog1.png in Resources */,
 				5E15FDD51AB196C2005BD1B4 /* movie43.svg in Resources */,
@@ -450,14 +472,18 @@
 				5E15FDDD1AB198B8005BD1B4 /* newspaper11 (1).png in Resources */,
 				5E56E7041ABA8CD700FA6753 /* film51.png in Resources */,
 				AAC02B3A193DF344003997F3 /* Podfile in Resources */,
+				5E2CEE341BE749F800A0CD04 /* blackboard14 (2).png in Resources */,
 				5ED4C0EB1AB2CC4E00D2BF8A /* YoutubeTableViewCell.xib in Resources */,
 				5E56E7021AB9922100FA6753 /* No_Image_Available.png in Resources */,
 				5E56E7001AB98FB400FA6753 /* BlogTableViewCell.xib in Resources */,
+				5E2CEE2A1BE7373A00A0CD04 /* blackboard14.png in Resources */,
 				5E56E7061ABA8CDD00FA6753 /* blog1 (1).png in Resources */,
+				5E2CEE2E1BE737D700A0CD04 /* stag.png in Resources */,
 				5E56E7101ABA965D00FA6753 /* ima2.png in Resources */,
 				5E56E6FC1AB859E800FA6753 /* OtherTableViewCell.xib in Resources */,
 				5E2CEE231BE700A000A0CD04 /* iphone6plus.storyboard in Resources */,
 				5E2CEE211BE6F99600A0CD04 /* iphone6.storyboard in Resources */,
+				5E2CEE321BE740DF00A0CD04 /* blackboard14 (1).png in Resources */,
 				5ED4C0E71AB2CA0900D2BF8A /* NewsTableViewCell.xib in Resources */,
 				5E15FDD91AB1983E005BD1B4 /* movie43.png in Resources */,
 				5ECD67751AB6BF5E009F5CCF /* ticket3.png in Resources */,
@@ -550,6 +576,8 @@
 				5EC0D4681BA82B59004221F8 /* CellPreference.swift in Sources */,
 				5ECD677E1AB6C9D8009F5CCF /* TicketTableViewCell.swift in Sources */,
 				5EC073771B9EADAB006D425D /* RadioViewController.swift in Sources */,
+				5E2CEE281BE72B2100A0CD04 /* BoardViewController.swift in Sources */,
+				5E2CEE301BE73D5A00A0CD04 /* UIColorExtention.swift in Sources */,
 				5ECBC6A51AB08BB100F75649 /* YoutubeViewController.swift in Sources */,
 				5EC073751B9E9E87006D425D /* ChannelViewController.swift in Sources */,
 				AAC02B19193DEEFE003997F3 /* AppDelegate.swift in Sources */,

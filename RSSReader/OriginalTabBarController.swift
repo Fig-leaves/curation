@@ -15,13 +15,14 @@ class OriginalTabBarController: UITabBarController {
 
         // Do any additional setup after loading the view.
         // あらかじめ色とフォントファミリーを指定
-        let colorKey = UIColor(red: 255/255, green: 158/255, blue: 35/255, alpha: 1.0)
-        let colorBg = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1.0)
+        let colorKey = UIColor(netHex: 0xFFFFFF)
+        let colorBg = UIColor(netHex: 0x397234)
         let fontFamily: UIFont! = UIFont(name: "Hiragino Kaku Gothic ProN",size:10)
         
         // 文字色とフォント変えたい
         let selectedAttributes: [String : AnyObject]! = [NSFontAttributeName: fontFamily, NSForegroundColorAttributeName: colorKey]
         UITabBarItem.appearance().setTitleTextAttributes(selectedAttributes, forState: UIControlState.Selected)
+        UITabBarItem.appearance().setTitleTextAttributes(selectedAttributes, forState: UIControlState.Normal)
         
         // アイコンの色変えたい
         UITabBar.appearance().tintColor = colorKey

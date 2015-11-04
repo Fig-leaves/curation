@@ -39,6 +39,18 @@ class CellPreference {
         return cell
     }
     
+    
+    class func setValueToBoardViewCell(cell: NewsTableViewCell, item: NSDictionary) -> NewsTableViewCell {
+        cell.titleLabel.text = item[Constants.board.TITLE] as! NSString as String
+        cell.dateLabel.text = item[Constants.board.LAST] as! NSString as String
+        cell.authorLabel.text = ("投稿数 : " as String!)! + (item[Constants.board.POST] as! String)
+        
+        return cell
+    }
+
+    
+    
+    
     class func setValueToBlogViewCell(cell: BlogTableViewCell, item: NSDictionary) -> BlogTableViewCell {
        let image :UIImage = UIImage(named: "ima2.png")!
         cell.blogImage.image = image

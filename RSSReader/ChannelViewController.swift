@@ -11,7 +11,7 @@ import UIKit
 class ChannelViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdstirMraidViewDelegate{
     
     
-    @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     var items = NSMutableArray()
     var refresh: UIRefreshControl!
     final let API_KEY = Constants.youtube.API_KEY
@@ -28,11 +28,10 @@ class ChannelViewController: UIViewController, UITableViewDataSource, UITableVie
         // 広告ビューを解放します。
         self.adView = nil
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "内さま"
+        self.title = "ムシチャンネル"
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
         self.inter!.spot = Constants.inter_ad.spot
@@ -53,7 +52,7 @@ class ChannelViewController: UIViewController, UITableViewDataSource, UITableVie
         self.adView = adView
 
         // NavigationControllerのタイトルバー(NavigationBar)の色の変更
-        self.navigationController?.navigationBar.barTintColor = UIColor.blackColor()
+        self.navigationController?.navigationBar.barTintColor = UIColor(netHex: 0x397234)
         // NavigationConrtollerの文字カラーの変更
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         // NavigationControllerのNavigationItemの色
@@ -61,13 +60,13 @@ class ChannelViewController: UIViewController, UITableViewDataSource, UITableVie
 
         items = NSMutableArray()
         let nibName = UINib(nibName: "YoutubeTableViewCell", bundle:nil)
-        table.registerNib(nibName, forCellReuseIdentifier: "Cell")
-        table.delegate = self
-        table.dataSource = self
+        tableView.registerNib(nibName, forCellReuseIdentifier: "Cell")
+        tableView.delegate = self
+        tableView.dataSource = self
         self.refresh = UIRefreshControl()
         self.refresh.attributedTitle = NSAttributedString(string: Constants.message.UPDATING)
         self.refresh.addTarget(self, action: "viewWillAppear:", forControlEvents: UIControlEvents.ValueChanged)
-        self.table.addSubview(refresh)
+        self.tableView.addSubview(refresh)
         
 //        // NADViewクラスを生成
 //        nadView = NADView(frame: CGRect(x: Constants.frame.X,
@@ -102,7 +101,7 @@ class ChannelViewController: UIViewController, UITableViewDataSource, UITableVie
         if(next) {
             urlString = "https://www.googleapis.com/youtube/v3/search?key=\(API_KEY)&part=snippet&channelId=\(self.CHANNEL_ID)&pageToken=\(self.nextPageToken)&maxResults=30"
         } else {
-            urlString = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCd8GWuNu4-b0q6Bu0dHysGg&maxResults=30&key=\(API_KEY)"
+            urlString = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=\(self.CHANNEL_ID)&maxResults=30&key=\(API_KEY)"
         }
         let url:NSURL! = NSURL(string:urlString)
         let urlRequest:NSURLRequest = NSURLRequest(URL:url)
@@ -141,12 +140,12 @@ class ChannelViewController: UIViewController, UITableViewDataSource, UITableVie
                 self.items.addObject(content)
             }
         })
-        self.table.reloadData()
+        self.tableView.reloadData()
         self.loading = false
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        if(self.table.contentOffset.y >= (self.table.contentSize.height - self.table.bounds.size.height)
+        if(self.tableView.contentOffset.y >= (self.tableView.contentSize.height - self.tableView.bounds.size.height)
             && self.nextPageToken != nil
             && loading == false) {
             loading = true
@@ -177,7 +176,7 @@ class ChannelViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = self.table.dequeueReusableCellWithIdentifier("Cell") as! YoutubeTableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! YoutubeTableViewCell
         let item = self.items[indexPath.row] as! NSDictionary
         
         return CellPreference.setValueToYoutubeViewCell(cell, item: item)
@@ -185,6 +184,8 @@ class ChannelViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let item = self.items[indexPath.row] as! NSDictionary
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+
         let con = KINWebBrowserViewController()
         let youtube_url = "https://www.youtube.com/watch?v=" + (item[Constants.article_data.VIDEO_ID] as! String)
         let URL = NSURL(string: youtube_url)
@@ -197,6 +198,4 @@ class ChannelViewController: UIViewController, UITableViewDataSource, UITableVie
         self.navigationController?.pushViewController(con, animated: true)
     }
   
-    
-    
 }

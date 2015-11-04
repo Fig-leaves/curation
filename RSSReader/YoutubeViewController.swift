@@ -9,7 +9,7 @@
 import UIKit
 
 class YoutubeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdstirMraidViewDelegate {
-    @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     var items = NSMutableArray()
     var refresh: UIRefreshControl!
     final let API_KEY = Constants.youtube.API_KEY
@@ -21,6 +21,7 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
 
     var adView: AdstirMraidView? = nil
     deinit {
+        
         // デリゲートを解放します。解放を忘れるとクラッシュする可能性があります。
         self.adView?.delegate = nil
         // 広告ビューを解放します。
@@ -29,11 +30,12 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "とぅるさま"
+        self.title = "プレイ動画"
         
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
         self.inter!.spot = Constants.inter_ad.spot
+        self.inter?.delegate = nil
         self.inter!.load()
         
         
@@ -53,19 +55,19 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
         
 
         self.nextPageToken = "nil"
-        self.navigationController?.navigationBar.barTintColor = UIColor.blackColor()
+        self.navigationController?.navigationBar.barTintColor = UIColor(netHex: 0x397234)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
 
         items = NSMutableArray()
         let nibName = UINib(nibName: "YoutubeTableViewCell", bundle:nil)
-        table.registerNib(nibName, forCellReuseIdentifier: "Cell")
-        table.delegate = self
-        table.dataSource = self
+        tableView.registerNib(nibName, forCellReuseIdentifier: "Cell")
+        tableView.delegate = self
+        tableView.dataSource = self
         self.refresh = UIRefreshControl()
         self.refresh.attributedTitle = NSAttributedString(string: Constants.message.UPDATING)
         self.refresh.addTarget(self, action: "viewWillAppear:", forControlEvents: UIControlEvents.ValueChanged)
-        self.table.addSubview(refresh)
+        self.tableView.addSubview(refresh)
         
     }
     
@@ -88,12 +90,12 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
             self.items = data
             self.nextPageToken = token
         })
-        self.table.reloadData()
+        self.tableView.reloadData()
         self.loading = false
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        if(self.table.contentOffset.y >= (self.table.contentSize.height - self.table.bounds.size.height)
+        if(self.tableView.contentOffset.y >= (self.tableView.contentSize.height - self.tableView.bounds.size.height)
             && self.nextPageToken != nil
             && loading == false) {
             loading = true
@@ -118,7 +120,7 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.table.dequeueReusableCellWithIdentifier("Cell") as! YoutubeTableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! YoutubeTableViewCell
         let item = self.items[indexPath.row] as! NSDictionary
         
         return CellPreference.setValueToYoutubeViewCell(cell, item: item)
@@ -126,9 +128,10 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let item = self.items[indexPath.row] as! NSDictionary
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
 
         if click_count % Constants.inter_ad.click_count == 0 {
-            self.inter!.showTypeB(self)
+            self.inter!.showTypeC(self)
         }
         click_count++;
         self.navigationController?.pushViewController(Snippet.setTapAction(item, mode: "movie"), animated: true)

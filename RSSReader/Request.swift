@@ -27,6 +27,7 @@ class Request {
 //        let dic:NSDictionary
         
         do {
+            print("youtube")
             data = try NSURLConnection.sendSynchronousRequest(urlRequest, returningResponse: nil)
             dic = try NSJSONSerialization.JSONObjectWithData(
                 data,
@@ -98,10 +99,6 @@ class Request {
             if let news = object.objectForKey("news_name") as? NSDictionary {
                 news_name = news.objectForKey(Constants.article_data.TEXT) as! NSString
             } 
-            
-            
-            
-            
             if(object.objectForKey("source") is NSDictionary) {
                 var source = object.objectForKey("source") as! NSDictionary
                 content[Constants.article_data.AUTHOR] = source.objectForKey(Constants.article_data.TEXT) as! NSString
@@ -116,6 +113,7 @@ class Request {
             } else {
                 day = object.objectForKey(Constants.news_json_key.pubDate) as! NSString;
             }
+            
             Snippet.convertDate(day, news_name: news_name)  {
                 (result, dateFormat,error) in
                 if(error == nil) {
@@ -124,6 +122,53 @@ class Request {
                     items.addObject(content)
                 }
             }
+        })
+        return items
+    }
+    
+    class func fetchFromBoard(url: String, items:NSMutableArray) -> NSMutableArray {
+        var urlString:String
+        urlString = url as String
+        let url:NSURL! = NSURL(string:urlString)
+        let urlRequest:NSURLRequest = NSURLRequest(URL:url)
+        
+        var data:NSData
+        var dic: NSDictionary = NSDictionary()
+        
+        do {
+            data = try NSURLConnection.sendSynchronousRequest(urlRequest, returningResponse: nil)
+            dic = try NSJSONSerialization.JSONObjectWithData(
+                data,
+                options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
+        } catch {
+            print("ERROR")
+        }
+        
+        let result: NSDictionary = dic.objectForKey("results") as! NSDictionary
+        let itemsArray: NSArray = result.objectForKey("collection1") as! NSArray
+        var content: Dictionary<String, AnyObject> = ["" : ""]
+        
+        itemsArray.enumerateObjectsUsingBlock({ object, index, stop in
+            
+            if let news = object.objectForKey("title") as? NSDictionary {
+                content[Constants.board.TITLE] = news.objectForKey(Constants.article_data.TEXT) as! NSString
+                content[Constants.board.LINK] = news.objectForKey(Constants.article_data.HREF) as! NSString
+            } else {
+                content[Constants.board.TITLE] = object.objectForKey("title") as! NSString
+                content[Constants.board.LINK] = object.objectForKey("url") as! NSString
+            }
+            
+            if(object.objectForKey("last") is NSDictionary) {
+                var date = object.objectForKey("last") as! NSDictionary
+                content[Constants.board.LAST] = date.objectForKey("text")
+            } else {
+                content[Constants.board.LAST] = object.objectForKey("last")
+            }
+
+            
+            content[Constants.board.POST] = object.objectForKey("post")
+
+            items.addObject(content)
         })
         return items
     }

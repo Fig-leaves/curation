@@ -8,63 +8,63 @@
 
 import UIKit
 
-class OtherViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MWFeedParserDelegate {
+class OtherViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MWFeedParserDelegate, AdstirMraidViewDelegate {
     
-    var keys: NSArray = ["バナナムーン",
-                         "   radiko",
-                         "   ラジオのHP",
-                         "バナナTV",
-                         "Twitter",
-                         "Facebook"
+    var keys: NSArray = ["2015セカンドムシカード",
+                         "2015セカンドおたすけカード",
+                         "2015ファーストムシカード",
+                         "2015ファーストおたすけカード",
                          ]
-    var values: NSArray = ["banana moon",
-                           "http://radiko.jp/",
-                           "http://www.tbsradio.jp/banana/index.html",
-                           "http://www.tv-asahi.co.jp/douga/bananatv_15",
-                           "https://twitter.com/banana__tv",
-                           "https://www.facebook.com/BANANA.TV.87",
+    var values: NSArray = ["http://mushiking.boy.jp/cardlist-2/#M-2",
+                           "http://mushiking.boy.jp/cardlist-2/2",
+                           "http://mushiking.boy.jp/cardlist/",
+                           "http://mushiking.boy.jp/cardlist/2",
                         ]
 
-    @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var adView: AdstirMraidView? = nil
+    deinit {
+        // デリゲートを解放します。解放を忘れるとクラッシュする可能性があります。
+        self.adView?.delegate = nil
+        // 広告ビューを解放します。
+        self.adView = nil
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.table.estimatedRowHeight = 90
-        self.table.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 90
+        self.tableView.rowHeight = UITableViewAutomaticDimension
         // NavigationControllerのタイトルバー(NavigationBar)の色の変更
-        self.navigationController?.navigationBar.barTintColor = UIColor.blackColor()
+        self.navigationController?.navigationBar.barTintColor = UIColor(netHex: 0x397234)
         // NavigationConrtollerの文字カラーの変更
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         // NavigationControllerのNavigationItemの色
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
 
         let nibName = UINib(nibName: "OtherTableViewCell", bundle:nil)
-        table.registerNib(nibName, forCellReuseIdentifier: "Cell")
+        tableView.registerNib(nibName, forCellReuseIdentifier: "Cell")
         
         let emptyCell = UINib(nibName: "EmptyTableViewCell", bundle:nil)
-        table.registerNib(emptyCell, forCellReuseIdentifier: "EmptyCell")
+        tableView.registerNib(emptyCell, forCellReuseIdentifier: "EmptyCell")
         
-        table.delegate = self
-        table.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         
-        self.title = Constants.title.OTHER
+        self.title = "カードリスト"
         
-//        // NADViewクラスを生成
-//        nadView = NADView(frame: CGRect(x: Constants.frame.X,
-//            y: Constants.frame.Y,
-//            width: Constants.frame.WIDTH,
-//            height: Constants.frame.HEIGHT))
-//        // 広告枠のapikey/spotidを設定(必須)
-//        nadView.setNendID(Constants.nend_id.API_ID, spotID: Constants.nend_id.SPOT_ID)
-//        // nendSDKログ出力の設定(任意)
-//        nadView.isOutputLog = true
-//        // delegateを受けるオブジェクトを指定(必須)
-//        nadView.delegate = self
-//        // 読み込み開始(必須)
-//        nadView.load()
-//        // 通知有無にかかわらずViewに乗せる場合
-//        self.view.addSubview(nadView)
+        let originY = self.view.frame.height
+        let originX = (self.view.frame.size.width - kAdstirAdSize320x50.size.width) / 2
+        let adView = AdstirMraidView(adSize: kAdstirAdSize320x50, origin: CGPointMake(originX, originY - 100), media: Constants.ad.id, spot:Constants.ad.spot)
+        // リフレッシュ秒数を設定します。
+        adView.intervalTime = 5
+        // デリゲートを設定します。
+        adView.delegate = self
+        // 広告ビューを親ビューに追加します。
+        self.view.addSubview(adView)
+        self.adView = adView
+
 
     }
     
@@ -90,10 +90,13 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
 
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath!) {
+        tableView?.deselectRowAtIndexPath(indexPath, animated: true)
+
         if(indexPath.row < 10) {
             let con = KINWebBrowserViewController()
             let URL = NSURL(string: values[indexPath.row] as! NSString as String)
             con.loadURL(URL)
+            
             
             self.navigationController?.pushViewController(con, animated: true)
         } else {
@@ -123,10 +126,10 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     
     func tableView(table: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.table.dequeueReusableCellWithIdentifier("Cell") as! OtherTableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! OtherTableViewCell
         cell.titleLabel.text = keys[indexPath.row] as! NSString as String
         if(indexPath.row == 9 ) {
-            let empty = self.table.dequeueReusableCellWithIdentifier("EmptyCell") as! EmptyTableViewCell
+            let empty = self.tableView.dequeueReusableCellWithIdentifier("EmptyCell") as! EmptyTableViewCell
             return empty
         } else {
             return cell
@@ -134,9 +137,6 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     // セルの選択を禁止する
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        if(indexPath.row == 4) {
-            return nil
-        }
         return indexPath
     }
 
