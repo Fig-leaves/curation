@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>ムシキング</string>
+	<string>96猫</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleGetInfoString</key>
@@ -25,7 +25,7 @@
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>jp.fig.musiking.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>jp.fig.96neko.$(PRODUCT_NAME:rfc1034identifier)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -38,6 +38,25 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>2.7</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>6617192855bd3fdf7840d82ff4949fb75d914233</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict>
+					<key>consumerKey</key>
+					<string>Re3eDQnGwBl2Y5RGv5YDdxgZS</string>
+					<key>consumerSecret</key>
+					<string>W9F68RrSDBA59v6yK0QYFeMpG2vjl4He8Fi756TXykxjOF79cF</string>
+				</dict>
+				<key>KitName</key>
+				<string>Twitter</string>
+			</dict>
+		</array>
+	</dict>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>

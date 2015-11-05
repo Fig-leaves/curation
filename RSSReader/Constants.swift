@@ -42,9 +42,10 @@ struct Constants {
     
     struct youtube {
         static let API_KEY = "AIzaSyCcfEgQ_6qLIV5STXnZnLo040NzEmZuVZ4"
-        static let WORD = "ムシキング　動画"
-        static let RADIO = "さまーず"
-        static let CHANNEL = "UCoObuRNP0OjE5ILcOAhXZIg"
+        static let WORD = "96猫 生放送"
+        static let WORD2 = "96猫 実況"
+        static let RADIO = "96猫 歌ってみた"
+        static let CHANNEL = "UCwu15I0KWOI6Xbe2Uziee4A"
     }
     
     

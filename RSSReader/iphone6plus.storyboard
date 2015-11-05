@@ -28,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="-661" y="450"/>
         </scene>
-        <!--Other View Controller-->
+        <!--Channel View Controller-->
         <scene sceneID="fTr-cP-RFl">
             <objects>
-                <viewController id="pby-mV-eVZ" customClass="OtherViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pby-mV-eVZ" customClass="ChannelViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IEm-h7-sar"/>
                         <viewControllerLayoutGuide type="bottom" id="4m9-Kt-zgl"/>
@@ -66,11 +66,11 @@
             </objects>
             <point key="canvasLocation" x="773" y="1348"/>
         </scene>
-        <!--カードリスト-->
+        <!--公式チャンネル-->
         <scene sceneID="tJs-mQ-GLD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aka-Qv-F4M" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="カードリスト" image="soccer72.png" id="keM-nc-ABD"/>
+                    <tabBarItem key="tabBarItem" title="公式チャンネル" image="halloween242.png" id="keM-nc-ABD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="06L-Ee-6fx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -88,7 +88,7 @@
         <!--youtube-->
         <scene sceneID="FSq-eE-nEp">
             <objects>
-                <viewController title="youtube" id="E12-7Q-nv7" customClass="NewsViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="youtube" id="E12-7Q-nv7" customClass="TwitterViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KVB-kg-eqi"/>
                         <viewControllerLayoutGuide type="bottom" id="qE2-BO-WY5"/>
@@ -116,7 +116,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="0hP-pb-IVK"/>
                     <connections>
-                        <outlet property="table" destination="cbk-bi-Da7" id="jcB-Xm-aZw"/>
+                        <outlet property="tableView" destination="cbk-bi-Da7" id="3tn-2l-AXo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HmW-fR-dg7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -142,10 +142,10 @@
             </objects>
             <point key="canvasLocation" x="292" y="665"/>
         </scene>
-        <!--Youtube View Controller-->
+        <!--Radio View Controller-->
         <scene sceneID="QSi-bn-XmY">
             <objects>
-                <viewController id="y7w-m9-5hF" customClass="YoutubeViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="y7w-m9-5hF" customClass="RadioViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XUi-wI-sux"/>
                         <viewControllerLayoutGuide type="bottom" id="mg3-BI-GxQ"/>
@@ -180,11 +180,11 @@
             </objects>
             <point key="canvasLocation" x="773" y="2074"/>
         </scene>
-        <!--プレイ動画-->
+        <!--歌ってみた-->
         <scene sceneID="amR-jS-fgS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="brC-Zv-L6u" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="プレイ動画" image="film51.png" id="mhk-M0-r5x"/>
+                    <tabBarItem key="tabBarItem" title="歌ってみた" image="sing10.png" id="mhk-M0-r5x"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sQF-Nr-v3B">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -199,10 +199,10 @@
             </objects>
             <point key="canvasLocation" x="292" y="2075"/>
         </scene>
-        <!--Channel View Controller-->
+        <!--Youtube2 View Controller-->
         <scene sceneID="r6n-iX-VEu">
             <objects>
-                <viewController id="5MK-JG-BC6" customClass="ChannelViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5MK-JG-BC6" customClass="Youtube2ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LnQ-mM-Jua"/>
                         <viewControllerLayoutGuide type="bottom" id="Kmy-6B-iVL"/>
@@ -237,11 +237,11 @@
             </objects>
             <point key="canvasLocation" x="1114" y="-21"/>
         </scene>
-        <!--ムシチャンネル-->
+        <!--ゲーム実況-->
         <scene sceneID="UqI-bl-jUw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nP0-pb-B03" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ムシチャンネル" image="stag.png" id="lrf-hT-9xD"/>
+                    <tabBarItem key="tabBarItem" title="ゲーム実況" image="controller.png" id="lrf-hT-9xD"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="q3i-I7-MS1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="khY-ls-TSI">
@@ -257,10 +257,10 @@
             </objects>
             <point key="canvasLocation" x="292" y="-21"/>
         </scene>
-        <!--Board View Controller-->
+        <!--Youtube View Controller-->
         <scene sceneID="BQc-5t-KV2">
             <objects>
-                <viewController id="Dlf-eI-x7P" customClass="BoardViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Dlf-eI-x7P" customClass="YoutubeViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k4N-mx-2GC"/>
                         <viewControllerLayoutGuide type="bottom" id="Dbs-qh-6SX"/>
@@ -295,11 +295,11 @@
             </objects>
             <point key="canvasLocation" x="-251" y="2074"/>
         </scene>
-        <!--掲示板-->
+        <!--生放送-->
         <scene sceneID="IWJ-Lg-4xT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Et-Hb-p3w" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="掲示板" image="blackboard14.png" id="aNa-0N-LwU"/>
+                    <tabBarItem key="tabBarItem" title="生放送" image="signal97.png" id="aNa-0N-LwU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZYo-Je-BDD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -364,11 +364,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="blackboard14.png" width="24" height="24"/>
-        <image name="film51.png" width="24" height="24"/>
+        <image name="controller.png" width="24" height="24"/>
+        <image name="halloween242.png" width="24" height="24"/>
         <image name="logo95.png" width="24" height="24"/>
         <image name="newspaper11 (2).png" width="24" height="24"/>
-        <image name="soccer72.png" width="24" height="24"/>
-        <image name="stag.png" width="24" height="24"/>
+        <image name="signal97.png" width="24" height="24"/>
+        <image name="sing10.png" width="24" height="24"/>
     </resources>
 </document>

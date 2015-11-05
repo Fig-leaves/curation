@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="-809" y="766"/>
         </scene>
-        <!--Youtube View Controller-->
+        <!--Radio View Controller-->
         <scene sceneID="Uv2-sx-dIf">
             <objects>
-                <viewController id="b72-iv-5qL" customClass="YoutubeViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="b72-iv-5qL" customClass="RadioViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UFo-XV-a58">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,11 +62,11 @@
             </objects>
             <point key="canvasLocation" x="458" y="1465"/>
         </scene>
-        <!--プレイ動画-->
+        <!--歌ってみた-->
         <scene sceneID="4pm-OG-Qey">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1CV-ir-oM9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="プレイ動画" image="film51.png" id="zAD-iD-3iO"/>
+                    <tabBarItem key="tabBarItem" title="歌ってみた" image="sing10.png" id="zAD-iD-3iO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pe7-nd-UBk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -84,7 +84,7 @@
         <!--youtube-->
         <scene sceneID="Kb7-9v-kmy">
             <objects>
-                <viewController title="youtube" id="LO7-hY-PaM" customClass="NewsViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="youtube" id="LO7-hY-PaM" customClass="TwitterViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7aY-PT-iUy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,7 +109,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="qIJ-pC-wPx"/>
                     <connections>
-                        <outlet property="table" destination="zBR-v4-foC" id="xIs-c5-UEJ"/>
+                        <outlet property="tableView" destination="zBR-v4-foC" id="NP3-L1-AUo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2RY-Yd-isr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -135,10 +135,10 @@
             </objects>
             <point key="canvasLocation" x="-24" y="781"/>
         </scene>
-        <!--Board View Controller-->
+        <!--Youtube View Controller-->
         <scene sceneID="9jF-2P-otP">
             <objects>
-                <viewController id="RgT-Wz-YaB" customClass="BoardViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RgT-Wz-YaB" customClass="YoutubeViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="88v-rT-mtb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,11 +170,11 @@
             </objects>
             <point key="canvasLocation" x="458" y="2191"/>
         </scene>
-        <!--掲示板-->
+        <!--生放送-->
         <scene sceneID="Qez-ik-rPm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hRs-6y-9XU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="掲示板" image="blackboard14 (1).png" id="reD-Pk-d2F"/>
+                    <tabBarItem key="tabBarItem" title="生放送" image="signal97.png" id="reD-Pk-d2F"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hzM-gG-FgH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -189,10 +189,10 @@
             </objects>
             <point key="canvasLocation" x="-24" y="2191"/>
         </scene>
-        <!--Other View Controller-->
+        <!--Channel View Controller-->
         <scene sceneID="ueH-It-mTM">
             <objects>
-                <viewController id="Vlb-tY-tin" customClass="OtherViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Vlb-tY-tin" customClass="ChannelViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hUI-UM-lGd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,11 +224,11 @@
             </objects>
             <point key="canvasLocation" x="458" y="95"/>
         </scene>
-        <!--カードリスト-->
+        <!--公式チャンネル-->
         <scene sceneID="Vx1-0Y-WXy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Kz-Il-eSu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="カードリスト" image="soccer72.png" id="U8a-NG-psz"/>
+                    <tabBarItem key="tabBarItem" title="公式チャンネル" image="halloween242.png" id="U8a-NG-psz"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="80z-XE-2Lz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JkE-jH-5Il">
@@ -244,10 +244,10 @@
             </objects>
             <point key="canvasLocation" x="-24" y="95"/>
         </scene>
-        <!--Channel View Controller-->
+        <!--Youtube2 View Controller-->
         <scene sceneID="22X-Fn-Eou">
             <objects>
-                <viewController id="dJy-TV-wgX" customClass="ChannelViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dJy-TV-wgX" customClass="Youtube2ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4P6-rl-TKT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -279,11 +279,11 @@
             </objects>
             <point key="canvasLocation" x="-566" y="2191"/>
         </scene>
-        <!--ムシチャンネル-->
+        <!--ゲーム実況-->
         <scene sceneID="a0C-Q0-VIn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ovg-vh-dPw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ムシチャンネル" image="stag.png" id="yyG-ka-enD"/>
+                    <tabBarItem key="tabBarItem" title="ゲーム実況" image="controller.png" id="yyG-ka-enD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="be6-3E-jBi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -345,12 +345,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="blackboard14 (1).png" width="24" height="24"/>
-        <image name="film51.png" width="24" height="24"/>
+        <image name="controller.png" width="24" height="24"/>
+        <image name="halloween242.png" width="24" height="24"/>
         <image name="logo95.png" width="24" height="24"/>
         <image name="newspaper11 (2).png" width="24" height="24"/>
-        <image name="soccer72.png" width="24" height="24"/>
-        <image name="stag.png" width="24" height="24"/>
+        <image name="signal97.png" width="24" height="24"/>
+        <image name="sing10.png" width="24" height="24"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

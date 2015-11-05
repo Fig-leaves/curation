@@ -31,7 +31,7 @@ class ChannelViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "ムシチャンネル"
+        self.title = "公式チャンネル"
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
         self.inter!.spot = Constants.inter_ad.spot
@@ -52,7 +52,7 @@ class ChannelViewController: UIViewController, UITableViewDataSource, UITableVie
         self.adView = adView
 
         // NavigationControllerのタイトルバー(NavigationBar)の色の変更
-        self.navigationController?.navigationBar.barTintColor = UIColor(netHex: 0x397234)
+        self.navigationController?.navigationBar.barTintColor = UIColor.blackColor()
         // NavigationConrtollerの文字カラーの変更
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         // NavigationControllerのNavigationItemの色
@@ -99,9 +99,9 @@ class ChannelViewController: UIViewController, UITableViewDataSource, UITableVie
     func request(next: Bool) {
         var urlString:String
         if(next) {
-            urlString = "https://www.googleapis.com/youtube/v3/search?key=\(API_KEY)&part=snippet&channelId=\(self.CHANNEL_ID)&pageToken=\(self.nextPageToken)&maxResults=30"
+            urlString = "https://www.googleapis.com/youtube/v3/search?key=\(API_KEY)&part=snippet&channelId=\(self.CHANNEL_ID)&pageToken=\(self.nextPageToken)&maxResults=30&order=date"
         } else {
-            urlString = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=\(self.CHANNEL_ID)&maxResults=30&key=\(API_KEY)"
+            urlString = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=\(self.CHANNEL_ID)&maxResults=30&key=\(API_KEY)&order=date"
         }
         let url:NSURL! = NSURL(string:urlString)
         let urlRequest:NSURLRequest = NSURLRequest(URL:url)

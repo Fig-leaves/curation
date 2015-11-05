@@ -16,7 +16,7 @@ class OriginalTabBarController: UITabBarController {
         // Do any additional setup after loading the view.
         // あらかじめ色とフォントファミリーを指定
         let colorKey = UIColor(netHex: 0xFFFFFF)
-        let colorBg = UIColor(netHex: 0x397234)
+        let colorBg = UIColor.blackColor()
         let fontFamily: UIFont! = UIFont(name: "Hiragino Kaku Gothic ProN",size:10)
         
         // 文字色とフォント変えたい

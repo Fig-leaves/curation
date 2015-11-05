@@ -8,17 +8,17 @@
 
 import UIKit
 
-class YoutubeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdstirMraidViewDelegate {
+class Youtube2ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdstirMraidViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     var items = NSMutableArray()
     var refresh: UIRefreshControl!
     final let API_KEY = Constants.youtube.API_KEY
-    final let WORD:String = Constants.youtube.WORD
+    final let WORD:String = Constants.youtube.WORD2
     var loading = false
     var nextPageToken:NSString!
     var inter: AdstirInterstitial? = nil
     var click_count = 0;
-
+    
     var adView: AdstirMraidView? = nil
     deinit {
         
@@ -30,7 +30,7 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "生放送"
+        self.title = "ゲーム実況"
         
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
@@ -53,15 +53,12 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
         self.view.addSubview(adView)
         self.adView = adView
         
-
+        
         self.nextPageToken = "nil"
-        // NavigationControllerのタイトルバー(NavigationBar)の色の変更
         self.navigationController?.navigationBar.barTintColor = UIColor.blackColor()
-        // NavigationConrtollerの文字カラーの変更
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        // NavigationControllerのNavigationItemの色
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-
+        
         items = NSMutableArray()
         let nibName = UINib(nibName: "YoutubeTableViewCell", bundle:nil)
         tableView.registerNib(nibName, forCellReuseIdentifier: "Cell")
@@ -101,16 +98,16 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
         if(self.tableView.contentOffset.y >= (self.tableView.contentSize.height - self.tableView.bounds.size.height)
             && self.nextPageToken != nil
             && loading == false) {
-            loading = true
-            SVProgressHUD.showWithStatus(Constants.message.LOADING)
+                loading = true
+                SVProgressHUD.showWithStatus(Constants.message.LOADING)
                 
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                if(self.nextPageToken == nil) {
-                } else {
-                    self.request(true)                
-                    SVProgressHUD.dismiss()
-                }
-            })
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    if(self.nextPageToken == nil) {
+                    } else {
+                        self.request(true)
+                        SVProgressHUD.dismiss()
+                    }
+                })
         }
     }
     
@@ -132,7 +129,7 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let item = self.items[indexPath.row] as! NSDictionary
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-
+        
         if click_count % Constants.inter_ad.click_count == 0 {
             self.inter!.showTypeB(self)
         }

@@ -7,17 +7,18 @@
 //
 
 import Foundation
+import TwitterKit
 
 class Request {
-    class func fetchFromYoutube(next: Bool, word: String, nextPageToken:String, items: NSMutableArray,callback: (NSMutableArray, String) -> Void) {
+    class func fetchFromYoutube(next: Bool, word: String, nextPageToken:String, items: NSMutableArray, order:String, callback: (NSMutableArray, String) -> Void) {
         var token = nextPageToken
         let API_KEY = Constants.youtube.API_KEY
         let searchWord:String! = word.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
         var urlString:String
         if(next) {
-            urlString = "https://www.googleapis.com/youtube/v3/search?key=\(API_KEY)&q=\(searchWord)&part=snippet&pageToken=\(nextPageToken)&maxResults=20&order=viewCount"
+            urlString = "https://www.googleapis.com/youtube/v3/search?key=\(API_KEY)&q=\(searchWord)&part=snippet&pageToken=\(nextPageToken)&maxResults=20&order=\(order)"
         } else {
-            urlString = "https://www.googleapis.com/youtube/v3/search?key=\(API_KEY)&q=\(searchWord)&part=snippet&maxResults=20&order=viewCount"
+            urlString = "https://www.googleapis.com/youtube/v3/search?key=\(API_KEY)&q=\(searchWord)&part=snippet&maxResults=20&order=\(order)"
         }
         let url:NSURL! = NSURL(string:urlString)
         let urlRequest:NSURLRequest = NSURLRequest(URL:url)
@@ -191,5 +192,26 @@ class Request {
             }
             callback(items)
         })
+    }
+    
+    class func fetchTwitterTimeLine(user: String) {
+        var items = NSMutableArray()
+        var url = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=%4096__neko&count=20"
+        Snippet.fetch( url, callback: {
+            (data, error) in
+            print(data)
+        })
+    }
+    class func callAPI(path: String, parameters: [NSObject : AnyObject]!, completion: TWTRNetworkCompletion!){
+        self._callAPI(path, method: "GET", parameters: parameters, completion: completion)
+    }
+    
+    class func _callAPI(path: String, method: String, parameters: [NSObject : AnyObject]!, completion: TWTRNetworkCompletion!){
+        var clientError: NSError?
+        let endpoint = "https://api.twitter.com/1.1/statuses/" + path
+        let request = Twitter.sharedInstance().APIClient.URLRequestWithMethod(method, URL: endpoint, parameters: parameters, error: &clientError)
+//        if request != nil {
+            Twitter.sharedInstance().APIClient.sendTwitterRequest(request, completion: completion)
+//        }
     }
 }

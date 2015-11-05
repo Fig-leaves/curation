@@ -86,7 +86,7 @@ class MultiViewController: UIViewController, UITableViewDataSource, UITableViewD
     func request(next:Bool) {
 
         if self.title == "youtube" {
-            Request.fetchFromYoutube(next, word: WORD, nextPageToken: self.nextPageToken as String, items: self.items, callback: {
+            Request.fetchFromYoutube(next, word: WORD, nextPageToken: self.nextPageToken as String, items: self.items, order: "viewCount", callback: {
                 (data, token) in
                 self.items = data
                 self.nextPageToken = token

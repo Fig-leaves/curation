@@ -175,6 +175,43 @@ class Snippet {
         }
     }
     
+    // Sun Nov 01 11:05:13 +0000 2015 -> yyyy-MM-dd HH:mm:ss
+    class func normalizeDateFormat5(day: String) -> NSDate {
+        var convertEnglishToMM: Dictionary<String, String> = ["Jan" : "1", "Feb" : "2", "Mar" : "3", "Apr" : "4", "May" : "5", "Jun" : "6",
+            "Jul" : "7", "Aug" : "8", "Sep" : "9", "Oct" : "10", "Nov" : "11", "Dec" : "12"]
+        var yyy = day.componentsSeparatedByString(" ")
+        var MM = convertEnglishToMM[yyy[1]]
+        var day = yyy[2]
+        var time = yyy[3].componentsSeparatedByString(":")
+        var hh = time[0]
+        var mm = time[1]
+        var ss = time[2]
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+        dateFormatter.locale = NSLocale.systemLocale()
+        dateFormatter.timeZone = NSTimeZone.systemTimeZone()
+        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss" // 日付フォーマットの設定
+        var data_formatter = (yyy.last)! + "-" + MM! + "-" + day + " " + hh + ":" + mm + ":" + ss
+        let date = dateFormatter.dateFromString(data_formatter)!
+        
+        return date
+    }
+    
+    class func convertDateformatToWhenAt(time: NSDate) -> String {
+        let now:NSDate? = NSDate()
+        
+        let cal = NSCalendar.currentCalendar()
+        let calUnit:NSCalendarUnit = [.Second, .Minute, .Hour, .Day, .Year]
+        let components = cal.components(calUnit, fromDate: time, toDate: now!, options: [])
+        
+        if(components.year != 0)          { return String(components.year)   + "年前";
+        } else if(components.day    != 0) { return String(components.day)    + "日前";
+        } else if(components.hour   != 0) { return String(components.hour)   + "時間前";
+        } else if(components.minute != 0) { return String(components.minute) + "分前";
+        } else                            { return String(components.second) + "秒前"; }
+    }
+    
     class func isIncludeWord(search: NSMutableArray, word: NSString) -> Bool {
         for item in search {
             if(item[Constants.article_data.TITLE] as! NSString == word) {

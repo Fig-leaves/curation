@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Fabric
+import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -38,6 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         viewController = storyboard.instantiateViewControllerWithIdentifier("Main")
         self.window?.rootViewController = viewController
         
+        
+        Fabric.with([Twitter.self])
+
         return true
     }
     
