@@ -32,6 +32,8 @@ class ChannelViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "ムシチャンネル"
+        TrackingManager.sendScreenTracking("ムシチャンネル")
+
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
         self.inter!.spot = Constants.inter_ad.spot
@@ -194,6 +196,7 @@ class ChannelViewController: UIViewController, UITableViewDataSource, UITableVie
             self.inter!.showTypeB(self)
         }
         click_count++;
+        TrackingManager.sendEventTracking("Youtube", action:"Push", label:"閲覧", value:NSNumber(), screen:"ムシチャンネル")
 
         self.navigationController?.pushViewController(con, animated: true)
     }

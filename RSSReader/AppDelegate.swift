@@ -24,6 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let myNativeBoundSize: CGSize = UIScreen.mainScreen().nativeBounds.size
         var storyboard : UIStoryboard!
         
+        GAI.sharedInstance().trackerWithTrackingId(Constants.analytics.TRACK_ID)
+        GAI.sharedInstance().trackUncaughtExceptions = true
+        GAI.sharedInstance().dispatchInterval = 20
+        GAI.sharedInstance().logger.logLevel=GAILogLevel.Info
+        
+        
         print(myNativeBoundSize.width)
         if myNativeBoundSize.width == 640 {
             storyboard =  UIStoryboard(name: "Main",bundle:nil)

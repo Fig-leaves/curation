@@ -31,6 +31,8 @@ class BoardViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        TrackingManager.sendScreenTracking("掲示板")
+
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
         self.inter!.spot = Constants.inter_ad.spot
@@ -96,6 +98,8 @@ class BoardViewController: UIViewController, UITableViewDataSource, UITableViewD
             self.inter!.showTypeC(self)
         }
         click_count++;
+        TrackingManager.sendEventTracking("Board", action:"Push", label:"閲覧", value:NSNumber(), screen:"掲示板")
+
 
         self.navigationController?.pushViewController( Snippet.setTapAction(item, mode: "blog"), animated: true)
     }

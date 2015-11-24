@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdstirMraidViewDelegate {
+class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdstirMraidViewDelegate  {
 
     var items = NSMutableArray()
     var articles = NSMutableArray()
@@ -26,15 +26,16 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.adView = nil
     }
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        TrackingManager.sendScreenTracking("ニュース")
         
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
         self.inter!.spot = Constants.inter_ad.spot
         self.inter?.delegate = nil
         self.inter!.load()
-
         
         // 広告表示位置: タブバーの下でセンタリング、広告サイズ: 320,50 の場合
         let originY = self.view.frame.height
@@ -92,6 +93,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Dispose of any resources that can be recreated.
     }
     
+    
     func reload() {
         items = NSMutableArray()
         articles = NSMutableArray()
@@ -145,6 +147,8 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if click_count % Constants.inter_ad.click_count == 0 {
             self.inter!.showTypeC(self)
         }
+        
+        TrackingManager.sendEventTracking("ブログ", action:"Push", label:"閲覧", value:NSNumber(), screen:"ニュース")
         click_count++;
 
         self.navigationController?.pushViewController( Snippet.setTapAction(item, mode: "blog"), animated: true)

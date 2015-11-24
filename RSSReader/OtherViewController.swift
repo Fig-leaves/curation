@@ -34,6 +34,7 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         self.tableView.estimatedRowHeight = 90
         self.tableView.rowHeight = UITableViewAutomaticDimension
         // NavigationControllerのタイトルバー(NavigationBar)の色の変更
@@ -53,7 +54,8 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.dataSource = self
         
         self.title = "カードリスト"
-        
+        TrackingManager.sendScreenTracking("カードリスト")
+
         let originY = self.view.frame.height
         let originX = (self.view.frame.size.width - kAdstirAdSize320x50.size.width) / 2
         let adView = AdstirMraidView(adSize: kAdstirAdSize320x50, origin: CGPointMake(originX, originY - 100), media: Constants.ad.id, spot:Constants.ad.spot)
@@ -92,12 +94,14 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath!) {
         tableView?.deselectRowAtIndexPath(indexPath, animated: true)
 
+        
         if(indexPath.row < 10) {
             let con = KINWebBrowserViewController()
             let URL = NSURL(string: values[indexPath.row] as! NSString as String)
             con.loadURL(URL)
             
-            
+            TrackingManager.sendEventTracking("カードリスト", action:"Push", label:"閲覧", value:NSNumber(), screen:"カードリスト")
+
             self.navigationController?.pushViewController(con, animated: true)
         } else {
             // 共有する項目
@@ -116,10 +120,7 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
                 UIActivityTypeSaveToCameraRoll,
                 UIActivityTypePrint
             ]
-            
             activityVC.excludedActivityTypes = excludedActivityTypes
-            
-            // UIActivityViewControllerを表示
             self.presentViewController(activityVC, animated: true, completion: nil)
         }
     }

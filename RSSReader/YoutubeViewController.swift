@@ -32,6 +32,8 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         self.title = "プレイ動画"
         
+        TrackingManager.sendScreenTracking("プレイ動画")
+
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
         self.inter!.spot = Constants.inter_ad.spot
@@ -45,7 +47,7 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
         let adView = AdstirMraidView(adSize: kAdstirAdSize320x50, origin: CGPointMake(originX, originY - 100), media: Constants.ad.id, spot:Constants.ad.spot)
         
         // リフレッシュ秒数を設定します。
-        adView.intervalTime = 5
+        adView.intervalTime = 3
         // デリゲートを設定します。
         adView.delegate = self
         
@@ -129,6 +131,8 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let item = self.items[indexPath.row] as! NSDictionary
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+
+        TrackingManager.sendEventTracking("Youtube", action:"Push", label:"閲覧", value:NSNumber(), screen:"プレイ動画")
 
         if click_count % Constants.inter_ad.click_count == 0 {
             self.inter!.showTypeC(self)

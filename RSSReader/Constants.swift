@@ -28,6 +28,10 @@ struct Constants {
         static let click_count = 7
     }
     
+    struct analytics {
+        static let TRACK_ID = "UA-70168853-1"
+    }
+    
     struct blog {
         static let OFFICIAL_URL = "https://www.kimonolabs.com/api/7yus8l2u?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
     }

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E04D40A1BFA075F00399EA4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E04D4091BFA075F00399EA4 /* CoreData.framework */; };
+		5E04D40C1BFA076D00399EA4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E04D40B1BFA076D00399EA4 /* SystemConfiguration.framework */; };
+		5E04D40E1BFA088100399EA4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E04D40D1BFA088100399EA4 /* libz.tbd */; };
+		5E04D4101BFA089500399EA4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E04D40F1BFA089500399EA4 /* libsqlite3.tbd */; };
+		5E04D4121BFA0A1200399EA4 /* TrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E04D4111BFA0A1200399EA4 /* TrackingManager.swift */; };
+		5E04D4141BFA193700399EA4 /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E04D4131BFA193700399EA4 /* libAdIdAccess.a */; };
 		5E15FDD51AB196C2005BD1B4 /* movie43.svg in Resources */ = {isa = PBXBuildFile; fileRef = 5E15FDD41AB196C2005BD1B4 /* movie43.svg */; };
 		5E15FDD91AB1983E005BD1B4 /* movie43.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E15FDD81AB1983E005BD1B4 /* movie43.png */; };
 		5E15FDDD1AB198B8005BD1B4 /* newspaper11 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 5E15FDDC1AB198B8005BD1B4 /* newspaper11 (1).png */; };
@@ -29,6 +35,7 @@
 		5E2CEE301BE73D5A00A0CD04 /* UIColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CEE2F1BE73D5A00A0CD04 /* UIColorExtention.swift */; };
 		5E2CEE321BE740DF00A0CD04 /* blackboard14 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 5E2CEE311BE740DF00A0CD04 /* blackboard14 (1).png */; };
 		5E2CEE341BE749F800A0CD04 /* blackboard14 (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 5E2CEE331BE749F800A0CD04 /* blackboard14 (2).png */; };
+		5E444F5F1BFE01B400A0259E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E444F5E1BFE01B400A0259E /* GoogleService-Info.plist */; };
 		5E56E6F61AB7C22F00FA6753 /* more23.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E56E6F51AB7C22F00FA6753 /* more23.png */; };
 		5E56E6F81AB7C26F00FA6753 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E56E6F71AB7C26F00FA6753 /* OtherViewController.swift */; };
 		5E56E6FB1AB859E800FA6753 /* OtherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E56E6F91AB859E800FA6753 /* OtherTableViewCell.swift */; };
@@ -89,6 +96,12 @@
 
 /* Begin PBXFileReference section */
 		281D97FAFD08B2D5D5E3D7DF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5E04D4091BFA075F00399EA4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5E04D40B1BFA076D00399EA4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5E04D40D1BFA088100399EA4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		5E04D40F1BFA089500399EA4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		5E04D4111BFA0A1200399EA4 /* TrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingManager.swift; sourceTree = "<group>"; };
+		5E04D4131BFA193700399EA4 /* libAdIdAccess.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdIdAccess.a; sourceTree = "<group>"; };
 		5E15FDD41AB196C2005BD1B4 /* movie43.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = movie43.svg; sourceTree = "<group>"; };
 		5E15FDD81AB1983E005BD1B4 /* movie43.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = movie43.png; sourceTree = "<group>"; };
 		5E15FDDC1AB198B8005BD1B4 /* newspaper11 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newspaper11 (1).png"; sourceTree = "<group>"; };
@@ -112,6 +125,7 @@
 		5E2CEE2F1BE73D5A00A0CD04 /* UIColorExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtention.swift; sourceTree = "<group>"; };
 		5E2CEE311BE740DF00A0CD04 /* blackboard14 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackboard14 (1).png"; sourceTree = "<group>"; };
 		5E2CEE331BE749F800A0CD04 /* blackboard14 (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackboard14 (2).png"; sourceTree = "<group>"; };
+		5E444F5E1BFE01B400A0259E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E56E6F51AB7C22F00FA6753 /* more23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more23.png; sourceTree = "<group>"; };
 		5E56E6F71AB7C26F00FA6753 /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		5E56E6F91AB859E800FA6753 /* OtherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherTableViewCell.swift; sourceTree = "<group>"; };
@@ -171,11 +185,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E161A7D1AC2C9A300B039F8 /* AdSupport.framework in Frameworks */,
+				5E04D40A1BFA075F00399EA4 /* CoreData.framework in Frameworks */,
+				5E04D40C1BFA076D00399EA4 /* SystemConfiguration.framework in Frameworks */,
+				5E04D40E1BFA088100399EA4 /* libz.tbd in Frameworks */,
+				5E04D4141BFA193700399EA4 /* libAdIdAccess.a in Frameworks */,
+				5E04D4101BFA089500399EA4 /* libsqlite3.tbd in Frameworks */,
 				5E9A6E341BCFC7380076C91A /* libPods.a in Frameworks */,
 				5E161A851AC2C9FC00B039F8 /* UIKit.framework in Frameworks */,
 				5E161A831AC2C9F600B039F8 /* Foundation.framework in Frameworks */,
 				5E161A811AC2C9EB00B039F8 /* CoreGraphics.framework in Frameworks */,
-				5E161A7D1AC2C9A300B039F8 /* AdSupport.framework in Frameworks */,
 				5E161A7C1AC2C99B00B039F8 /* Security.framework in Frameworks */,
 				5E161A7B1AC2C98300B039F8 /* ImageIO.framework in Frameworks */,
 				5E9A6E321BCFC0210076C91A /* AdstirAds.framework in Frameworks */,
@@ -281,6 +300,11 @@
 		70FA9D20B8584551BECCAF8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E04D4131BFA193700399EA4 /* libAdIdAccess.a */,
+				5E04D40F1BFA089500399EA4 /* libsqlite3.tbd */,
+				5E04D40D1BFA088100399EA4 /* libz.tbd */,
+				5E04D40B1BFA076D00399EA4 /* SystemConfiguration.framework */,
+				5E04D4091BFA075F00399EA4 /* CoreData.framework */,
 				5E2CEE241BE7066100A0CD04 /* AdstirInterstitial.h */,
 				5E2CEE251BE7069D00A0CD04 /* libAdstirAds-LegacyInterstitial.a */,
 				5E9A6E331BCFC7380076C91A /* libPods.a */,
@@ -319,6 +343,7 @@
 		AAC02B15193DEEFE003997F3 /* RSSReader */ = {
 			isa = PBXGroup;
 			children = (
+				5E444F5E1BFE01B400A0259E /* GoogleService-Info.plist */,
 				5EFE7D461B970ACA006D43E3 /* Utility */,
 				5EFE7D451B970AA4006D43E3 /* ViewController */,
 				5ECD67801AB751C3009F5CCF /* swiftyJSON */,
@@ -333,6 +358,7 @@
 				AAC02B35193DF2B8003997F3 /* RSSReader-Bridging-Header.h */,
 				5E161A711AC2B73700B039F8 /* OriginalTabBarController.swift */,
 				5E5D9D931BCFD40B0028ED75 /* Launch Screen.storyboard */,
+				5E04D4111BFA0A1200399EA4 /* TrackingManager.swift */,
 			);
 			path = RSSReader;
 			sourceTree = "<group>";
@@ -486,6 +512,7 @@
 				5E2CEE321BE740DF00A0CD04 /* blackboard14 (1).png in Resources */,
 				5ED4C0E71AB2CA0900D2BF8A /* NewsTableViewCell.xib in Resources */,
 				5E15FDD91AB1983E005BD1B4 /* movie43.png in Resources */,
+				5E444F5F1BFE01B400A0259E /* GoogleService-Info.plist in Resources */,
 				5ECD67751AB6BF5E009F5CCF /* ticket3.png in Resources */,
 				5EFEE2D71BD292FB00A18582 /* 100px-Ruby_logo.svg.png in Resources */,
 				5EF014001BDF7A13002DB31B /* logo95.png in Resources */,
@@ -576,6 +603,7 @@
 				5EC0D4681BA82B59004221F8 /* CellPreference.swift in Sources */,
 				5ECD677E1AB6C9D8009F5CCF /* TicketTableViewCell.swift in Sources */,
 				5EC073771B9EADAB006D425D /* RadioViewController.swift in Sources */,
+				5E04D4121BFA0A1200399EA4 /* TrackingManager.swift in Sources */,
 				5E2CEE281BE72B2100A0CD04 /* BoardViewController.swift in Sources */,
 				5E2CEE301BE73D5A00A0CD04 /* UIColorExtention.swift in Sources */,
 				5ECBC6A51AB08BB100F75649 /* YoutubeViewController.swift in Sources */,
@@ -716,6 +744,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/build/Release-iphoneos",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RSSReader/GoogleAnalytics",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Curation;
@@ -747,6 +776,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/build/Release-iphoneos",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RSSReader/GoogleAnalytics",
 				);
 				PRODUCT_NAME = Curation;
 				PROVISIONING_PROFILE = "";
