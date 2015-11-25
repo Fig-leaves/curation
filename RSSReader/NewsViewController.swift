@@ -29,7 +29,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        TrackingManager.sendScreenTracking("ニュース")
+        TrackingManager.sendScreenTracking("NEWS")
         
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id

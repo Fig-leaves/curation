@@ -30,8 +30,8 @@ class RadioViewController: UIViewController , UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "さまぁ〜ず"
-        TrackingManager.sendScreenTracking("ニュース")
+        self.title = "LIVE"
+        TrackingManager.sendScreenTracking("LIVE")
 
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id

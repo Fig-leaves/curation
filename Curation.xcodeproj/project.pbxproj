@@ -36,6 +36,9 @@
 		5E2CEE321BE740DF00A0CD04 /* blackboard14 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 5E2CEE311BE740DF00A0CD04 /* blackboard14 (1).png */; };
 		5E2CEE341BE749F800A0CD04 /* blackboard14 (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 5E2CEE331BE749F800A0CD04 /* blackboard14 (2).png */; };
 		5E444F5F1BFE01B400A0259E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E444F5E1BFE01B400A0259E /* GoogleService-Info.plist */; };
+		5E444F611C0535A500A0259E /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E444F601C0535A500A0259E /* TwitterViewController.swift */; };
+		5E444F641C0535DA00A0259E /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E444F621C0535DA00A0259E /* TweetTableViewCell.swift */; };
+		5E444F651C0535DA00A0259E /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E444F631C0535DA00A0259E /* TweetTableViewCell.xib */; };
 		5E56E6F61AB7C22F00FA6753 /* more23.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E56E6F51AB7C22F00FA6753 /* more23.png */; };
 		5E56E6F81AB7C26F00FA6753 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E56E6F71AB7C26F00FA6753 /* OtherViewController.swift */; };
 		5E56E6FB1AB859E800FA6753 /* OtherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E56E6F91AB859E800FA6753 /* OtherTableViewCell.swift */; };
@@ -126,6 +129,9 @@
 		5E2CEE311BE740DF00A0CD04 /* blackboard14 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackboard14 (1).png"; sourceTree = "<group>"; };
 		5E2CEE331BE749F800A0CD04 /* blackboard14 (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackboard14 (2).png"; sourceTree = "<group>"; };
 		5E444F5E1BFE01B400A0259E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5E444F601C0535A500A0259E /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
+		5E444F621C0535DA00A0259E /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
+		5E444F631C0535DA00A0259E /* TweetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
 		5E56E6F51AB7C22F00FA6753 /* more23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more23.png; sourceTree = "<group>"; };
 		5E56E6F71AB7C26F00FA6753 /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		5E56E6F91AB859E800FA6753 /* OtherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherTableViewCell.swift; sourceTree = "<group>"; };
@@ -264,6 +270,8 @@
 				5E56E6FE1AB98FB400FA6753 /* BlogTableViewCell.xib */,
 				5EA67BF01ACC1BAB0021A1E8 /* EmptyTableViewCell.swift */,
 				5EA67BF11ACC1BAB0021A1E8 /* EmptyTableViewCell.xib */,
+				5E444F621C0535DA00A0259E /* TweetTableViewCell.swift */,
+				5E444F631C0535DA00A0259E /* TweetTableViewCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -281,6 +289,7 @@
 				5EC073741B9E9E87006D425D /* ChannelViewController.swift */,
 				5EC0D4651BA8253F004221F8 /* MultiViewController.swift */,
 				5E2CEE271BE72B2100A0CD04 /* BoardViewController.swift */,
+				5E444F601C0535A500A0259E /* TwitterViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -410,6 +419,7 @@
 				AAC02B11193DEEFE003997F3 /* Resources */,
 				5D1F79F4E393422A8E38BE19 /* Copy Pods Resources */,
 				930E94CC8157EA793CEA0B0E /* Embed Pods Frameworks */,
+				5E444F661C05383600A0259E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -452,6 +462,11 @@
 					AAC02B12193DEEFE003997F3 = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = 67N46B5ZSN;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					AAC02B24193DEEFE003997F3 = {
 						CreatedOnToolsVersion = 6.0;
@@ -499,6 +514,7 @@
 				5E56E7041ABA8CD700FA6753 /* film51.png in Resources */,
 				AAC02B3A193DF344003997F3 /* Podfile in Resources */,
 				5E2CEE341BE749F800A0CD04 /* blackboard14 (2).png in Resources */,
+				5E444F651C0535DA00A0259E /* TweetTableViewCell.xib in Resources */,
 				5ED4C0EB1AB2CC4E00D2BF8A /* YoutubeTableViewCell.xib in Resources */,
 				5E56E7021AB9922100FA6753 /* No_Image_Available.png in Resources */,
 				5E56E7001AB98FB400FA6753 /* BlogTableViewCell.xib in Resources */,
@@ -562,6 +578,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5E444F661C05383600A0259E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
 		930E94CC8157EA793CEA0B0E /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -586,12 +615,14 @@
 			files = (
 				5E56E6FB1AB859E800FA6753 /* OtherTableViewCell.swift in Sources */,
 				5EF013FE1BDF7922002DB31B /* WebViewController.swift in Sources */,
+				5E444F641C0535DA00A0259E /* TweetTableViewCell.swift in Sources */,
 				5E56E6FF1AB98FB400FA6753 /* BlogTableViewCell.swift in Sources */,
 				5ECD677B1AB6C9B6009F5CCF /* TicketViewController.swift in Sources */,
 				5E56E6F81AB7C26F00FA6753 /* OtherViewController.swift in Sources */,
 				5EC0D46A1BA8311C004221F8 /* Request.swift in Sources */,
 				5ED4C0E61AB2CA0900D2BF8A /* NewsTableViewCell.swift in Sources */,
 				5E9F62671AE542D400C72ED4 /* Constants.swift in Sources */,
+				5E444F611C0535A500A0259E /* TwitterViewController.swift in Sources */,
 				5EA67BF21ACC1BAB0021A1E8 /* EmptyTableViewCell.swift in Sources */,
 				5E161A721AC2B73700B039F8 /* OriginalTabBarController.swift in Sources */,
 				5EC0D4661BA8253F004221F8 /* MultiViewController.swift in Sources */,

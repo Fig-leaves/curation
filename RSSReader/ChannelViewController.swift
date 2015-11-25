@@ -31,8 +31,8 @@ class ChannelViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "ムシチャンネル"
-        TrackingManager.sendScreenTracking("ムシチャンネル")
+        self.title = "VEVO"
+        TrackingManager.sendScreenTracking("VEVO")
 
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id

@@ -13,7 +13,7 @@ class WebViewController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "ミムッター"
+        self.title = "BOARD"
 
         let url: NSURL = NSURL(string: Constants.web_view.url)!
         let request: NSURLRequest = NSURLRequest(URL: url)

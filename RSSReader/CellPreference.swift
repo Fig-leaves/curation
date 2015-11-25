@@ -84,4 +84,17 @@ class CellPreference {
         return cell
     }
     
+    class func setValueToTweetCell(cell: TweetTableViewCell, item:NSDictionary) -> TweetTableViewCell {
+        cell.nameLabel.text = item["name"] as! String
+        cell.contentLabel.text = item["text"] as! String
+        cell.screenNameLabel.text = item["whenAt"] as! String
+        let imgURL: NSURL? = NSURL(string: item["profile_image_url"] as! String)
+        cell.profile_image.setImageWithURL(imgURL)
+        
+        return cell
+    }
+    
+    
+    
+    
 }

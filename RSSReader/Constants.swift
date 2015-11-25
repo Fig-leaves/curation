@@ -15,7 +15,7 @@ struct Constants {
         static let NEWS_SITE3 = ""
     }
     struct web_view {
-        static let url = "https://twitter.com/hentaimimura"
+        static let url = "http://6240.teacup.com/avicii10/bbs"
     }
     
     struct ad {
@@ -46,9 +46,9 @@ struct Constants {
     
     struct youtube {
         static let API_KEY = "AIzaSyCcfEgQ_6qLIV5STXnZnLo040NzEmZuVZ4"
-        static let WORD = "ムシキング　動画"
-        static let RADIO = "さまーず"
-        static let CHANNEL = "UCoObuRNP0OjE5ILcOAhXZIg"
+        static let WORD = "Avicii REMIX"
+        static let RADIO = "Avicii LIVE"
+        static let CHANNEL = "UC1SqP7_RfOC9Jf9L_GRHANg"
     }
     
     
