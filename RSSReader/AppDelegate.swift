@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Fabric
+import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -39,6 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             storyboard =  UIStoryboard(name: "iphone6plus",bundle:nil)
         }
         
+        Fabric.with([Twitter.self])
         var viewController:UIViewController
 
         viewController = storyboard.instantiateViewControllerWithIdentifier("Main")
