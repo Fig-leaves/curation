@@ -39,6 +39,7 @@
 		5E444F611C0535A500A0259E /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E444F601C0535A500A0259E /* TwitterViewController.swift */; };
 		5E444F641C0535DA00A0259E /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E444F621C0535DA00A0259E /* TweetTableViewCell.swift */; };
 		5E444F651C0535DA00A0259E /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E444F631C0535DA00A0259E /* TweetTableViewCell.xib */; };
+		5E444F681C05396800A0259E /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E444F671C05396800A0259E /* Twitter.framework */; };
 		5E56E6F61AB7C22F00FA6753 /* more23.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E56E6F51AB7C22F00FA6753 /* more23.png */; };
 		5E56E6F81AB7C26F00FA6753 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E56E6F71AB7C26F00FA6753 /* OtherViewController.swift */; };
 		5E56E6FB1AB859E800FA6753 /* OtherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E56E6F91AB859E800FA6753 /* OtherTableViewCell.swift */; };
@@ -132,6 +133,7 @@
 		5E444F601C0535A500A0259E /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		5E444F621C0535DA00A0259E /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		5E444F631C0535DA00A0259E /* TweetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
+		5E444F671C05396800A0259E /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		5E56E6F51AB7C22F00FA6753 /* more23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more23.png; sourceTree = "<group>"; };
 		5E56E6F71AB7C26F00FA6753 /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		5E56E6F91AB859E800FA6753 /* OtherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherTableViewCell.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E444F681C05396800A0259E /* Twitter.framework in Frameworks */,
 				5E161A7D1AC2C9A300B039F8 /* AdSupport.framework in Frameworks */,
 				5E04D40A1BFA075F00399EA4 /* CoreData.framework in Frameworks */,
 				5E04D40C1BFA076D00399EA4 /* SystemConfiguration.framework in Frameworks */,
@@ -309,6 +312,7 @@
 		70FA9D20B8584551BECCAF8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E444F671C05396800A0259E /* Twitter.framework */,
 				5E04D4131BFA193700399EA4 /* libAdIdAccess.a */,
 				5E04D40F1BFA089500399EA4 /* libsqlite3.tbd */,
 				5E04D40D1BFA088100399EA4 /* libz.tbd */,
@@ -419,7 +423,7 @@
 				AAC02B11193DEEFE003997F3 /* Resources */,
 				5D1F79F4E393422A8E38BE19 /* Copy Pods Resources */,
 				930E94CC8157EA793CEA0B0E /* Embed Pods Frameworks */,
-				5E444F661C05383600A0259E /* ShellScript */,
+				5E444F661C05383600A0259E /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -578,18 +582,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5E444F661C05383600A0259E /* ShellScript */ = {
+		5E444F661C05383600A0259E /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "";
+			shellPath = "./Fabric.framework/run 6617192855bd3fdf7840d82ff4949fb75d914233 3ba5701baa0031b2b190f15f82658e4c8264b5ee164af24695b3bd63fe2c5e3f";
+			shellScript = "./Fabric.framework/run 6617192855bd3fdf7840d82ff4949fb75d914233 3ba5701baa0031b2b190f15f82658e4c8264b5ee164af24695b3bd63fe2c5e3f";
 		};
 		930E94CC8157EA793CEA0B0E /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
