@@ -40,11 +40,11 @@ class BoardViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.inter!.load()
         
         // NavigationControllerのタイトルバー(NavigationBar)の色の変更
-        self.navigationController?.navigationBar.barTintColor = UIColor(netHex: 0x397234)
+        self.navigationController?.navigationBar.barTintColor = UIColor(netHex: 0x000000)
         // NavigationConrtollerの文字カラーの変更
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         // NavigationControllerのNavigationItemの色
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
 
         self.title = "掲示板"
         

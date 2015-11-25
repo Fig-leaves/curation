@@ -66,7 +66,7 @@
         <scene sceneID="4pm-OG-Qey">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1CV-ir-oM9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="REMIX" image="film51.png" id="zAD-iD-3iO"/>
+                    <tabBarItem key="tabBarItem" title="REMIX" image="instrument27.png" id="zAD-iD-3iO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pe7-nd-UBk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -174,7 +174,7 @@
         <scene sceneID="Qez-ik-rPm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hRs-6y-9XU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="LIVE" image="blackboard14 (1).png" id="reD-Pk-d2F"/>
+                    <tabBarItem key="tabBarItem" title="LIVE" image="disc6.png" id="reD-Pk-d2F"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hzM-gG-FgH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -203,7 +203,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="eEF-a8-j7t">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eEF-a8-j7t" id="EeV-Ch-qn2">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -283,7 +283,7 @@
         <scene sceneID="a0C-Q0-VIn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ovg-vh-dPw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="VEVO" image="stag.png" id="yyG-ka-enD"/>
+                    <tabBarItem key="tabBarItem" title="VEVO" image="quaver11.png" id="yyG-ka-enD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="be6-3E-jBi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -346,9 +346,10 @@
     </scenes>
     <resources>
         <image name="blackboard14 (1).png" width="24" height="24"/>
-        <image name="film51.png" width="24" height="24"/>
+        <image name="disc6.png" width="32" height="32"/>
+        <image name="instrument27.png" width="24" height="24"/>
         <image name="newspaper11 (2).png" width="24" height="24"/>
-        <image name="stag.png" width="24" height="24"/>
+        <image name="quaver11.png" width="32" height="32"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

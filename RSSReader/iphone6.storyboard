@@ -18,7 +18,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="aao-1f-EHi" kind="relationship" relationship="viewControllers" id="PNP-B5-jZK"/>
-                        <segue destination="SeK-7S-YrG" kind="relationship" relationship="viewControllers" id="vV9-Wc-wml"/>
+                        <segue destination="EJt-iv-VKj" kind="relationship" relationship="viewControllers" id="ELW-JN-qec"/>
                         <segue destination="GP5-yS-yzr" kind="relationship" relationship="viewControllers" id="Gwc-C0-8El"/>
                         <segue destination="TLd-rI-Clq" kind="relationship" relationship="viewControllers" id="4wZ-Gk-ZZm"/>
                         <segue destination="mfh-xp-6fX" kind="relationship" relationship="viewControllers" id="5cu-SV-2tp"/>
@@ -37,7 +37,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7ZR-tS-ayT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eHt-au-3GF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="FS1-0m-5Pl">
@@ -83,12 +83,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qeX-2G-nQ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="291.5" y="1339.5"/>
+            <point key="canvasLocation" x="285.5" y="1245.5"/>
         </scene>
         <!--youtube-->
         <scene sceneID="UO4-19-OOv">
             <objects>
-                <viewController title="youtube" id="KXx-UM-W8j" customClass="NewsViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="youtube" id="KXx-UM-W8j" customClass="TwitterViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w0b-w7-8gh"/>
                         <viewControllerLayoutGuide type="bottom" id="HR5-Gj-fPO"/>
@@ -116,18 +116,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="CLz-EA-1md"/>
                     <connections>
-                        <outlet property="table" destination="Uff-2V-aUx" id="ybK-eX-qcE"/>
+                        <outlet property="tableView" destination="Uff-2V-aUx" id="BQr-wT-c7f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uKi-l6-5Eo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="773.5" y="664.5"/>
         </scene>
-        <!--ニュース-->
+        <!--NEWS-->
         <scene sceneID="soa-mI-GQW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aao-1f-EHi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ニュース" image="newspaper11 (2).png" id="Ow8-DG-0Gp"/>
+                    <tabBarItem key="tabBarItem" title="NEWS" image="newspaper11 (2).png" id="Ow8-DG-0Gp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SeP-DI-HC2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -180,11 +180,11 @@
             </objects>
             <point key="canvasLocation" x="773.5" y="2074.5"/>
         </scene>
-        <!--プレイ動画-->
+        <!--REMIX-->
         <scene sceneID="VZT-hL-kak">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TLd-rI-Clq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="プレイ動画" image="film51.png" id="3O5-e4-SDZ"/>
+                    <tabBarItem key="tabBarItem" title="REMIX" image="instrument27.png" id="3O5-e4-SDZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="s58-ej-WiE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -237,11 +237,11 @@
             </objects>
             <point key="canvasLocation" x="913.5" y="-21.5"/>
         </scene>
-        <!--ムシチャンネル-->
+        <!--VEVO-->
         <scene sceneID="iOx-My-rHc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mfh-xp-6fX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ムシチャンネル" image="stag.png" id="32y-uU-oQe"/>
+                    <tabBarItem key="tabBarItem" title="VEVO" image="quaver11.png" id="32y-uU-oQe"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ups-rw-lhp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="o6z-5O-pKs">
@@ -257,10 +257,10 @@
             </objects>
             <point key="canvasLocation" x="292" y="-21"/>
         </scene>
-        <!--Board View Controller-->
+        <!--Radio View Controller-->
         <scene sceneID="Nc5-So-eyV">
             <objects>
-                <viewController id="epo-qX-pQv" customClass="BoardViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="epo-qX-pQv" customClass="RadioViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xXi-PX-Okp"/>
                         <viewControllerLayoutGuide type="bottom" id="cy3-kJ-FjT"/>
@@ -295,11 +295,11 @@
             </objects>
             <point key="canvasLocation" x="-250.5" y="2074.5"/>
         </scene>
-        <!--掲示板-->
+        <!--LIVE-->
         <scene sceneID="HuJ-Tl-UZO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GP5-yS-yzr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="掲示板" image="blackboard14.png" id="EUl-X0-Bj2"/>
+                    <tabBarItem key="tabBarItem" title="LIVE" image="disc6.png" id="EUl-X0-Bj2"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ahj-al-pMY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -323,7 +323,7 @@
                         <viewControllerLayoutGuide type="bottom" id="XMd-VI-D6N"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kbW-UA-XX3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Act-IF-9c7">
@@ -342,11 +342,11 @@
             </objects>
             <point key="canvasLocation" x="773.5" y="-707.5"/>
         </scene>
-        <!--ミムッター-->
+        <!--BOARD-->
         <scene sceneID="ILf-sI-Srl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EJt-iv-VKj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ミムッター" image="logo95.png" id="085-6O-wUE"/>
+                    <tabBarItem key="tabBarItem" title="BOARD" image="blackboard14 (1).png" id="085-6O-wUE"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="owH-1K-X13"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cy5-oF-buJ">
@@ -364,11 +364,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="blackboard14.png" width="24" height="24"/>
-        <image name="film51.png" width="24" height="24"/>
-        <image name="logo95.png" width="24" height="24"/>
+        <image name="blackboard14 (1).png" width="24" height="24"/>
+        <image name="disc6.png" width="32" height="32"/>
+        <image name="instrument27.png" width="24" height="24"/>
         <image name="newspaper11 (2).png" width="24" height="24"/>
+        <image name="quaver11.png" width="32" height="32"/>
         <image name="soccer72.png" width="24" height="24"/>
-        <image name="stag.png" width="24" height="24"/>
     </resources>
 </document>

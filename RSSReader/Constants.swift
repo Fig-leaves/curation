@@ -19,12 +19,12 @@ struct Constants {
     }
     
     struct ad {
-        static let id = "MEDIA-8f52fd45"
+        static let id = "MEDIA-87f0c785"
         static let spot:UInt = 1
     }
     struct inter_ad {
-        static let id = "MEDIA-cef73fb7"
-        static let spot:UInt = 1
+        static let id = "MEDIA-87f0c785"
+        static let spot:UInt = 2
         static let click_count = 7
     }
     

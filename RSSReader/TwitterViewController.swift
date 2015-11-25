@@ -27,7 +27,7 @@ class TwitterViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "96猫ツイート"
+        self.title = "Avicii"
         
         let nibName = UINib(nibName: "TweetTableViewCell", bundle:nil)
         tableView.registerNib(nibName, forCellReuseIdentifier: "Cell")
@@ -47,7 +47,7 @@ class TwitterViewController: UIViewController, UITableViewDataSource, UITableVie
         // 広告表示位置: タブバーの下でセンタリング、広告サイズ: 320,50 の場合
         let originY = self.view.frame.height
         let originX = (self.view.frame.size.width - kAdstirAdSize320x50.size.width) / 2
-        let adView = AdstirMraidView(adSize: kAdstirAdSize320x50, origin: CGPointMake(originX, originY - 100), media: Constants.ad.id, spot:Constants.ad.spot)
+        let adView = AdstirMraidView(adSize: kAdstirAdSize320x100, origin: CGPointMake(originX, originY - 100), media: Constants.ad.id, spot:Constants.ad.spot)
         
         // リフレッシュ秒数を設定します。
         adView.intervalTime = 5
@@ -60,7 +60,7 @@ class TwitterViewController: UIViewController, UITableViewDataSource, UITableVie
         
         
         items = NSMutableArray()
-        let params : Dictionary<String, String> = ["screen_name" : "@96__neko", "count" : "40"]
+        let params : Dictionary<String, String> = ["screen_name" : "@Avicii", "count" : "40"]
         Request.callAPI("/user_timeline.json", parameters: params, completion: {
             response, data, err in
             let json = JSON(data: data!)
@@ -137,7 +137,7 @@ class TwitterViewController: UIViewController, UITableViewDataSource, UITableVie
         let con = KINWebBrowserViewController()
         var URL: NSURL!
         
-        var tw_url = String(UTF8String: "https://twitter.com/96__neko/status/")! + (item["id_str"] as! String)
+        var tw_url = String(UTF8String: "https://twitter.com/Avicii/status/")! + (item["id_str"] as! String)
         URL = NSURL(string: tw_url)
         con.loadURL(URL)
         self.navigationController?.pushViewController(con, animated: true)

@@ -41,7 +41,7 @@ class RadioViewController: UIViewController , UITableViewDataSource, UITableView
         // 広告表示位置: タブバーの下でセンタリング、広告サイズ: 320,50 の場合
         let originY = self.view.frame.height
         let originX = (self.view.frame.size.width - kAdstirAdSize320x50.size.width) / 2
-        let adView = AdstirMraidView(adSize: kAdstirAdSize320x50, origin: CGPointMake(originX, originY - 100), media: Constants.ad.id, spot:Constants.ad.spot)
+        let adView = AdstirMraidView(adSize: kAdstirAdSize320x100, origin: CGPointMake(originX, originY - 100), media: Constants.ad.id, spot:Constants.ad.spot)
         
         // リフレッシュ秒数を設定します。
         adView.intervalTime = 5

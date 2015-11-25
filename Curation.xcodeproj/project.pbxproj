@@ -43,6 +43,13 @@
 		5E444F6C1C053A7B00A0259E /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E444F691C053A7B00A0259E /* TwitterCore.framework */; };
 		5E444F6D1C053A7B00A0259E /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E444F6A1C053A7B00A0259E /* TwitterKit.framework */; };
 		5E444F6E1C053A7B00A0259E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E444F6B1C053A7B00A0259E /* Fabric.framework */; };
+		5E444F721C053DF200A0259E /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E444F6F1C053DF200A0259E /* TwitterCore.framework */; };
+		5E444F731C053DF200A0259E /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E444F701C053DF200A0259E /* TwitterKit.framework */; };
+		5E444F741C053DF200A0259E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E444F711C053DF200A0259E /* Fabric.framework */; };
+		5E444F761C053E4400A0259E /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5E444F751C053E4400A0259E /* TwitterKitResources.bundle */; };
+		5E444F781C0541B300A0259E /* instrument27.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E444F771C0541B300A0259E /* instrument27.png */; };
+		5E444F7A1C05420C00A0259E /* quaver11.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E444F791C05420C00A0259E /* quaver11.png */; };
+		5E444F7C1C05433600A0259E /* disc6.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E444F7B1C05433600A0259E /* disc6.png */; };
 		5E56E6F61AB7C22F00FA6753 /* more23.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E56E6F51AB7C22F00FA6753 /* more23.png */; };
 		5E56E6F81AB7C26F00FA6753 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E56E6F71AB7C26F00FA6753 /* OtherViewController.swift */; };
 		5E56E6FB1AB859E800FA6753 /* OtherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E56E6F91AB859E800FA6753 /* OtherTableViewCell.swift */; };
@@ -140,6 +147,13 @@
 		5E444F691C053A7B00A0259E /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 		5E444F6A1C053A7B00A0259E /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		5E444F6B1C053A7B00A0259E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		5E444F6F1C053DF200A0259E /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		5E444F701C053DF200A0259E /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		5E444F711C053DF200A0259E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		5E444F751C053E4400A0259E /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		5E444F771C0541B300A0259E /* instrument27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instrument27.png; sourceTree = "<group>"; };
+		5E444F791C05420C00A0259E /* quaver11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quaver11.png; sourceTree = "<group>"; };
+		5E444F7B1C05433600A0259E /* disc6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disc6.png; sourceTree = "<group>"; };
 		5E56E6F51AB7C22F00FA6753 /* more23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more23.png; sourceTree = "<group>"; };
 		5E56E6F71AB7C26F00FA6753 /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		5E56E6F91AB859E800FA6753 /* OtherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherTableViewCell.swift; sourceTree = "<group>"; };
@@ -209,8 +223,11 @@
 				5E04D4101BFA089500399EA4 /* libsqlite3.tbd in Frameworks */,
 				5E9A6E341BCFC7380076C91A /* libPods.a in Frameworks */,
 				5E161A851AC2C9FC00B039F8 /* UIKit.framework in Frameworks */,
+				5E444F721C053DF200A0259E /* TwitterCore.framework in Frameworks */,
+				5E444F731C053DF200A0259E /* TwitterKit.framework in Frameworks */,
 				5E161A831AC2C9F600B039F8 /* Foundation.framework in Frameworks */,
 				5E161A811AC2C9EB00B039F8 /* CoreGraphics.framework in Frameworks */,
+				5E444F741C053DF200A0259E /* Fabric.framework in Frameworks */,
 				5E161A7C1AC2C99B00B039F8 /* Security.framework in Frameworks */,
 				5E161A7B1AC2C98300B039F8 /* ImageIO.framework in Frameworks */,
 				5E444F6D1C053A7B00A0259E /* TwitterKit.framework in Frameworks */,
@@ -233,6 +250,9 @@
 		5ECD67731AB6BF2E009F5CCF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				5E444F7B1C05433600A0259E /* disc6.png */,
+				5E444F791C05420C00A0259E /* quaver11.png */,
+				5E444F771C0541B300A0259E /* instrument27.png */,
 				5EF013FF1BDF7A13002DB31B /* logo95.png */,
 				5E56E70F1ABA965D00FA6753 /* ima2.png */,
 				5E56E70D1ABA961A00FA6753 /* ima.png */,
@@ -321,6 +341,9 @@
 		70FA9D20B8584551BECCAF8B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E444F6F1C053DF200A0259E /* TwitterCore.framework */,
+				5E444F701C053DF200A0259E /* TwitterKit.framework */,
+				5E444F711C053DF200A0259E /* Fabric.framework */,
 				5E444F691C053A7B00A0259E /* TwitterCore.framework */,
 				5E444F6A1C053A7B00A0259E /* TwitterKit.framework */,
 				5E444F6B1C053A7B00A0259E /* Fabric.framework */,
@@ -347,6 +370,7 @@
 		AAC02B0A193DEEFE003997F3 = {
 			isa = PBXGroup;
 			children = (
+				5E444F751C053E4400A0259E /* TwitterKitResources.bundle */,
 				AAC02B39193DF344003997F3 /* Podfile */,
 				AAC02B15193DEEFE003997F3 /* RSSReader */,
 				AAC02B28193DEEFE003997F3 /* RSSReaderTests */,
@@ -520,6 +544,7 @@
 				5E56E6F61AB7C22F00FA6753 /* more23.png in Resources */,
 				5E5D9D941BCFD40B0028ED75 /* Launch Screen.storyboard in Resources */,
 				5EC073791B9EB269006D425D /* technology34 (1).png in Resources */,
+				5E444F781C0541B300A0259E /* instrument27.png in Resources */,
 				5ECD677F1AB6C9D8009F5CCF /* TicketTableViewCell.xib in Resources */,
 				5E2CEE2C1BE7373F00A0CD04 /* soccer72.png in Resources */,
 				5EC0737B1B9EB288006D425D /* technology34.png in Resources */,
@@ -541,7 +566,9 @@
 				5E56E6FC1AB859E800FA6753 /* OtherTableViewCell.xib in Resources */,
 				5E2CEE231BE700A000A0CD04 /* iphone6plus.storyboard in Resources */,
 				5E2CEE211BE6F99600A0CD04 /* iphone6.storyboard in Resources */,
+				5E444F7C1C05433600A0259E /* disc6.png in Resources */,
 				5E2CEE321BE740DF00A0CD04 /* blackboard14 (1).png in Resources */,
+				5E444F761C053E4400A0259E /* TwitterKitResources.bundle in Resources */,
 				5ED4C0E71AB2CA0900D2BF8A /* NewsTableViewCell.xib in Resources */,
 				5E15FDD91AB1983E005BD1B4 /* movie43.png in Resources */,
 				5E444F5F1BFE01B400A0259E /* GoogleService-Info.plist in Resources */,
@@ -549,6 +576,7 @@
 				5EFEE2D71BD292FB00A18582 /* 100px-Ruby_logo.svg.png in Resources */,
 				5EF014001BDF7A13002DB31B /* logo95.png in Resources */,
 				5EC0737D1B9EB2B8006D425D /* television12.png in Resources */,
+				5E444F7A1C05420C00A0259E /* quaver11.png in Resources */,
 				AAC02B1E193DEEFE003997F3 /* Main.storyboard in Resources */,
 				AAC02B20193DEEFE003997F3 /* Images.xcassets in Resources */,
 			);
@@ -795,6 +823,7 @@
 					"$(PROJECT_DIR)/RSSReader/GoogleAnalytics",
 				);
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.avicii.Curation;
 				PRODUCT_NAME = Curation;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RSSReader/RSSReader-Bridging-Header.h";
@@ -826,6 +855,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/RSSReader/GoogleAnalytics",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.avicii.Curation;
 				PRODUCT_NAME = Curation;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RSSReader/RSSReader-Bridging-Header.h";

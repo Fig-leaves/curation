@@ -14,6 +14,14 @@ class WebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "BOARD"
+        
+        // NavigationControllerのタイトルバー(NavigationBar)の色の変更
+        self.navigationController?.navigationBar.barTintColor = UIColor(netHex: 0x000000)
+        // NavigationConrtollerの文字カラーの変更
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        // NavigationControllerのNavigationItemの色
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+
 
         let url: NSURL = NSURL(string: Constants.web_view.url)!
         let request: NSURLRequest = NSURLRequest(URL: url)
