@@ -51,9 +51,13 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
         // デリゲートを設定します。
         adView.delegate = self
         
-        // 広告ビューを親ビューに追加します。
-        self.view.addSubview(adView)
-        self.adView = adView
+        if(Constants.ad.ENABLE_VIEW) {
+            // 広告ビューを親ビューに追加します。
+            self.view.addSubview(adView)
+            self.adView = adView
+        }
+        
+
         
 
         self.nextPageToken = "nil"

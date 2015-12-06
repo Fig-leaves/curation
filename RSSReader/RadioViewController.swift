@@ -48,9 +48,12 @@ class RadioViewController: UIViewController , UITableViewDataSource, UITableView
         // デリゲートを設定します。
         adView.delegate = self
         
-        // 広告ビューを親ビューに追加します。
-        self.view.addSubview(adView)
-        self.adView = adView
+        
+        if(Constants.ad.ENABLE_VIEW) {
+            // 広告ビューを親ビューに追加します。
+            self.view.addSubview(adView)
+            self.adView = adView
+        }
 
 
         // NavigationControllerのタイトルバー(NavigationBar)の色の変更
@@ -70,20 +73,7 @@ class RadioViewController: UIViewController , UITableViewDataSource, UITableView
         self.refresh.addTarget(self, action: "viewWillAppear:", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(refresh)
         
-        // NADViewクラスを生成
-//        nadView = NADView(frame: CGRect(x: Constants.frame.X,
-//            y: Constants.frame.Y,
-//            width: Constants.frame.WIDTH,
-//            height: Constants.frame.HEIGHT))
-//        // 広告枠のapikey/spotidを設定(必須)
-//        nadView.setNendID(Constants.nend_id.API_ID, spotID: Constants.nend_id.SPOT_ID)
-//        // nendSDKログ出力の設定(任意)
-//        nadView.isOutputLog = true
-//        // delegateを受けるオブジェクトを指定(必須)
-//        nadView.delegate = self
-        // 読み込み開始(必須)
-//        nadView.load()
-//        self.view.addSubview(nadView)
+
     }
     
     override func didReceiveMemoryWarning() {

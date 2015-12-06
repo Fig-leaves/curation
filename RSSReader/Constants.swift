@@ -15,12 +15,14 @@ struct Constants {
         static let NEWS_SITE3 = ""
     }
     struct web_view {
-        static let url = "http://6240.teacup.com/avicii10/bbs"
+        static let url = "http://jbbs.shitaraba.net/music/28930/"
     }
     
     struct ad {
         static let id = "MEDIA-87f0c785"
         static let spot:UInt = 1
+        static let ENABLE_VIEW = false
+
     }
     struct inter_ad {
         static let id = "MEDIA-87f0c785"
@@ -29,7 +31,7 @@ struct Constants {
     }
     
     struct analytics {
-        static let TRACK_ID = "UA-70168853-1"
+        static let TRACK_ID = "UA-70168853-3"
     }
     
     struct blog {
