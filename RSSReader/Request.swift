@@ -62,7 +62,7 @@ class Request {
         })
     }
     
-    class func fetchFromNews(url: String, items:NSMutableArray) -> NSMutableArray {
+    class func fetchFromEvent(url: String, items:NSMutableArray) -> NSMutableArray {
         var urlString:String
         urlString = url as String
         let url:NSURL! = NSURL(string:urlString)
@@ -81,6 +81,68 @@ class Request {
         }
         
         
+        
+        var news_name = dic.objectForKey("name") as! NSString
+        let result: NSDictionary = dic.objectForKey("results") as! NSDictionary
+        let itemsArray: NSArray = result.objectForKey("collection1") as! NSArray
+        var content: Dictionary<String, AnyObject> = ["" : ""]
+        
+        itemsArray.enumerateObjectsUsingBlock({ object, index, stop in
+            
+            if let news = object.objectForKey("event") as? NSDictionary {
+                content[Constants.article_data.TITLE] = news.objectForKey(Constants.article_data.TEXT) as! NSString
+                content[Constants.article_data.LINK] = news.objectForKey(Constants.article_data.HREF) as! NSString
+            } else {
+                content[Constants.article_data.TITLE] = object.objectForKey("event") as! NSString
+            }
+            
+            if let news = object.objectForKey("news_name") as? NSDictionary {
+                news_name = news.objectForKey(Constants.article_data.TEXT) as! NSString
+            }
+            if(object.objectForKey("source") is NSDictionary) {
+                var source = object.objectForKey("source") as! NSDictionary
+                content[Constants.article_data.AUTHOR] = source.objectForKey(Constants.article_data.TEXT) as! NSString
+            } else {
+                content[Constants.article_data.AUTHOR] = news_name
+            }
+            
+            var day:NSString!
+            if(object.objectForKey(Constants.news_json_key.pubDate) is NSDictionary) {
+                var date = object.objectForKey(Constants.news_json_key.pubDate) as! NSDictionary
+                day = date.objectForKey(Constants.article_data.TEXT) as! NSString
+            } else {
+                day = object.objectForKey(Constants.news_json_key.pubDate) as! NSString;
+            }
+            
+            Snippet.convertDate(day, news_name: news_name)  {
+                (result, dateFormat,error) in
+                if(error == nil) {
+                    content[Constants.article_data.CREATED_AT] = result.timeIntervalSinceNow
+                    content[Constants.news_json_key.pubDate] = dateFormat
+                    items.addObject(content)
+                }
+            }
+        })
+        return items
+    }
+    
+    class func fetchFromNews(url: String, items:NSMutableArray, isNormalize: Bool) -> NSMutableArray {
+        var urlString:String
+        urlString = url as String
+        let url:NSURL! = NSURL(string:urlString)
+        let urlRequest:NSURLRequest = NSURLRequest(URL:url)
+        
+        var data:NSData
+        var dic: NSDictionary = NSDictionary()
+        
+        do {
+            data = try NSURLConnection.sendSynchronousRequest(urlRequest, returningResponse: nil)
+            dic = try NSJSONSerialization.JSONObjectWithData(
+                data,
+                options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
+        } catch {
+            print("ERROR")
+        }
         
         var news_name = dic.objectForKey("name") as! NSString
         let result: NSDictionary = dic.objectForKey("results") as! NSDictionary
@@ -114,17 +176,71 @@ class Request {
             } else {
                 day = object.objectForKey(Constants.news_json_key.pubDate) as! NSString;
             }
+            print(day)
             
-            Snippet.convertDate(day, news_name: news_name)  {
-                (result, dateFormat,error) in
-                if(error == nil) {
-                    content[Constants.article_data.CREATED_AT] = result.timeIntervalSinceNow
-                    content[Constants.news_json_key.pubDate] = dateFormat
+            if(isNormalize) {
+                Snippet.convertDate(day, news_name: news_name)  {
+                    (result, dateFormat,error) in
+                    if(error == nil) {
+                        content[Constants.article_data.CREATED_AT] = result.timeIntervalSinceNow
+                        content[Constants.news_json_key.pubDate] = dateFormat
+                    } else {
+                        content[Constants.news_json_key.pubDate] = day
+                    }
+                    print(content)
                     items.addObject(content)
                 }
+            } else {
+                content[Constants.news_json_key.pubDate] = day
+                items.addObject(content)
             }
+
+
         })
         return items
+    }
+    
+    class func fetchFromCardList(url: String, items:NSMutableArray) -> NSMutableArray {
+        var urlString:String
+        urlString = url as String
+        let url:NSURL! = NSURL(string:urlString)
+        let urlRequest:NSURLRequest = NSURLRequest(URL:url)
+        
+        var data:NSData
+        var dic: NSDictionary = NSDictionary()
+        
+        do {
+            data = try NSURLConnection.sendSynchronousRequest(urlRequest, returningResponse: nil)
+            dic = try NSJSONSerialization.JSONObjectWithData(
+                data,
+                options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
+        } catch {
+            print("ERROR")
+        }
+        
+        let result: NSDictionary = dic.objectForKey("results") as! NSDictionary
+        let itemsArray: NSArray = result.objectForKey("collection1") as! NSArray
+        var content: Dictionary<String, AnyObject> = ["" : ""]
+        
+        itemsArray.enumerateObjectsUsingBlock({ object, index, stop in
+            
+            if let news = object.objectForKey("title") as? NSDictionary {
+                content[Constants.board.TITLE] = news.objectForKey(Constants.article_data.TEXT) as! NSString
+            } else {
+                content[Constants.board.TITLE] = object.objectForKey("title") as! NSString
+            }
+            
+            if(object.objectForKey("link") is NSDictionary) {
+                var date = object.objectForKey("link") as! NSDictionary
+                content[Constants.board.LINK] = "http://www.db.yugioh-card.com/yugiohdb/" + (date.objectForKey("value") as! String)
+            } else {
+                content[Constants.board.LINK] = "http://www.db.yugioh-card.com/yugiohdb/" + (object.objectForKey("value") as! String)
+            }
+            print(content)
+            items.addObject(content)
+        })
+        return items
+
     }
     
     class func fetchFromBoard(url: String, items:NSMutableArray) -> NSMutableArray {

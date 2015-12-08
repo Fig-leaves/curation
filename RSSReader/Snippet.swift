@@ -198,6 +198,7 @@ class Snippet {
         return date
     }
     
+
     class func convertDateformatToWhenAt(time: NSDate) -> String {
         let now:NSDate? = NSDate()
         

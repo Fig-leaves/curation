@@ -13,7 +13,7 @@ class WebViewController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "BOARD"
+        self.title = "カードリスト"
         
         // NavigationControllerのタイトルバー(NavigationBar)の色の変更
         self.navigationController?.navigationBar.barTintColor = UIColor(netHex: 0x000000)

@@ -47,9 +47,14 @@ class CellPreference {
         
         return cell
     }
+    
+    class func setValueToBoardtype2ViewCell(cell: BoardTableViewCell, item: NSDictionary) -> BoardTableViewCell {
+        cell.titleLabel.text = item[Constants.board.TITLE] as! NSString as String
+        
+        return cell
+    }
 
-    
-    
+
     
     class func setValueToBlogViewCell(cell: BlogTableViewCell, item: NSDictionary) -> BlogTableViewCell {
        let image :UIImage = UIImage(named: "ima2.png")!

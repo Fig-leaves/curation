@@ -63,6 +63,16 @@
 		5E56E70E1ABA961A00FA6753 /* ima.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E56E70D1ABA961A00FA6753 /* ima.png */; };
 		5E56E7101ABA965D00FA6753 /* ima2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E56E70F1ABA965D00FA6753 /* ima2.png */; };
 		5E5D9D941BCFD40B0028ED75 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5D9D931BCFD40B0028ED75 /* Launch Screen.storyboard */; };
+		5E8CA85B1C15627200A908D6 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8CA8591C15627200A908D6 /* EventTableViewCell.swift */; };
+		5E8CA85C1C15627200A908D6 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E8CA85A1C15627200A908D6 /* EventTableViewCell.xib */; };
+		5E8CA85E1C15666500A908D6 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8CA85D1C15666500A908D6 /* EventViewController.swift */; };
+		5E8CA8631C15845F00A908D6 /* BoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8CA8611C15845F00A908D6 /* BoardTableViewCell.swift */; };
+		5E8CA8641C15845F00A908D6 /* BoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E8CA8621C15845F00A908D6 /* BoardTableViewCell.xib */; };
+		5E8CA8661C15877A00A908D6 /* Boardtype2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8CA8651C15877A00A908D6 /* Boardtype2ViewController.swift */; };
+		5E8CA8681C158F1E00A908D6 /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8CA8671C158F1E00A908D6 /* CardListViewController.swift */; };
+		5E8CA86A1C159F7900A908D6 /* cross6.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E8CA8691C159F7800A908D6 /* cross6.png */; };
+		5E8CA86C1C159FA500A908D6 /* purchase1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E8CA86B1C159FA500A908D6 /* purchase1.png */; };
+		5E8CA86E1C159FDB00A908D6 /* square234.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E8CA86D1C159FDB00A908D6 /* square234.png */; };
 		5E9A6E321BCFC0210076C91A /* AdstirAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9A6E311BCFC0210076C91A /* AdstirAds.framework */; };
 		5E9A6E341BCFC7380076C91A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9A6E331BCFC7380076C91A /* libPods.a */; };
 		5E9F62671AE542D400C72ED4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9F62661AE542D400C72ED4 /* Constants.swift */; };
@@ -167,6 +177,16 @@
 		5E56E70D1ABA961A00FA6753 /* ima.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ima.png; sourceTree = "<group>"; };
 		5E56E70F1ABA965D00FA6753 /* ima2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ima2.png; sourceTree = "<group>"; };
 		5E5D9D931BCFD40B0028ED75 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		5E8CA8591C15627200A908D6 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		5E8CA85A1C15627200A908D6 /* EventTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
+		5E8CA85D1C15666500A908D6 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		5E8CA8611C15845F00A908D6 /* BoardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardTableViewCell.swift; sourceTree = "<group>"; };
+		5E8CA8621C15845F00A908D6 /* BoardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardTableViewCell.xib; sourceTree = "<group>"; };
+		5E8CA8651C15877A00A908D6 /* Boardtype2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boardtype2ViewController.swift; sourceTree = "<group>"; };
+		5E8CA8671C158F1E00A908D6 /* CardListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
+		5E8CA8691C159F7800A908D6 /* cross6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross6.png; sourceTree = "<group>"; };
+		5E8CA86B1C159FA500A908D6 /* purchase1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purchase1.png; sourceTree = "<group>"; };
+		5E8CA86D1C159FDB00A908D6 /* square234.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square234.png; sourceTree = "<group>"; };
 		5E9A6E311BCFC0210076C91A /* AdstirAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdstirAds.framework; path = "/Users/itosouplus/Desktop/swift-rss-sample/AdstirAds.framework"; sourceTree = "<absolute>"; };
 		5E9A6E331BCFC7380076C91A /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		5E9F62661AE542D400C72ED4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -251,6 +271,9 @@
 			isa = PBXGroup;
 			children = (
 				5E444F7B1C05433600A0259E /* disc6.png */,
+				5E8CA86B1C159FA500A908D6 /* purchase1.png */,
+				5E8CA86D1C159FDB00A908D6 /* square234.png */,
+				5E8CA8691C159F7800A908D6 /* cross6.png */,
 				5E444F791C05420C00A0259E /* quaver11.png */,
 				5E444F771C0541B300A0259E /* instrument27.png */,
 				5EF013FF1BDF7A13002DB31B /* logo95.png */,
@@ -304,6 +327,10 @@
 				5EA67BF11ACC1BAB0021A1E8 /* EmptyTableViewCell.xib */,
 				5E444F621C0535DA00A0259E /* TweetTableViewCell.swift */,
 				5E444F631C0535DA00A0259E /* TweetTableViewCell.xib */,
+				5E8CA8591C15627200A908D6 /* EventTableViewCell.swift */,
+				5E8CA85A1C15627200A908D6 /* EventTableViewCell.xib */,
+				5E8CA8611C15845F00A908D6 /* BoardTableViewCell.swift */,
+				5E8CA8621C15845F00A908D6 /* BoardTableViewCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -322,6 +349,9 @@
 				5EC0D4651BA8253F004221F8 /* MultiViewController.swift */,
 				5E2CEE271BE72B2100A0CD04 /* BoardViewController.swift */,
 				5E444F601C0535A500A0259E /* TwitterViewController.swift */,
+				5E8CA85D1C15666500A908D6 /* EventViewController.swift */,
+				5E8CA8651C15877A00A908D6 /* Boardtype2ViewController.swift */,
+				5E8CA8671C158F1E00A908D6 /* CardListViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -542,8 +572,10 @@
 				AA8AA144194362C900C3888B /* logo.png in Resources */,
 				5E56E70E1ABA961A00FA6753 /* ima.png in Resources */,
 				5E56E6F61AB7C22F00FA6753 /* more23.png in Resources */,
+				5E8CA8641C15845F00A908D6 /* BoardTableViewCell.xib in Resources */,
 				5E5D9D941BCFD40B0028ED75 /* Launch Screen.storyboard in Resources */,
 				5EC073791B9EB269006D425D /* technology34 (1).png in Resources */,
+				5E8CA85C1C15627200A908D6 /* EventTableViewCell.xib in Resources */,
 				5E444F781C0541B300A0259E /* instrument27.png in Resources */,
 				5ECD677F1AB6C9D8009F5CCF /* TicketTableViewCell.xib in Resources */,
 				5E2CEE2C1BE7373F00A0CD04 /* soccer72.png in Resources */,
@@ -552,10 +584,12 @@
 				5E15FDD51AB196C2005BD1B4 /* movie43.svg in Resources */,
 				5E56E7081ABA8CE200FA6753 /* newspaper11 (2).png in Resources */,
 				5E15FDDD1AB198B8005BD1B4 /* newspaper11 (1).png in Resources */,
+				5E8CA86E1C159FDB00A908D6 /* square234.png in Resources */,
 				5E56E7041ABA8CD700FA6753 /* film51.png in Resources */,
 				AAC02B3A193DF344003997F3 /* Podfile in Resources */,
 				5E2CEE341BE749F800A0CD04 /* blackboard14 (2).png in Resources */,
 				5E444F651C0535DA00A0259E /* TweetTableViewCell.xib in Resources */,
+				5E8CA86C1C159FA500A908D6 /* purchase1.png in Resources */,
 				5ED4C0EB1AB2CC4E00D2BF8A /* YoutubeTableViewCell.xib in Resources */,
 				5E56E7021AB9922100FA6753 /* No_Image_Available.png in Resources */,
 				5E56E7001AB98FB400FA6753 /* BlogTableViewCell.xib in Resources */,
@@ -565,6 +599,7 @@
 				5E56E7101ABA965D00FA6753 /* ima2.png in Resources */,
 				5E56E6FC1AB859E800FA6753 /* OtherTableViewCell.xib in Resources */,
 				5E2CEE231BE700A000A0CD04 /* iphone6plus.storyboard in Resources */,
+				5E8CA86A1C159F7900A908D6 /* cross6.png in Resources */,
 				5E2CEE211BE6F99600A0CD04 /* iphone6.storyboard in Resources */,
 				5E444F7C1C05433600A0259E /* disc6.png in Resources */,
 				5E2CEE321BE740DF00A0CD04 /* blackboard14 (1).png in Resources */,
@@ -662,11 +697,15 @@
 				5EF013FE1BDF7922002DB31B /* WebViewController.swift in Sources */,
 				5E444F641C0535DA00A0259E /* TweetTableViewCell.swift in Sources */,
 				5E56E6FF1AB98FB400FA6753 /* BlogTableViewCell.swift in Sources */,
+				5E8CA85B1C15627200A908D6 /* EventTableViewCell.swift in Sources */,
 				5ECD677B1AB6C9B6009F5CCF /* TicketViewController.swift in Sources */,
 				5E56E6F81AB7C26F00FA6753 /* OtherViewController.swift in Sources */,
 				5EC0D46A1BA8311C004221F8 /* Request.swift in Sources */,
+				5E8CA85E1C15666500A908D6 /* EventViewController.swift in Sources */,
 				5ED4C0E61AB2CA0900D2BF8A /* NewsTableViewCell.swift in Sources */,
+				5E8CA8631C15845F00A908D6 /* BoardTableViewCell.swift in Sources */,
 				5E9F62671AE542D400C72ED4 /* Constants.swift in Sources */,
+				5E8CA8681C158F1E00A908D6 /* CardListViewController.swift in Sources */,
 				5E444F611C0535A500A0259E /* TwitterViewController.swift in Sources */,
 				5EA67BF21ACC1BAB0021A1E8 /* EmptyTableViewCell.swift in Sources */,
 				5E161A721AC2B73700B039F8 /* OriginalTabBarController.swift in Sources */,
@@ -685,6 +724,7 @@
 				5ECBC6A51AB08BB100F75649 /* YoutubeViewController.swift in Sources */,
 				5EC073751B9E9E87006D425D /* ChannelViewController.swift in Sources */,
 				AAC02B19193DEEFE003997F3 /* AppDelegate.swift in Sources */,
+				5E8CA8661C15877A00A908D6 /* Boardtype2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -823,7 +863,7 @@
 					"$(PROJECT_DIR)/RSSReader/GoogleAnalytics",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.avicii.Curation;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.yugioh.Curation;
 				PRODUCT_NAME = Curation;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RSSReader/RSSReader-Bridging-Header.h";
@@ -855,7 +895,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/RSSReader/GoogleAnalytics",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.avicii.Curation;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.yugioh.Curation;
 				PRODUCT_NAME = Curation;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RSSReader/RSSReader-Bridging-Header.h";

@@ -30,9 +30,9 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "REMIX"
+        self.title = "対戦動画"
         
-        TrackingManager.sendScreenTracking("REMIX")
+        TrackingManager.sendScreenTracking("対戦動画")
 
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id

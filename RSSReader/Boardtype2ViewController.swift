@@ -8,15 +8,15 @@
 
 import UIKit
 
-class BoardViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdstirMraidViewDelegate {
-
+class Boardtype2ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdstirMraidViewDelegate {
+    
     @IBOutlet weak var tableView: UITableView!
     var articles = NSMutableArray()
     var refresh: UIRefreshControl!
     var loading = false
     var inter: AdstirInterstitial? = nil
     var click_count = 3
-
+    
     var adView: AdstirMraidView? = nil
     deinit {
         // デリゲートを解放します。解放を忘れるとクラッシュする可能性があります。
@@ -25,13 +25,13 @@ class BoardViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.adView = nil
     }
     
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         TrackingManager.sendScreenTracking("掲示板")
-
+        
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
         self.inter!.spot = Constants.inter_ad.spot
@@ -44,16 +44,16 @@ class BoardViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         // NavigationControllerのNavigationItemの色
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
-
+        
         self.title = "掲示板"
         
         articles = Request.fetchFromBoard(Constants.board_site.URL, items: articles)
         tableView.delegate = self
         tableView.dataSource = self
-
-        let nibName = UINib(nibName: "NewsTableViewCell", bundle:nil)
+        
+        let nibName = UINib(nibName: "BoardTableViewCell", bundle:nil)
         tableView.registerNib(nibName, forCellReuseIdentifier: "Cell")
-
+        
         // 広告表示位置: タブバーの下でセンタリング、広告サイズ: 320,50 の場合
         let originY = self.view.frame.height
         let originX = (self.view.frame.size.width - kAdstirAdSize320x50.size.width) / 2
@@ -68,16 +68,16 @@ class BoardViewController: UIViewController, UITableViewDataSource, UITableViewD
             self.adView = adView
         }
         
-
+        
         
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func tableView(table: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 70
     }
@@ -87,23 +87,22 @@ class BoardViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(table: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! NewsTableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! BoardTableViewCell
         let item = self.articles[indexPath.row] as! NSDictionary
         
-        return CellPreference.setValueToBoardViewCell(cell, item: item)
+        return CellPreference.setValueToBoardtype2ViewCell(cell, item: item)
     }
     
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let item = self.articles[indexPath.row] as! NSDictionary
         tableView?.deselectRowAtIndexPath(indexPath, animated: true)
-
+        
         if click_count % Constants.inter_ad.click_count == 0 {
             self.inter!.showTypeC(self)
         }
         click_count++;
         TrackingManager.sendEventTracking("Board", action:"Push", label:"閲覧", value:NSNumber(), screen:"掲示板")
-
-
+        
         self.navigationController?.pushViewController( Snippet.setTapAction(item, mode: "blog"), animated: true)
     }
     
@@ -117,5 +116,5 @@ class BoardViewController: UIViewController, UITableViewDataSource, UITableViewD
             })
         }
     }
-
+    
 }

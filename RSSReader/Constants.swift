@@ -10,28 +10,37 @@ import Foundation
 
 struct Constants {
     struct article_url {
-        static let NEWS_SITE1 = "https://www.kimonolabs.com/api/d55vqhbw?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let NEWS_SITE1 = "https://www.kimonolabs.com/api/52i5size?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
         static let NEWS_SITE2 = ""
         static let NEWS_SITE3 = ""
     }
+    
+    struct event_url {
+        static let NEWS_SITE1 = "https://www.kimonolabs.com/api/3h0yohuk?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+    }
+    
     struct web_view {
-        static let url = "http://jbbs.shitaraba.net/music/28930/"
+        static let url = "http://www.db.yugioh-card.com/yugiohdb/card_list.action"
+    }
+    
+    struct card_list {
+        static let URL = "https://www.kimonolabs.com/api/bm8dptr0?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
     }
     
     struct ad {
-        static let id = "MEDIA-87f0c785"
+        static let id = "MEDIA-5be329cb"
         static let spot:UInt = 1
-        static let ENABLE_VIEW = false
+        static let ENABLE_VIEW = true
 
     }
     struct inter_ad {
-        static let id = "MEDIA-87f0c785"
+        static let id = "MEDIA-5be329cb"
         static let spot:UInt = 2
         static let click_count = 7
     }
     
     struct analytics {
-        static let TRACK_ID = "UA-70168853-3"
+        static let TRACK_ID = "UA-70168853-5"
     }
     
     struct blog {
@@ -43,12 +52,12 @@ struct Constants {
     }
     
     struct board_site {
-        static let URL = "https://www.kimonolabs.com/api/3nq0ehse?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let URL = "https://www.kimonolabs.com/api/2ljl6b6e?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
     }
     
     struct youtube {
         static let API_KEY = "AIzaSyCcfEgQ_6qLIV5STXnZnLo040NzEmZuVZ4"
-        static let WORD = "Avicii REMIX"
+        static let WORD = "遊戯王 対戦"
         static let RADIO = "Avicii LIVE"
         static let CHANNEL = "UC1SqP7_RfOC9Jf9L_GRHANg"
     }
