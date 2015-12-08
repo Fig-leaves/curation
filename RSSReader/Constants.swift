@@ -10,13 +10,13 @@ import Foundation
 
 struct Constants {
     struct article_url {
-        static let NEWS_SITE1 = "https://www.kimonolabs.com/api/52i5size?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let NEWS_SITE1 = "https://www.kimonolabs.com/api/dkrkdzl6?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
         static let NEWS_SITE2 = ""
         static let NEWS_SITE3 = ""
     }
     
     struct event_url {
-        static let NEWS_SITE1 = "https://www.kimonolabs.com/api/3h0yohuk?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let NEWS_SITE1 = "https://www.kimonolabs.com/api/dkrkdzl6?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
     }
     
     struct web_view {
@@ -44,7 +44,7 @@ struct Constants {
     }
     
     struct blog {
-        static let OFFICIAL_URL = "https://www.kimonolabs.com/api/7yus8l2u?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let OFFICIAL_URL = "https://www.kimonolabs.com/api/dkrkdzl6?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
     }
 
     struct ticket {

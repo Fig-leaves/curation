@@ -119,7 +119,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
     func request(url: NSString) {
-        self.articles = Request.fetchFromNews(url as String, items: articles, isNormalize: true)
+        self.articles = Request.fetchFromNews(url as String, items: articles, isNormalize: false)
         self.loading = false
         let sort_descriptor1:NSSortDescriptor = NSSortDescriptor(key:"pudDate", ascending:false)
         let sorts = sort_descriptor1

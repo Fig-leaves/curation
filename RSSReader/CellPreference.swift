@@ -57,8 +57,9 @@ class CellPreference {
 
     
     class func setValueToBlogViewCell(cell: BlogTableViewCell, item: NSDictionary) -> BlogTableViewCell {
-       let image :UIImage = UIImage(named: "ima2.png")!
-        cell.blogImage.image = image
+        let imgURL: NSURL? = NSURL(string: item["image"] as! String)
+        cell.blogImage.setImageWithURL(imgURL)
+        
         cell.titleLabel.text = item[Constants.article_data.TITLE] as! NSString as String
         cell.dateLabel.text = item[Constants.article_data.DATE] as! NSString as String
         cell.titleLabel.numberOfLines = 2;

@@ -45,8 +45,6 @@ class Snippet {
         return dic
     }
     
-    
-    
     class func sortDate(item: NSMutableArray, count: Int) -> NSMutableArray {
         for (var i = 0; i < (count - 1); i++) {
             for (var j = (count - 1); j > i; j--) {

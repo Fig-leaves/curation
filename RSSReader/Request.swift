@@ -25,7 +25,6 @@ class Request {
         
         var data:NSData
         var dic: NSDictionary = NSDictionary()
-//        let dic:NSDictionary
         
         do {
             print("youtube")
@@ -176,7 +175,6 @@ class Request {
             } else {
                 day = object.objectForKey(Constants.news_json_key.pubDate) as! NSString;
             }
-            print(day)
             
             if(isNormalize) {
                 Snippet.convertDate(day, news_name: news_name)  {
@@ -192,6 +190,7 @@ class Request {
                 }
             } else {
                 content[Constants.news_json_key.pubDate] = day
+                print(content)
                 items.addObject(content)
             }
 
@@ -298,10 +297,15 @@ class Request {
             for (index: _, subJson: mySubJson) in data["results"]["collection1"] {
                 content[Constants.article_data.TITLE] = mySubJson[Constants.json_key.property1][Constants.article_data.TEXT].stringValue
                 content[Constants.article_data.HREF] = mySubJson[Constants.json_key.property1][Constants.article_data.HREF].stringValue
-                if(mySubJson[Constants.json_key.property2] != nil) {
-                    content[Constants.article_data.DATE] = mySubJson[Constants.json_key.property2].stringValue
+                if(mySubJson[Constants.news_json_key.pubDate] != nil) {
+                    content[Constants.article_data.DATE] = mySubJson[Constants.news_json_key.pubDate].stringValue
                 } else {
                     content[Constants.article_data.DATE] = ""
+                }
+                if(mySubJson["image"]["src"] != nil) {
+                    content["image"] = mySubJson["image"]["src"].stringValue
+                } else {
+                    content["image"] = ""
                 }
                 print(content)
                 items.addObject(content)

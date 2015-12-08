@@ -29,8 +29,8 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "デッキレシピ"
-        TrackingManager.sendScreenTracking("デッキリスト")
+        self.title = "Android"
+        TrackingManager.sendScreenTracking("Android")
         
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
