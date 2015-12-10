@@ -63,6 +63,9 @@
 		5E56E70E1ABA961A00FA6753 /* ima.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E56E70D1ABA961A00FA6753 /* ima.png */; };
 		5E56E7101ABA965D00FA6753 /* ima2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E56E70F1ABA965D00FA6753 /* ima2.png */; };
 		5E5D9D941BCFD40B0028ED75 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5D9D931BCFD40B0028ED75 /* Launch Screen.storyboard */; };
+		5E8217B21C1970DF0054DCC5 /* Web2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8217B11C1970DF0054DCC5 /* Web2ViewController.swift */; };
+		5E8217B41C1986D30054DCC5 /* rank_ios.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E8217B31C1986D30054DCC5 /* rank_ios.png */; };
+		5E8217B61C1987EA0054DCC5 /* rank-and.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E8217B51C1987EA0054DCC5 /* rank-and.png */; };
 		5E8CA85B1C15627200A908D6 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8CA8591C15627200A908D6 /* EventTableViewCell.swift */; };
 		5E8CA85C1C15627200A908D6 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E8CA85A1C15627200A908D6 /* EventTableViewCell.xib */; };
 		5E8CA85E1C15666500A908D6 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8CA85D1C15666500A908D6 /* EventViewController.swift */; };
@@ -76,6 +79,9 @@
 		5E96CF881C168330008C5BC9 /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96CF871C168330008C5BC9 /* RankViewController.swift */; };
 		5E96CF8A1C16A760008C5BC9 /* mac7.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E96CF891C16A760008C5BC9 /* mac7.png */; };
 		5E96CF8C1C16A766008C5BC9 /* system1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E96CF8B1C16A766008C5BC9 /* system1.png */; };
+		5E96CF8F1C194668008C5BC9 /* News2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96CF8E1C194668008C5BC9 /* News2ViewController.swift */; };
+		5E96CF911C195D7D008C5BC9 /* Blog2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96CF901C195D7D008C5BC9 /* Blog2ViewController.swift */; };
+		5E96CF931C19668E008C5BC9 /* News3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96CF921C19668E008C5BC9 /* News3ViewController.swift */; };
 		5E9A6E321BCFC0210076C91A /* AdstirAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9A6E311BCFC0210076C91A /* AdstirAds.framework */; };
 		5E9A6E341BCFC7380076C91A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9A6E331BCFC7380076C91A /* libPods.a */; };
 		5E9F62671AE542D400C72ED4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9F62661AE542D400C72ED4 /* Constants.swift */; };
@@ -180,6 +186,9 @@
 		5E56E70D1ABA961A00FA6753 /* ima.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ima.png; sourceTree = "<group>"; };
 		5E56E70F1ABA965D00FA6753 /* ima2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ima2.png; sourceTree = "<group>"; };
 		5E5D9D931BCFD40B0028ED75 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		5E8217B11C1970DF0054DCC5 /* Web2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Web2ViewController.swift; sourceTree = "<group>"; };
+		5E8217B31C1986D30054DCC5 /* rank_ios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rank_ios.png; sourceTree = "<group>"; };
+		5E8217B51C1987EA0054DCC5 /* rank-and.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rank-and.png"; sourceTree = "<group>"; };
 		5E8CA8591C15627200A908D6 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		5E8CA85A1C15627200A908D6 /* EventTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
 		5E8CA85D1C15666500A908D6 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +202,9 @@
 		5E96CF871C168330008C5BC9 /* RankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
 		5E96CF891C16A760008C5BC9 /* mac7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mac7.png; sourceTree = "<group>"; };
 		5E96CF8B1C16A766008C5BC9 /* system1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = system1.png; sourceTree = "<group>"; };
+		5E96CF8E1C194668008C5BC9 /* News2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News2ViewController.swift; sourceTree = "<group>"; };
+		5E96CF901C195D7D008C5BC9 /* Blog2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blog2ViewController.swift; sourceTree = "<group>"; };
+		5E96CF921C19668E008C5BC9 /* News3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News3ViewController.swift; sourceTree = "<group>"; };
 		5E9A6E311BCFC0210076C91A /* AdstirAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdstirAds.framework; path = "/Users/itosouplus/Desktop/swift-rss-sample/AdstirAds.framework"; sourceTree = "<absolute>"; };
 		5E9A6E331BCFC7380076C91A /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		5E9F62661AE542D400C72ED4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -273,10 +285,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E96CF8D1C194651008C5BC9 /* news */ = {
+			isa = PBXGroup;
+			children = (
+				5E2959D41AAD3FC4009872AF /* NewsViewController.swift */,
+				5E96CF8E1C194668008C5BC9 /* News2ViewController.swift */,
+				5E96CF921C19668E008C5BC9 /* News3ViewController.swift */,
+			);
+			name = news;
+			sourceTree = "<group>";
+		};
 		5ECD67731AB6BF2E009F5CCF /* image */ = {
 			isa = PBXGroup;
 			children = (
 				5E444F7B1C05433600A0259E /* disc6.png */,
+				5E8217B31C1986D30054DCC5 /* rank_ios.png */,
+				5E8217B51C1987EA0054DCC5 /* rank-and.png */,
 				5E96CF8B1C16A766008C5BC9 /* system1.png */,
 				5E96CF891C16A760008C5BC9 /* mac7.png */,
 				5E8CA86B1C159FA500A908D6 /* purchase1.png */,
@@ -346,13 +370,15 @@
 		5EFE7D451B970AA4006D43E3 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5E96CF8D1C194651008C5BC9 /* news */,
 				5ECBC6A41AB08BB100F75649 /* YoutubeViewController.swift */,
 				5EC073761B9EADAB006D425D /* RadioViewController.swift */,
 				5ECD677A1AB6C9B6009F5CCF /* TicketViewController.swift */,
 				5E56E6F71AB7C26F00FA6753 /* OtherViewController.swift */,
 				5EF013FD1BDF7922002DB31B /* WebViewController.swift */,
-				5E2959D41AAD3FC4009872AF /* NewsViewController.swift */,
+				5E8217B11C1970DF0054DCC5 /* Web2ViewController.swift */,
 				AAC02B1A193DEEFE003997F3 /* BlogViewController.swift */,
+				5E96CF901C195D7D008C5BC9 /* Blog2ViewController.swift */,
 				5EC073741B9E9E87006D425D /* ChannelViewController.swift */,
 				5EC0D4651BA8253F004221F8 /* MultiViewController.swift */,
 				5E2CEE271BE72B2100A0CD04 /* BoardViewController.swift */,
@@ -591,6 +617,7 @@
 				5EC0737B1B9EB288006D425D /* technology34.png in Resources */,
 				5E15FDDF1AB198FC005BD1B4 /* blog1.png in Resources */,
 				5E15FDD51AB196C2005BD1B4 /* movie43.svg in Resources */,
+				5E8217B41C1986D30054DCC5 /* rank_ios.png in Resources */,
 				5E56E7081ABA8CE200FA6753 /* newspaper11 (2).png in Resources */,
 				5E15FDDD1AB198B8005BD1B4 /* newspaper11 (1).png in Resources */,
 				5E8CA86E1C159FDB00A908D6 /* square234.png in Resources */,
@@ -613,6 +640,7 @@
 				5E8CA86A1C159F7900A908D6 /* cross6.png in Resources */,
 				5E2CEE211BE6F99600A0CD04 /* iphone6.storyboard in Resources */,
 				5E444F7C1C05433600A0259E /* disc6.png in Resources */,
+				5E8217B61C1987EA0054DCC5 /* rank-and.png in Resources */,
 				5E2CEE321BE740DF00A0CD04 /* blackboard14 (1).png in Resources */,
 				5E444F761C053E4400A0259E /* TwitterKitResources.bundle in Resources */,
 				5ED4C0E71AB2CA0900D2BF8A /* NewsTableViewCell.xib in Resources */,
@@ -708,10 +736,12 @@
 				5EF013FE1BDF7922002DB31B /* WebViewController.swift in Sources */,
 				5E444F641C0535DA00A0259E /* TweetTableViewCell.swift in Sources */,
 				5E56E6FF1AB98FB400FA6753 /* BlogTableViewCell.swift in Sources */,
+				5E8217B21C1970DF0054DCC5 /* Web2ViewController.swift in Sources */,
 				5E8CA85B1C15627200A908D6 /* EventTableViewCell.swift in Sources */,
 				5ECD677B1AB6C9B6009F5CCF /* TicketViewController.swift in Sources */,
 				5E56E6F81AB7C26F00FA6753 /* OtherViewController.swift in Sources */,
 				5EC0D46A1BA8311C004221F8 /* Request.swift in Sources */,
+				5E96CF8F1C194668008C5BC9 /* News2ViewController.swift in Sources */,
 				5E8CA85E1C15666500A908D6 /* EventViewController.swift in Sources */,
 				5ED4C0E61AB2CA0900D2BF8A /* NewsTableViewCell.swift in Sources */,
 				5E8CA8631C15845F00A908D6 /* BoardTableViewCell.swift in Sources */,
@@ -731,8 +761,10 @@
 				5ECD677E1AB6C9D8009F5CCF /* TicketTableViewCell.swift in Sources */,
 				5EC073771B9EADAB006D425D /* RadioViewController.swift in Sources */,
 				5E04D4121BFA0A1200399EA4 /* TrackingManager.swift in Sources */,
+				5E96CF911C195D7D008C5BC9 /* Blog2ViewController.swift in Sources */,
 				5E2CEE281BE72B2100A0CD04 /* BoardViewController.swift in Sources */,
 				5E2CEE301BE73D5A00A0CD04 /* UIColorExtention.swift in Sources */,
+				5E96CF931C19668E008C5BC9 /* News3ViewController.swift in Sources */,
 				5ECBC6A51AB08BB100F75649 /* YoutubeViewController.swift in Sources */,
 				5EC073751B9E9E87006D425D /* ChannelViewController.swift in Sources */,
 				AAC02B19193DEEFE003997F3 /* AppDelegate.swift in Sources */,
@@ -875,7 +907,7 @@
 					"$(PROJECT_DIR)/RSSReader/GoogleAnalytics",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.yugioh.Curation;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.fig.app-rank.Curation";
 				PRODUCT_NAME = Curation;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RSSReader/RSSReader-Bridging-Header.h";
@@ -907,7 +939,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/RSSReader/GoogleAnalytics",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.yugioh.Curation;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.fig.app-rank.Curation";
 				PRODUCT_NAME = Curation;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RSSReader/RSSReader-Bridging-Header.h";

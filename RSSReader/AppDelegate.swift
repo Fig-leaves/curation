@@ -31,7 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GAI.sharedInstance().dispatchInterval = 20
         GAI.sharedInstance().logger.logLevel=GAILogLevel.Info
         
-        
         print(myNativeBoundSize.width)
         if myNativeBoundSize.width == 640 {
             storyboard =  UIStoryboard(name: "Main",bundle:nil)

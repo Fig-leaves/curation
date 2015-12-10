@@ -8,12 +8,12 @@
 
 import UIKit
 
-class BlogViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdstirMraidViewDelegate {
+class Blog2ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdstirMraidViewDelegate {
     var items = NSMutableArray()
     var loading = false
     var refresh: UIRefreshControl!
     @IBOutlet weak var tableView: UITableView!
-
+    
     var adView: AdstirMraidView? = nil
     deinit {
         // デリゲートを解放します。解放を忘れるとクラッシュする可能性があります。
@@ -21,7 +21,7 @@ class BlogViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // 広告ビューを解放します。
         self.adView = nil
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,7 +57,7 @@ class BlogViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.refresh.attributedTitle = NSAttributedString(string: Constants.message.UPDATING)
         self.refresh.addTarget(self, action: Selector("reload"), forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(refresh)
-       
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -73,7 +73,7 @@ class BlogViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-               
+        
         let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
             items = NSMutableArray()
@@ -85,7 +85,7 @@ class BlogViewController: UIViewController, UITableViewDataSource, UITableViewDe
             appDelegate.blogView = true
     }
     func request() {
-        Request.fetchFromBlog(Constants.blog.OFFICIAL_URL) {
+        Request.fetchFromBlog(Constants.blog.OFFICIAL_URL2) {
             (data) in
             self.items = data
             let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -123,12 +123,12 @@ class BlogViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func scrollViewDidScroll(scrollView: UIScrollView) {
         if(self.tableView.contentOffset.y >= (self.tableView.contentSize.height - self.tableView.bounds.size.height)
             && self.loading == false) {
-            SVProgressHUD.showWithStatus(Constants.message.LOADING)
-            self.loading = true
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                SVProgressHUD.dismiss()
-            })
+                SVProgressHUD.showWithStatus(Constants.message.LOADING)
+                self.loading = true
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    SVProgressHUD.dismiss()
+                })
         }
     }
-
+    
 }

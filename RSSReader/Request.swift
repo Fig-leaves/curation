@@ -165,7 +165,7 @@ class Request {
                 var source = object.objectForKey("source") as! NSDictionary
                 content[Constants.article_data.AUTHOR] = source.objectForKey(Constants.article_data.TEXT) as! NSString
             } else {
-                content[Constants.article_data.AUTHOR] = news_name
+                content[Constants.article_data.AUTHOR] = ""
             }
             
             var day:NSString!
@@ -295,8 +295,15 @@ class Request {
             (data, error) in
             var content : Dictionary<String, String> = ["" : ""]
             for (index: _, subJson: mySubJson) in data["results"]["collection1"] {
-                content[Constants.article_data.TITLE] = mySubJson[Constants.json_key.property1][Constants.article_data.TEXT].stringValue
-                content[Constants.article_data.HREF] = mySubJson[Constants.json_key.property1][Constants.article_data.HREF].stringValue
+                
+                if let news = mySubJson[Constants.json_key.property1] as? NSDictionary {
+                    content[Constants.article_data.TITLE] = mySubJson[Constants.json_key.property1][Constants.article_data.TEXT].stringValue
+                    content[Constants.article_data.HREF] = mySubJson[Constants.json_key.property1][Constants.article_data.HREF].stringValue
+                } else {
+                    content[Constants.article_data.TITLE] = mySubJson[Constants.json_key.property1].stringValue
+                    content[Constants.article_data.HREF] = mySubJson["link"]["href"].stringValue
+                }
+
                 if(mySubJson[Constants.news_json_key.pubDate] != nil) {
                     content[Constants.article_data.DATE] = mySubJson[Constants.news_json_key.pubDate].stringValue
                 } else {

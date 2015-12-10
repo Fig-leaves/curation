@@ -8,8 +8,8 @@
 
 import UIKit
 
-class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdstirMraidViewDelegate  {
-
+class News2ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdstirMraidViewDelegate  {
+    
     var items = NSMutableArray()
     var articles = NSMutableArray()
     var refresh: UIRefreshControl!
@@ -25,11 +25,11 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // 広告ビューを解放します。
         self.adView = nil
     }
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        TrackingManager.sendScreenTracking("ニュース")
+        TrackingManager.sendScreenTracking("Andトピック")
         
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
@@ -65,28 +65,25 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.refresh = UIRefreshControl()
         self.refresh.attributedTitle = NSAttributedString(string: Constants.message.UPDATING)
         
-        self.title = Constants.title.NEWS
+        self.title = "Andトピック"
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
-        if(appDelegate.newsView == false ) {
             SVProgressHUD.showWithStatus(Constants.message.LOADING)
             items = NSMutableArray()
             articles = NSMutableArray()
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.get_article()
+                print(self.articles)
+
                 self.table.reloadData()
                 self.refresh?.endRefreshing()
                 SVProgressHUD.dismiss()
             })
             appDelegate.newsView = true
             appDelegate.newsItem = items
-        } else {
-            items = appDelegate.newsItem
-            self.table.reloadData()
-        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -105,27 +102,18 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func get_article() {
-
-        self.request(Constants.article_url.NEWS_SITE1)
-        if(Constants.article_url.NEWS_SITE2 != "") {
-            self.request(Constants.article_url.NEWS_SITE2)
-        } else if(Constants.article_url.NEWS_SITE3 != "") {
-            self.request(Constants.article_url.NEWS_SITE3)
-        }
+        self.request(Constants.other_article_url.article2)
         
         for item in self.items {
             self.articles.addObject(item)
         }
     }
-
+    
     func request(url: NSString) {
         self.articles = Request.fetchFromNews(url as String, items: articles, isNormalize: true)
-        self.loading = false
-        let sort_descriptor1:NSSortDescriptor = NSSortDescriptor(key:"pudDate", ascending:false)
-        let sorts = sort_descriptor1
-        Snippet.sortDate(self.articles, count: self.articles.count)
+        
     }
-   
+    
     func tableView(table: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 70
     }
@@ -148,9 +136,9 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self.inter!.showTypeC(self)
         }
         
-        TrackingManager.sendEventTracking("ブログ", action:"Push", label:"閲覧", value:NSNumber(), screen:"ニュース")
+        TrackingManager.sendEventTracking("Andトピック", action:"Push", label:"閲覧", value:NSNumber(), screen:"Andトピック")
         click_count++;
-
+        
         self.navigationController?.pushViewController( Snippet.setTapAction(item, mode: "blog"), animated: true)
     }
     
@@ -164,5 +152,5 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
             })
         }
     }
-
+    
 }

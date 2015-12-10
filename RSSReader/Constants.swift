@@ -10,9 +10,15 @@ import Foundation
 
 struct Constants {
     struct article_url {
-        static let NEWS_SITE1 = "https://www.kimonolabs.com/api/dkrkdzl6?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let NEWS_SITE1 = "https://www.kimonolabs.com/api/9623s7za?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
         static let NEWS_SITE2 = ""
         static let NEWS_SITE3 = ""
+    }
+    struct other_article_url {
+        static let article2 = "https://www.kimonolabs.com/api/c87xv81k?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let article3 = "https://www.kimonolabs.com/api/b170jo58?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let article4 = ""
+        static let article5 = ""
     }
     
     struct event_url {
@@ -20,7 +26,8 @@ struct Constants {
     }
     
     struct web_view {
-        static let url = "http://www.db.yugioh-card.com/yugiohdb/card_list.action"
+        static let url = "http://www.apprank.kenjisugimoto.com/"
+        static let url2 = "https://androider.jp/official/applist/ranking/total/daily/1/"
     }
     
     struct card_list {
@@ -28,23 +35,25 @@ struct Constants {
     }
     
     struct ad {
-        static let id = "MEDIA-5be329cb"
+        static let id = "MEDIA-efd15597"
         static let spot:UInt = 1
         static let ENABLE_VIEW = true
 
     }
     struct inter_ad {
-        static let id = "MEDIA-5be329cb"
+        static let id = "MEDIA-87f0c785"
         static let spot:UInt = 2
         static let click_count = 7
     }
     
     struct analytics {
-        static let TRACK_ID = "UA-70168853-5"
+        static let TRACK_ID = "UA-70168853-6"
     }
     
     struct blog {
-        static let OFFICIAL_URL = "https://www.kimonolabs.com/api/dkrkdzl6?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let OFFICIAL_URL = "https://www.kimonolabs.com/api/eifrx42m?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let OFFICIAL_URL2 = "https://www.kimonolabs.com/api/6e0bpwwk?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+
     }
 
     struct ticket {

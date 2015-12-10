@@ -25,8 +25,6 @@ class RankViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.adView = nil
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,7 +42,6 @@ class RankViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         // NavigationControllerのNavigationItemの色
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
-        
         self.title = "IOS"
         
         articles = fetchData(articles);
@@ -80,7 +77,7 @@ class RankViewController: UIViewController, UITableViewDataSource, UITableViewDe
         month_ago = NSDate(timeIntervalSinceNow: -30*24*60*60);
         var content: Dictionary<String, AnyObject> = ["" : ""]
 
-        for(var i = 0; i < 30;i++) {
+        for(var i = 0; i < 30 ; i++) {
             month_ago = NSDate(timeIntervalSinceNow: -Double(i)*24*60*60);
             
             let formatter = NSDateFormatter()

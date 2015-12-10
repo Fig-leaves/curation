@@ -8,10 +8,10 @@
 
 import UIKit
 
-class WebViewController: UIViewController, AdstirMraidViewDelegate {
-
+class Web2ViewController: UIViewController , AdstirMraidViewDelegate{
+    
     @IBOutlet weak var webView: UIWebView!
-
+    
     var inter: AdstirInterstitial? = nil
     var click_count = 1
     
@@ -25,9 +25,13 @@ class WebViewController: UIViewController, AdstirMraidViewDelegate {
 
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "IOSランキング"
+        self.title = "Andランキング"
+        
+        
+        
         
         
         self.inter = AdstirInterstitial()
@@ -49,7 +53,6 @@ class WebViewController: UIViewController, AdstirMraidViewDelegate {
         // 広告ビューを親ビューに追加します。
         self.view.addSubview(adView)
         self.adView = adView
-
         
         // NavigationControllerのタイトルバー(NavigationBar)の色の変更
         self.navigationController?.navigationBar.barTintColor = UIColor(netHex: 0x000000)
@@ -57,29 +60,29 @@ class WebViewController: UIViewController, AdstirMraidViewDelegate {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         // NavigationControllerのNavigationItemの色
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-
-
-        let url: NSURL = NSURL(string: Constants.web_view.url)!
+        
+        
+        let url: NSURL = NSURL(string: Constants.web_view.url2)!
         let request: NSURLRequest = NSURLRequest(URL: url)
         
         webView.loadRequest(request)
-
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
