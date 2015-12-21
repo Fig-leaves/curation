@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import TwitterKit
 
 class Request {
     class func fetchFromYoutube(next: Bool, word: String, nextPageToken:String, items: NSMutableArray,callback: (NSMutableArray, String) -> Void) {
@@ -321,25 +320,5 @@ class Request {
         })
     }
     
-    
-    class func fetchTwitterTimeLine(user: String) {
-        var items = NSMutableArray()
-        var url = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=%4096__neko&count=20"
-        Snippet.fetch( url, callback: {
-            (data, error) in
-            print(data)
-        })
-    }
-    class func callAPI(path: String, parameters: [NSObject : AnyObject]!, completion: TWTRNetworkCompletion!){
-        self._callAPI(path, method: "GET", parameters: parameters, completion: completion)
-    }
-    
-    class func _callAPI(path: String, method: String, parameters: [NSObject : AnyObject]!, completion: TWTRNetworkCompletion!){
-        var clientError: NSError?
-        let endpoint = "https://api.twitter.com/1.1/statuses/" + path
-        let request = Twitter.sharedInstance().APIClient.URLRequestWithMethod(method, URL: endpoint, parameters: parameters, error: &clientError)
-        //        if request != nil {
-        Twitter.sharedInstance().APIClient.sendTwitterRequest(request, completion: completion)
-        //        }
-    }
+
 }

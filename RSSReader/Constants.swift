@@ -37,11 +37,11 @@ struct Constants {
     struct ad {
         static let id = "MEDIA-efd15597"
         static let spot:UInt = 1
-        static let ENABLE_VIEW = true
+        static let ENABLE_VIEW = false
 
     }
     struct inter_ad {
-        static let id = "MEDIA-87f0c785"
+        static let id = "MEDIA-efd15597"
         static let spot:UInt = 2
         static let click_count = 7
     }

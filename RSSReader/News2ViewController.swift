@@ -102,7 +102,7 @@ class News2ViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func get_article() {
-        self.request(Constants.other_article_url.article2)
+        self.request(Constants.other_article_url.article3)
         
         for item in self.items {
             self.articles.addObject(item)
