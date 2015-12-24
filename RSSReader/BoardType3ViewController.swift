@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Boardtype2ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdstirMraidViewDelegate {
+class BoardType3ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdstirMraidViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     var articles = NSMutableArray()
@@ -28,7 +28,7 @@ class Boardtype2ViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TrackingManager.sendScreenTracking("モンスター一覧")
+        TrackingManager.sendScreenTracking("掲示板")
         
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
@@ -45,7 +45,7 @@ class Boardtype2ViewController: UIViewController, UITableViewDataSource, UITable
         
         self.title = "掲示板"
         
-        articles = Request.fetchFromBoard(Constants.board_site.URL2, items: articles)
+        articles = Request.fetchFromBoard(Constants.board_site.URL3, items: articles)
         
         
         tableView.delegate = self
@@ -67,6 +67,10 @@ class Boardtype2ViewController: UIViewController, UITableViewDataSource, UITable
             self.view.addSubview(adView)
             self.adView = adView
         }
+        
+        
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -101,7 +105,7 @@ class Boardtype2ViewController: UIViewController, UITableViewDataSource, UITable
             self.inter!.showTypeC(self)
         }
         click_count++;
-        TrackingManager.sendEventTracking("モンスター一覧", action:"Push", label:"閲覧", value:NSNumber(), screen: item["title"] as! String)
+        TrackingManager.sendEventTracking("Board", action:"Push", label:"閲覧", value:NSNumber(), screen:"掲示板")
         
         self.navigationController?.pushViewController( Snippet.setTapAction(item, mode: "blog"), animated: true)
     }

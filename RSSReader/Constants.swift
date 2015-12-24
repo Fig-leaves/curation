@@ -10,13 +10,13 @@ import Foundation
 
 struct Constants {
     struct article_url {
-        static let NEWS_SITE1 = "https://www.kimonolabs.com/api/9623s7za?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let NEWS_SITE1 = "https://www.kimonolabs.com/api/d0f2oxje?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
         static let NEWS_SITE2 = ""
         static let NEWS_SITE3 = ""
     }
     struct other_article_url {
-        static let article2 = "https://www.kimonolabs.com/api/c87xv81k?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
-        static let article3 = "https://www.kimonolabs.com/api/b170jo58?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let article2 = "https://www.kimonolabs.com/api/dyrwfamm?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let article3 = "https://www.kimonolabs.com/api/dyrwfamm?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
         static let article4 = ""
         static let article5 = ""
     }
@@ -61,12 +61,14 @@ struct Constants {
     }
     
     struct board_site {
-        static let URL = "https://www.kimonolabs.com/api/2ljl6b6e?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let URL = "https://www.kimonolabs.com/api/4rwljkca?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let URL2 = "https://www.kimonolabs.com/api/45xfk0zs?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let URL3 = "https://www.kimonolabs.com/api/6kym55ty?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
     }
     
     struct youtube {
         static let API_KEY = "AIzaSyCcfEgQ_6qLIV5STXnZnLo040NzEmZuVZ4"
-        static let WORD = "遊戯王 対戦"
+        static let WORD = "モンハン　討伐"
         static let RADIO = "Avicii LIVE"
         static let CHANNEL = "UC1SqP7_RfOC9Jf9L_GRHANg"
     }

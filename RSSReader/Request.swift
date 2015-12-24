@@ -282,9 +282,25 @@ class Request {
 
             
             content[Constants.board.POST] = object.objectForKey("post")
+            
+            print(content["title"])
+            if (content["title"] as! String).hasSuffix("一覧") {
+                print("一覧あり ")
+            } else if (content["title"] as! String).hasSuffix("一覧表") {
+                print("一覧表あり ")
+            } else if (content["title"] as! String).hasSuffix("方法") {
+            } else if (content["title"] as! String).hasPrefix("【モンハンクロス】") {
+                content[Constants.board.TITLE] = (content[Constants.board.TITLE] as! NSString).substringFromIndex(9)
+                items.addObject(content)
+            } else {
+                items.addObject(content)
+            }
 
-            items.addObject(content)
         })
+        
+        
+        
+        
         return items
     }
  

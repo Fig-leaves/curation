@@ -26,7 +26,6 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.adView = nil
     }
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         TrackingManager.sendScreenTracking("ニュース")
@@ -119,11 +118,11 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
     func request(url: NSString) {
-        self.articles = Request.fetchFromNews(url as String, items: articles, isNormalize: true)
+        self.articles = Request.fetchFromNews(url as String, items: articles, isNormalize: false)
         self.loading = false
-        let sort_descriptor1:NSSortDescriptor = NSSortDescriptor(key:"pudDate", ascending:false)
-        let sorts = sort_descriptor1
-        Snippet.sortDate(self.articles, count: self.articles.count)
+//        let sort_descriptor1:NSSortDescriptor = NSSortDescriptor(key:"pudDate", ascending:false)
+//        let sorts = sort_descriptor1
+//        Snippet.sortDate(self.articles, count: self.articles.count)
     }
    
     func tableView(table: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
