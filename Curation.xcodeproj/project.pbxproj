@@ -39,14 +39,6 @@
 		5E444F611C0535A500A0259E /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E444F601C0535A500A0259E /* TwitterViewController.swift */; };
 		5E444F641C0535DA00A0259E /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E444F621C0535DA00A0259E /* TweetTableViewCell.swift */; };
 		5E444F651C0535DA00A0259E /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E444F631C0535DA00A0259E /* TweetTableViewCell.xib */; };
-		5E444F681C05396800A0259E /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E444F671C05396800A0259E /* Twitter.framework */; };
-		5E444F6C1C053A7B00A0259E /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E444F691C053A7B00A0259E /* TwitterCore.framework */; };
-		5E444F6D1C053A7B00A0259E /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E444F6A1C053A7B00A0259E /* TwitterKit.framework */; };
-		5E444F6E1C053A7B00A0259E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E444F6B1C053A7B00A0259E /* Fabric.framework */; };
-		5E444F721C053DF200A0259E /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E444F6F1C053DF200A0259E /* TwitterCore.framework */; };
-		5E444F731C053DF200A0259E /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E444F701C053DF200A0259E /* TwitterKit.framework */; };
-		5E444F741C053DF200A0259E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E444F711C053DF200A0259E /* Fabric.framework */; };
-		5E444F761C053E4400A0259E /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5E444F751C053E4400A0259E /* TwitterKitResources.bundle */; };
 		5E444F781C0541B300A0259E /* instrument27.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E444F771C0541B300A0259E /* instrument27.png */; };
 		5E444F7A1C05420C00A0259E /* quaver11.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E444F791C05420C00A0259E /* quaver11.png */; };
 		5E444F7C1C05433600A0259E /* disc6.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E444F7B1C05433600A0259E /* disc6.png */; };
@@ -160,7 +152,6 @@
 		5E444F6F1C053DF200A0259E /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 		5E444F701C053DF200A0259E /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		5E444F711C053DF200A0259E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
-		5E444F751C053E4400A0259E /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		5E444F771C0541B300A0259E /* instrument27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instrument27.png; sourceTree = "<group>"; };
 		5E444F791C05420C00A0259E /* quaver11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quaver11.png; sourceTree = "<group>"; };
 		5E444F7B1C05433600A0259E /* disc6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disc6.png; sourceTree = "<group>"; };
@@ -233,25 +224,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E444F681C05396800A0259E /* Twitter.framework in Frameworks */,
 				5E161A7D1AC2C9A300B039F8 /* AdSupport.framework in Frameworks */,
 				5E04D40A1BFA075F00399EA4 /* CoreData.framework in Frameworks */,
 				5E04D40C1BFA076D00399EA4 /* SystemConfiguration.framework in Frameworks */,
 				5E04D40E1BFA088100399EA4 /* libz.tbd in Frameworks */,
-				5E444F6E1C053A7B00A0259E /* Fabric.framework in Frameworks */,
 				5E04D4141BFA193700399EA4 /* libAdIdAccess.a in Frameworks */,
 				5E04D4101BFA089500399EA4 /* libsqlite3.tbd in Frameworks */,
 				5E9A6E341BCFC7380076C91A /* libPods.a in Frameworks */,
 				5E161A851AC2C9FC00B039F8 /* UIKit.framework in Frameworks */,
-				5E444F721C053DF200A0259E /* TwitterCore.framework in Frameworks */,
-				5E444F731C053DF200A0259E /* TwitterKit.framework in Frameworks */,
 				5E161A831AC2C9F600B039F8 /* Foundation.framework in Frameworks */,
 				5E161A811AC2C9EB00B039F8 /* CoreGraphics.framework in Frameworks */,
-				5E444F741C053DF200A0259E /* Fabric.framework in Frameworks */,
 				5E161A7C1AC2C99B00B039F8 /* Security.framework in Frameworks */,
 				5E161A7B1AC2C98300B039F8 /* ImageIO.framework in Frameworks */,
-				5E444F6D1C053A7B00A0259E /* TwitterKit.framework in Frameworks */,
-				5E444F6C1C053A7B00A0259E /* TwitterCore.framework in Frameworks */,
 				5E9A6E321BCFC0210076C91A /* AdstirAds.framework in Frameworks */,
 				5E2CEE261BE7069D00A0CD04 /* libAdstirAds-LegacyInterstitial.a in Frameworks */,
 			);
@@ -400,7 +384,6 @@
 		AAC02B0A193DEEFE003997F3 = {
 			isa = PBXGroup;
 			children = (
-				5E444F751C053E4400A0259E /* TwitterKitResources.bundle */,
 				AAC02B39193DF344003997F3 /* Podfile */,
 				AAC02B15193DEEFE003997F3 /* RSSReader */,
 				AAC02B28193DEEFE003997F3 /* RSSReaderTests */,
@@ -489,7 +472,6 @@
 				AAC02B11193DEEFE003997F3 /* Resources */,
 				5D1F79F4E393422A8E38BE19 /* Copy Pods Resources */,
 				930E94CC8157EA793CEA0B0E /* Embed Pods Frameworks */,
-				5E444F661C05383600A0259E /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -603,7 +585,6 @@
 				5E2CEE211BE6F99600A0CD04 /* iphone6.storyboard in Resources */,
 				5E444F7C1C05433600A0259E /* disc6.png in Resources */,
 				5E2CEE321BE740DF00A0CD04 /* blackboard14 (1).png in Resources */,
-				5E444F761C053E4400A0259E /* TwitterKitResources.bundle in Resources */,
 				5ED4C0E71AB2CA0900D2BF8A /* NewsTableViewCell.xib in Resources */,
 				5E15FDD91AB1983E005BD1B4 /* movie43.png in Resources */,
 				5E444F5F1BFE01B400A0259E /* GoogleService-Info.plist in Resources */,
@@ -656,20 +637,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		5E444F661C05383600A0259E /* Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = "./Fabric.framework/run 6617192855bd3fdf7840d82ff4949fb75d914233 3ba5701baa0031b2b190f15f82658e4c8264b5ee164af24695b3bd63fe2c5e3f";
-			shellScript = "./Fabric.framework/run 6617192855bd3fdf7840d82ff4949fb75d914233 3ba5701baa0031b2b190f15f82658e4c8264b5ee164af24695b3bd63fe2c5e3f";
 		};
 		930E94CC8157EA793CEA0B0E /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -853,7 +820,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = RSSReader/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -887,7 +854,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = RSSReader/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

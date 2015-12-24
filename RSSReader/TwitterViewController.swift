@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import TwitterKit
 
 class TwitterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdstirMraidViewDelegate {
     
@@ -62,49 +61,6 @@ class TwitterViewController: UIViewController, UITableViewDataSource, UITableVie
         
 
         
-        
-        items = NSMutableArray()
-        let params : Dictionary<String, String> = ["screen_name" : "@Avicii", "count" : "40"]
-        Request.callAPI("/user_timeline.json", parameters: params, completion: {
-            response, data, err in
-            let json = JSON(data: data!)
-            var when : NSDate!
-            var item : Dictionary<String, AnyObject> = ["" : ""]
-            for (index, subJson):(String, JSON) in json {
-                var d = subJson
-                for value in d {
-                    if value.0 == "text" {
-                        item["text"] = value.1.stringValue
-                    }
-                    if value.0 == "id_str" {
-                        item["id_str"] = value.1.stringValue
-                    }
-                    if value.0 == "created_at" {
-                        item["created_at"] = value.1.stringValue
-                        when = Snippet.normalizeDateFormat5(value.1.stringValue)
-                    }
-                    
-                    if value.0 == "user" {
-                        for v in value.1 {
-                            if v.0 == "name" {
-                                item["name"] = v.1.stringValue
-                            }
-                            if v.0 == "screen_name" {
-                                item["screen_name"] = v.1.stringValue
-                            }
-                            if v.0 == "profile_image_url" {
-                                item["profile_image_url"] = v.1.stringValue
-                            }
-                        }
-                    }
-                }
-                item["whenAt"] = Snippet.convertDateformatToWhenAt(when)
-                
-                print(item)
-                self.items.addObject(item)
-                self.tableView.reloadData()
-            }
-        })
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
