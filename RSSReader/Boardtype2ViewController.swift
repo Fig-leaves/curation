@@ -43,7 +43,7 @@ class Boardtype2ViewController: UIViewController, UITableViewDataSource, UITable
         // NavigationControllerのNavigationItemの色
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
         
-        self.title = "掲示板"
+        self.title = "モンスター一覧"
         
         articles = Request.fetchFromBoard(Constants.board_site.URL2, items: articles)
         

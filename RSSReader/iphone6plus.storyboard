@@ -29,10 +29,10 @@
             </objects>
             <point key="canvasLocation" x="-661" y="450"/>
         </scene>
-        <!--News3 View Controller-->
+        <!--Board View Controller-->
         <scene sceneID="fTr-cP-RFl">
             <objects>
-                <viewController id="pby-mV-eVZ" customClass="News3ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pby-mV-eVZ" customClass="BoardViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IEm-h7-sar"/>
                         <viewControllerLayoutGuide type="bottom" id="4m9-Kt-zgl"/>
@@ -60,7 +60,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="n7D-Hk-Lxn"/>
                     <connections>
-                        <outlet property="table" destination="za3-H7-P19" id="TJC-Sd-Rhu"/>
+                        <outlet property="tableView" destination="za3-H7-P19" id="n5e-xW-3KA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgn-Jz-Jxj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -143,10 +143,10 @@
             </objects>
             <point key="canvasLocation" x="204" y="365"/>
         </scene>
-        <!--Youtube View Controller-->
+        <!--Board Type3 View Controller-->
         <scene sceneID="QSi-bn-XmY">
             <objects>
-                <viewController id="y7w-m9-5hF" customClass="YoutubeViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="y7w-m9-5hF" customClass="BoardType3ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XUi-wI-sux"/>
                         <viewControllerLayoutGuide type="bottom" id="mg3-BI-GxQ"/>
@@ -258,10 +258,10 @@
             </objects>
             <point key="canvasLocation" x="244" y="-100"/>
         </scene>
-        <!--News2 View Controller-->
+        <!--Board Type4 View Controller-->
         <scene sceneID="BQc-5t-KV2">
             <objects>
-                <viewController id="Dlf-eI-x7P" customClass="News2ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Dlf-eI-x7P" customClass="BoardType4ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k4N-mx-2GC"/>
                         <viewControllerLayoutGuide type="bottom" id="Dbs-qh-6SX"/>
@@ -289,7 +289,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="aez-RN-yPB"/>
                     <connections>
-                        <outlet property="table" destination="k4u-XK-mTb" id="6gM-bU-2bU"/>
+                        <outlet property="tableView" destination="k4u-XK-mTb" id="PIJ-VM-NR3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nmb-EW-Yhw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -411,10 +411,10 @@
             </objects>
             <point key="canvasLocation" x="-782" y="-829"/>
         </scene>
-        <!--News3 View Controller-->
+        <!--Boardtype2 View Controller-->
         <scene sceneID="7cI-OJ-a60">
             <objects>
-                <viewController id="Rl1-Jo-vdp" customClass="News3ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Rl1-Jo-vdp" customClass="Boardtype2ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lLc-zD-MPx"/>
                         <viewControllerLayoutGuide type="bottom" id="fAW-gw-UwM"/>
@@ -442,7 +442,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="xrZ-3p-kg7"/>
                     <connections>
-                        <outlet property="table" destination="uoQ-7t-K2t" id="Fto-1z-2JV"/>
+                        <outlet property="tableView" destination="uoQ-7t-K2t" id="Ehq-JG-3Lu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJq-Xo-V7v" userLabel="First Responder" sceneMemberID="firstResponder"/>

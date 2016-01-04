@@ -185,6 +185,14 @@
 		5E81C85C1C2B8C10004A9DED /* BoardType3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardType3ViewController.swift; sourceTree = "<group>"; };
 		5E81C85E1C2B90BD004A9DED /* BoardType4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardType4ViewController.swift; sourceTree = "<group>"; };
 		5E81C8601C2B9258004A9DED /* books8 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "books8 (1).png"; sourceTree = "<group>"; };
+		5E81C8631C2CD7B3004A9DED /* A-OTF-ShinGoPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "A-OTF-ShinGoPro-Bold.otf"; path = "fonts/A-OTF-ShinGoPro-Bold.otf"; sourceTree = "<group>"; };
+		5E81C8641C2CD7B3004A9DED /* A-OTF-ShinGoPro-DeBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "A-OTF-ShinGoPro-DeBold.otf"; path = "fonts/A-OTF-ShinGoPro-DeBold.otf"; sourceTree = "<group>"; };
+		5E81C8651C2CD7B3004A9DED /* A-OTF-ShinGoPro-ExLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "A-OTF-ShinGoPro-ExLight.otf"; path = "fonts/A-OTF-ShinGoPro-ExLight.otf"; sourceTree = "<group>"; };
+		5E81C8661C2CD7B3004A9DED /* A-OTF-ShinGoPro-Heavy .otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "A-OTF-ShinGoPro-Heavy .otf"; path = "fonts/A-OTF-ShinGoPro-Heavy .otf"; sourceTree = "<group>"; };
+		5E81C8671C2CD7B3004A9DED /* A-OTF-ShinGoPro-Light .otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "A-OTF-ShinGoPro-Light .otf"; path = "fonts/A-OTF-ShinGoPro-Light .otf"; sourceTree = "<group>"; };
+		5E81C8681C2CD7B3004A9DED /* A-OTF-ShinGoPro-Medium .otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "A-OTF-ShinGoPro-Medium .otf"; path = "fonts/A-OTF-ShinGoPro-Medium .otf"; sourceTree = "<group>"; };
+		5E81C8691C2CD7B3004A9DED /* A-OTF-ShinGoPro-Regular .otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "A-OTF-ShinGoPro-Regular .otf"; path = "fonts/A-OTF-ShinGoPro-Regular .otf"; sourceTree = "<group>"; };
+		5E81C86A1C2CD7B3004A9DED /* A-OTF-ShinGoPro-Ultra .otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "A-OTF-ShinGoPro-Ultra .otf"; path = "fonts/A-OTF-ShinGoPro-Ultra .otf"; sourceTree = "<group>"; };
 		5E8217B11C1970DF0054DCC5 /* Web2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Web2ViewController.swift; sourceTree = "<group>"; };
 		5E8217B31C1986D30054DCC5 /* rank_ios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rank_ios.png; sourceTree = "<group>"; };
 		5E8217B51C1987EA0054DCC5 /* rank-and.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rank-and.png"; sourceTree = "<group>"; };
@@ -279,6 +287,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E81C8621C2CD788004A9DED /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5E81C8631C2CD7B3004A9DED /* A-OTF-ShinGoPro-Bold.otf */,
+				5E81C8641C2CD7B3004A9DED /* A-OTF-ShinGoPro-DeBold.otf */,
+				5E81C8651C2CD7B3004A9DED /* A-OTF-ShinGoPro-ExLight.otf */,
+				5E81C8661C2CD7B3004A9DED /* A-OTF-ShinGoPro-Heavy .otf */,
+				5E81C8671C2CD7B3004A9DED /* A-OTF-ShinGoPro-Light .otf */,
+				5E81C8681C2CD7B3004A9DED /* A-OTF-ShinGoPro-Medium .otf */,
+				5E81C8691C2CD7B3004A9DED /* A-OTF-ShinGoPro-Regular .otf */,
+				5E81C86A1C2CD7B3004A9DED /* A-OTF-ShinGoPro-Ultra .otf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
 		5E96CF8D1C194651008C5BC9 /* news */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,6 +478,7 @@
 		AAC02B15193DEEFE003997F3 /* RSSReader */ = {
 			isa = PBXGroup;
 			children = (
+				5E81C8621C2CD788004A9DED /* fonts */,
 				5E444F5E1BFE01B400A0259E /* GoogleService-Info.plist */,
 				5EFE7D461B970ACA006D43E3 /* Utility */,
 				5EFE7D451B970AA4006D43E3 /* ViewController */,
@@ -894,7 +918,7 @@
 					"$(PROJECT_DIR)/RSSReader/GoogleAnalytics",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.fig.app-rank.Curation";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.mhx.Curation;
 				PRODUCT_NAME = Curation;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RSSReader/RSSReader-Bridging-Header.h";
@@ -926,7 +950,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/RSSReader/GoogleAnalytics",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.fig.app-rank.Curation";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.mhx.Curation;
 				PRODUCT_NAME = Curation;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RSSReader/RSSReader-Bridging-Header.h";

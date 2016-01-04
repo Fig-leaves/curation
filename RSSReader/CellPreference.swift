@@ -24,6 +24,7 @@ class CellPreference {
         cell.movieTitleLabel.numberOfLines = 0;
         cell.movieTitleLabel.sizeToFit()
         cell.dateLabel.text = newString
+        cell.dateLabel.textColor = UIColor(netHex: 0x808080)
         let imgURL: NSURL? = NSURL(string: item[Constants.article_data.IMAGE_URL] as! String)
         cell.movieImage.setImageWithURL(imgURL)
         
@@ -36,6 +37,10 @@ class CellPreference {
         cell.authorLabel.text = item[Constants.article_data.AUTHOR] as! NSString as String
         cell.titleLabel.numberOfLines = 2;
         
+        cell.authorLabel.textColor = UIColor(netHex: 0x808080)
+        cell.dateLabel.textColor = UIColor(netHex: 0x808080)
+
+        
         return cell
     }
     
@@ -43,13 +48,21 @@ class CellPreference {
     class func setValueToBoardViewCell(cell: NewsTableViewCell, item: NSDictionary) -> NewsTableViewCell {
         cell.titleLabel.text = item[Constants.board.TITLE] as! NSString as String
         cell.dateLabel.text = item[Constants.board.LAST] as! NSString as String
-        cell.authorLabel.text = ("投稿数 : " as String!)! + (item[Constants.board.POST] as! String)
+        cell.authorLabel.text = (item[Constants.board.POST] as! String)
+
+//        cell.titleLabel.font = UIFont(name: "A-OTF-ShinGoPro-Light.otf", size: 17.0)
+//        cell.authorLabel.font = UIFont(name: "A-OTF-ShinGoPro-Light.otf", size: 10.0)
+//        cell.dateLabel.font = UIFont(name: "A-OTF-ShinGoPro-Light.otf", size: 10.0)
         
+        cell.authorLabel.textColor = UIColor(netHex: 0x808080)
+        cell.dateLabel.textColor = UIColor(netHex: 0x808080)
+
         return cell
     }
     
     class func setValueToBoardtype2ViewCell(cell: BoardTableViewCell, item: NSDictionary) -> BoardTableViewCell {
         cell.titleLabel.text = item[Constants.board.TITLE] as! NSString as String
+//        cell.titleLabel.font = UIFont(name: "A-OTF-ShinGoPro-Light.otf", size: 16.0)
         
         return cell
     }

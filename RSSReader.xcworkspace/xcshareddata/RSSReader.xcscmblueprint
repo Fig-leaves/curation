@@ -1,5 +1,5 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "67FC36DD8E08CE51D811B89E593F03D71C699EF8",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8F8663A86BD9412505385E1C21E805555379EFEE",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
@@ -7,13 +7,15 @@
     "67FC36DD8E08CE51D811B89E593F03D71C699EF8" : 0,
     "E1D2DA109B596C81645CD174911146A84760615A" : 0,
     "7B007683-1A9F-4419-A960-2C0E408BADDF" : 0,
+    "8F8663A86BD9412505385E1C21E805555379EFEE" : 0,
     "72E8AEF8201D0465EAD5BE5475E77330EA7EC0CD" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E800942E-402F-4C5E-8E22-99B1590ADA24",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "67FC36DD8E08CE51D811B89E593F03D71C699EF8" : "swift-rss-sample",
+    "67FC36DD8E08CE51D811B89E593F03D71C699EF8" : "..\/..\/Desktop\/swift-rss-sample",
     "E1D2DA109B596C81645CD174911146A84760615A" : "Documents\/RESideMenuSwift",
     "7B007683-1A9F-4419-A960-2C0E408BADDF" : "RSSReaderSwift",
+    "8F8663A86BD9412505385E1C21E805555379EFEE" : "swift-rss-sample",
     "72E8AEF8201D0465EAD5BE5475E77330EA7EC0CD" : "Downloads\/Swifter"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "RSSReader",
@@ -21,7 +23,7 @@
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RSSReader.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:wantedly\/swift-rss-sample.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/penguin-san\/rssreader.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "67FC36DD8E08CE51D811B89E593F03D71C699EF8"
     },
@@ -34,6 +36,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/github.com\/susieyy\/RSSReaderSwift.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7B007683-1A9F-4419-A960-2C0E408BADDF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:wantedly\/swift-rss-sample.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8F8663A86BD9412505385E1C21E805555379EFEE"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/simara001\/RESideMenuSwift.git",

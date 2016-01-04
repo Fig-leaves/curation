@@ -28,7 +28,7 @@ class BoardType3ViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TrackingManager.sendScreenTracking("掲示板")
+        TrackingManager.sendScreenTracking("武器一覧")
         
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
@@ -43,7 +43,7 @@ class BoardType3ViewController: UIViewController, UITableViewDataSource, UITable
         // NavigationControllerのNavigationItemの色
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
         
-        self.title = "掲示板"
+        self.title = "武器一覧"
         
         articles = Request.fetchFromBoard(Constants.board_site.URL3, items: articles)
         
@@ -105,7 +105,7 @@ class BoardType3ViewController: UIViewController, UITableViewDataSource, UITable
             self.inter!.showTypeC(self)
         }
         click_count++;
-        TrackingManager.sendEventTracking("Board", action:"Push", label:"閲覧", value:NSNumber(), screen:"掲示板")
+        TrackingManager.sendEventTracking("武器一覧", action:"Push", label:"閲覧", value:NSNumber(), screen:"掲示板")
         
         self.navigationController?.pushViewController( Snippet.setTapAction(item, mode: "blog"), animated: true)
     }
