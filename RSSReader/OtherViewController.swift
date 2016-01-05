@@ -10,15 +10,20 @@ import UIKit
 
 class OtherViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MWFeedParserDelegate, AdstirMraidViewDelegate {
     
-    var keys: NSArray = ["2015セカンドムシカード",
-                         "2015セカンドおたすけカード",
-                         "2015ファーストムシカード",
-                         "2015ファーストおたすけカード",
+    var keys: NSArray = ["PS4版 自由・雑談掲示板",
+                         "PS4版 フレンド・メンバー募集",
+                         "XBOX ONE版 自由・雑談掲示板",
+                         "XBOX ONE版 フレンド・メンバー募集",
+                         "PC版 自由・雑談掲示板",
+                         "PC版 フレンド・メンバー募集"
                          ]
-    var values: NSArray = ["http://mushiking.boy.jp/cardlist-2/#M-2",
-                           "http://mushiking.boy.jp/cardlist-2/2",
-                           "http://mushiking.boy.jp/cardlist/",
-                           "http://mushiking.boy.jp/cardlist/2",
+    
+    var values: NSArray = ["http://swbf.jp/bbs/ps4_talk/",
+                           "http://swbf.jp/bbs/ps4_friends/",
+                           "http://swbf.jp/bbs/xbox_talk/",
+                           "http://swbf.jp/bbs/xbox_friends/",
+                           "http://swbf.jp/bbs/pc_talk/",
+                           "http://swbf.jp/bbs/pc_friends/"
                         ]
 
     @IBOutlet weak var tableView: UITableView!
@@ -38,7 +43,7 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.tableView.estimatedRowHeight = 90
         self.tableView.rowHeight = UITableViewAutomaticDimension
         // NavigationControllerのタイトルバー(NavigationBar)の色の変更
-        self.navigationController?.navigationBar.barTintColor = UIColor(netHex: 0x397234)
+        self.navigationController?.navigationBar.barTintColor = UIColor.blackColor()
         // NavigationConrtollerの文字カラーの変更
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         // NavigationControllerのNavigationItemの色
@@ -53,8 +58,8 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         
-        self.title = "カードリスト"
-        TrackingManager.sendScreenTracking("カードリスト")
+        self.title = "掲示板"
+        TrackingManager.sendScreenTracking("掲示板")
 
         let originY = self.view.frame.height
         let originX = (self.view.frame.size.width - kAdstirAdSize320x50.size.width) / 2
@@ -100,7 +105,7 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
             let URL = NSURL(string: values[indexPath.row] as! NSString as String)
             con.loadURL(URL)
             
-            TrackingManager.sendEventTracking("カードリスト", action:"Push", label:"閲覧", value:NSNumber(), screen:"カードリスト")
+            TrackingManager.sendEventTracking("掲示板", action:"Push", label:"閲覧", value:NSNumber(), screen:"掲示板")
 
             self.navigationController?.pushViewController(con, animated: true)
         } else {
