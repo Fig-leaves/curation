@@ -186,8 +186,11 @@ class Request {
                     } else {
                         content[Constants.news_json_key.pubDate] = day
                     }
-                    print(content)
-                    items.addObject(content)
+                    print(content["title"])
+                    if(((content["title"] as! String).rangeOfString("サプライ")) != nil) {
+                    } else {
+                        items.addObject(content)
+                    }
                 }
             } else {
                 content[Constants.news_json_key.pubDate] = day
