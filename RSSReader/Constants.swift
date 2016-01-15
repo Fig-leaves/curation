@@ -75,6 +75,7 @@ struct Constants {
     
     
     
+    
     /* ここから先はいじらないでください */
     struct message {
         static let LOADING = "読み込み中..."

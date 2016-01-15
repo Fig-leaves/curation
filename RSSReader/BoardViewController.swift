@@ -70,7 +70,36 @@ class BoardViewController: UIViewController, UITableViewDataSource, UITableViewD
         
 
         
-        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate //AppDelegate
+        if appDelegate.eula == false {
+            var alertController = UIAlertController(title: "利用規約に同意しますか？", message: "掲示板をご利用いただく前に利用規約やマナーに同意してください", preferredStyle: .Alert)
+            
+            let otherAction = UIAlertAction(title: "同意", style: .Default) {
+                action in NSLog("はいボタンが押されました")
+                appDelegate.eula = true
+            }
+            let readAction = UIAlertAction(title: "利用規約", style: .Default) {
+                action in NSLog("はいボタンが押されました")
+                let secondViewController: EulaViewController = self.storyboard?.instantiateViewControllerWithIdentifier("eula") as! EulaViewController
+                
+                self.navigationController?.pushViewController(secondViewController, animated: true)
+            }
+            
+            let cancelAction = UIAlertAction(title: "同意しない", style: .Cancel) {
+                action in NSLog("いいえボタンが押されました")
+            }
+            
+            // addActionした順に左から右にボタンが配置されます
+            alertController.addAction(otherAction)
+            alertController.addAction(readAction)
+            alertController.addAction(cancelAction)
+            
+            presentViewController(alertController, animated: true, completion: nil)
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {

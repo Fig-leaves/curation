@@ -42,6 +42,8 @@
 		5E444F781C0541B300A0259E /* instrument27.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E444F771C0541B300A0259E /* instrument27.png */; };
 		5E444F7A1C05420C00A0259E /* quaver11.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E444F791C05420C00A0259E /* quaver11.png */; };
 		5E444F7C1C05433600A0259E /* disc6.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E444F7B1C05433600A0259E /* disc6.png */; };
+		5E525A751C48C04300B4971E /* information3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E525A741C48C04300B4971E /* information3.png */; };
+		5E525A771C48C0EC00B4971E /* EulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E525A761C48C0EC00B4971E /* EulaViewController.swift */; };
 		5E56E6F61AB7C22F00FA6753 /* more23.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E56E6F51AB7C22F00FA6753 /* more23.png */; };
 		5E56E6F81AB7C26F00FA6753 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E56E6F71AB7C26F00FA6753 /* OtherViewController.swift */; };
 		5E56E6FB1AB859E800FA6753 /* OtherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E56E6F91AB859E800FA6753 /* OtherTableViewCell.swift */; };
@@ -169,6 +171,8 @@
 		5E444F771C0541B300A0259E /* instrument27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instrument27.png; sourceTree = "<group>"; };
 		5E444F791C05420C00A0259E /* quaver11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quaver11.png; sourceTree = "<group>"; };
 		5E444F7B1C05433600A0259E /* disc6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disc6.png; sourceTree = "<group>"; };
+		5E525A741C48C04300B4971E /* information3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = information3.png; sourceTree = "<group>"; };
+		5E525A761C48C0EC00B4971E /* EulaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EulaViewController.swift; sourceTree = "<group>"; };
 		5E56E6F51AB7C22F00FA6753 /* more23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more23.png; sourceTree = "<group>"; };
 		5E56E6F71AB7C26F00FA6753 /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		5E56E6F91AB859E800FA6753 /* OtherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherTableViewCell.swift; sourceTree = "<group>"; };
@@ -321,6 +325,7 @@
 				5E96CF8B1C16A766008C5BC9 /* system1.png */,
 				5E96CF891C16A760008C5BC9 /* mac7.png */,
 				5E8CA86B1C159FA500A908D6 /* purchase1.png */,
+				5E525A741C48C04300B4971E /* information3.png */,
 				5E8CA86D1C159FDB00A908D6 /* square234.png */,
 				5E8CA8691C159F7800A908D6 /* cross6.png */,
 				5E444F791C05420C00A0259E /* quaver11.png */,
@@ -409,6 +414,7 @@
 				5E81C85E1C2B90BD004A9DED /* BoardType4ViewController.swift */,
 				5E8CA8671C158F1E00A908D6 /* CardListViewController.swift */,
 				5E96CF871C168330008C5BC9 /* RankViewController.swift */,
+				5E525A761C48C0EC00B4971E /* EulaViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -662,6 +668,7 @@
 				5E8CA86A1C159F7900A908D6 /* cross6.png in Resources */,
 				5E2CEE211BE6F99600A0CD04 /* iphone6.storyboard in Resources */,
 				5EA31EAC1C293E04002CEEF4 /* dragon.png in Resources */,
+				5E525A751C48C04300B4971E /* information3.png in Resources */,
 				5E444F7C1C05433600A0259E /* disc6.png in Resources */,
 				5E8217B61C1987EA0054DCC5 /* rank-and.png in Resources */,
 				5E2CEE321BE740DF00A0CD04 /* blackboard14 (1).png in Resources */,
@@ -758,6 +765,7 @@
 				5E9F62671AE542D400C72ED4 /* Constants.swift in Sources */,
 				5E8CA8681C158F1E00A908D6 /* CardListViewController.swift in Sources */,
 				5E444F611C0535A500A0259E /* TwitterViewController.swift in Sources */,
+				5E525A771C48C0EC00B4971E /* EulaViewController.swift in Sources */,
 				5EA67BF21ACC1BAB0021A1E8 /* EmptyTableViewCell.swift in Sources */,
 				5E161A721AC2B73700B039F8 /* OriginalTabBarController.swift in Sources */,
 				5EC0D4661BA8253F004221F8 /* MultiViewController.swift in Sources */,

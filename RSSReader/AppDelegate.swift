@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var newsView : Bool = false
     var blogView : Bool = false
+    var eula : Bool = false
     var newsItem = NSMutableArray()
     var blogItem = NSMutableArray()
 
