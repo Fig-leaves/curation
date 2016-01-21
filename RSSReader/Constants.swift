@@ -15,7 +15,7 @@ struct Constants {
         static let NEWS_SITE3 = ""
     }
     struct other_article_url {
-        static let article2 = "https://www.kimonolabs.com/api/dyrwfamm?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let article2 = "https://www.kimonolabs.com/api/77zmzf8g?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
         static let article3 = "https://www.kimonolabs.com/api/dyrwfamm?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
         static let article4 = ""
         static let article5 = ""
@@ -35,19 +35,19 @@ struct Constants {
     }
     
     struct ad {
-        static let id = "MEDIA-6238b456"
+        static let id = "MEDIA-f639f31c"
         static let spot:UInt = 1
-        static let ENABLE_VIEW = false
+        static let ENABLE_VIEW = true
 
     }
     struct inter_ad {
-        static let id = "MEDIA-6238b456"
-        static let spot:UInt = 3
+        static let id = "MEDIA-f639f31c"
+        static let spot:UInt = 2
         static let click_count = 7
     }
     
     struct analytics {
-        static let TRACK_ID = "UA-70168853-7"
+        static let TRACK_ID = "UA-70168853-10"
     }
     
     struct blog {
@@ -61,14 +61,14 @@ struct Constants {
     }
     
     struct board_site {
-        static let URL = "https://www.kimonolabs.com/api/4rwljkca?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
-        static let URL2 = "https://www.kimonolabs.com/api/45xfk0zs?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
-        static let URL3 = "https://www.kimonolabs.com/api/6kym55ty?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let URL = "https://www.kimonolabs.com/api/dz3g693a?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let URL2 = "https://www.kimonolabs.com/api/ch67i4e2?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let URL3 = "https://www.kimonolabs.com/api/3slw29sc?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
     }
     
     struct youtube {
         static let API_KEY = "AIzaSyCcfEgQ_6qLIV5STXnZnLo040NzEmZuVZ4"
-        static let WORD = "モンハン　討伐"
+        static let WORD = "スーパーマリオメーカー"
         static let RADIO = "Avicii LIVE"
         static let CHANNEL = "UC1SqP7_RfOC9Jf9L_GRHANg"
     }

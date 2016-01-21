@@ -16,22 +16,21 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="Ovg-vh-dPw" kind="relationship" relationship="viewControllers" id="b7G-wR-OgT"/>
                         <segue destination="1CV-ir-oM9" kind="relationship" relationship="viewControllers" id="cpC-kd-65c"/>
                         <segue destination="bz0-li-6w3" kind="relationship" relationship="viewControllers" id="iKr-1K-cgJ"/>
                         <segue destination="qEa-hp-pq6" kind="relationship" relationship="viewControllers" id="Wx1-0u-7q9"/>
                         <segue destination="7Kz-Il-eSu" kind="relationship" relationship="viewControllers" id="gqN-s4-mvS"/>
-                        <segue destination="Ovg-vh-dPw" kind="relationship" relationship="viewControllers" id="b7G-wR-OgT"/>
-                        <segue destination="hRs-6y-9XU" kind="relationship" relationship="viewControllers" id="TIP-ZI-5xO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJn-lC-3h0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-823" y="388"/>
         </scene>
-        <!--News View Controller-->
+        <!--Board Type4 View Controller-->
         <scene sceneID="Uv2-sx-dIf">
             <objects>
-                <viewController id="b72-iv-5qL" customClass="NewsViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="b72-iv-5qL" customClass="BoardType4ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UFo-XV-a58">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,18 +55,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="qHD-Kl-3rI"/>
                     <connections>
-                        <outlet property="table" destination="keB-e2-AXM" id="9s7-Zh-n9H"/>
+                        <outlet property="tableView" destination="keB-e2-AXM" id="JTk-3g-zjg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1M-Pq-ce0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="458" y="1465"/>
         </scene>
-        <!--ニュース-->
+        <!--パーツリスト-->
         <scene sceneID="4pm-OG-Qey">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1CV-ir-oM9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ニュース" image="purchase1.png" id="zAD-iD-3iO"/>
+                    <tabBarItem key="tabBarItem" title="パーツリスト" image="bricks3.png" id="zAD-iD-3iO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pe7-nd-UBk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -85,7 +84,7 @@
         <!--youtube-->
         <scene sceneID="Kb7-9v-kmy">
             <objects>
-                <viewController title="youtube" id="LO7-hY-PaM" customClass="BoardType4ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="youtube" id="LO7-hY-PaM" customClass="Boardtype2ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7aY-PT-iUy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -225,11 +224,11 @@
             </objects>
             <point key="canvasLocation" x="458" y="95"/>
         </scene>
-        <!--討伐動画-->
+        <!--実況動画-->
         <scene sceneID="Vx1-0Y-WXy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Kz-Il-eSu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="討伐動画" image="movie43.png" id="U8a-NG-psz"/>
+                    <tabBarItem key="tabBarItem" title="実況動画" image="movie43.png" id="U8a-NG-psz"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="80z-XE-2Lz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JkE-jH-5Il">
@@ -280,11 +279,11 @@
             </objects>
             <point key="canvasLocation" x="-566" y="2191"/>
         </scene>
-        <!--武器-->
+        <!--ニュース-->
         <scene sceneID="a0C-Q0-VIn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ovg-vh-dPw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="武器" image="bow1.png" id="yyG-ka-enD"/>
+                    <tabBarItem key="tabBarItem" title="ニュース" image="purchase1.png" id="yyG-ka-enD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="be6-3E-jBi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -736,7 +735,7 @@ Cg
     <resources>
         <image name="blackboard14 (1).png" width="24" height="24"/>
         <image name="books8 (1).png" width="32" height="32"/>
-        <image name="bow1.png" width="32" height="32"/>
+        <image name="bricks3.png" width="32" height="32"/>
         <image name="dragon.png" width="32" height="32"/>
         <image name="information3.png" width="32" height="32"/>
         <image name="movie43.png" width="32" height="32"/>

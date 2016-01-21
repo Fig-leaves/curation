@@ -86,6 +86,7 @@
 		5EA31EAD1C293E04002CEEF4 /* bow1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EA31EAB1C293E04002CEEF4 /* bow1.png */; };
 		5EA67BF21ACC1BAB0021A1E8 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA67BF01ACC1BAB0021A1E8 /* EmptyTableViewCell.swift */; };
 		5EA67BF31ACC1BAB0021A1E8 /* EmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA67BF11ACC1BAB0021A1E8 /* EmptyTableViewCell.xib */; };
+		5EBD85381C4C8E41008638E2 /* bricks3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD85371C4C8E41008638E2 /* bricks3.png */; };
 		5EC073751B9E9E87006D425D /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC073741B9E9E87006D425D /* ChannelViewController.swift */; };
 		5EC073771B9EADAB006D425D /* RadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC073761B9EADAB006D425D /* RadioViewController.swift */; };
 		5EC073791B9EB269006D425D /* technology34 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC073781B9EB269006D425D /* technology34 (1).png */; };
@@ -223,6 +224,7 @@
 		5EA31EAB1C293E04002CEEF4 /* bow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bow1.png; sourceTree = "<group>"; };
 		5EA67BF01ACC1BAB0021A1E8 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
 		5EA67BF11ACC1BAB0021A1E8 /* EmptyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyTableViewCell.xib; sourceTree = "<group>"; };
+		5EBD85371C4C8E41008638E2 /* bricks3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bricks3.png; sourceTree = "<group>"; };
 		5EC073741B9E9E87006D425D /* ChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		5EC073761B9EADAB006D425D /* RadioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioViewController.swift; sourceTree = "<group>"; };
 		5EC073781B9EB269006D425D /* technology34 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "technology34 (1).png"; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 				5E96CF8B1C16A766008C5BC9 /* system1.png */,
 				5E96CF891C16A760008C5BC9 /* mac7.png */,
 				5E8CA86B1C159FA500A908D6 /* purchase1.png */,
+				5EBD85371C4C8E41008638E2 /* bricks3.png */,
 				5E525A741C48C04300B4971E /* information3.png */,
 				5E8CA86D1C159FDB00A908D6 /* square234.png */,
 				5E8CA8691C159F7800A908D6 /* cross6.png */,
@@ -677,6 +680,7 @@
 				5E444F5F1BFE01B400A0259E /* GoogleService-Info.plist in Resources */,
 				5ECD67751AB6BF5E009F5CCF /* ticket3.png in Resources */,
 				5E81C8611C2B9258004A9DED /* books8 (1).png in Resources */,
+				5EBD85381C4C8E41008638E2 /* bricks3.png in Resources */,
 				5EFEE2D71BD292FB00A18582 /* 100px-Ruby_logo.svg.png in Resources */,
 				5EF014001BDF7A13002DB31B /* logo95.png in Resources */,
 				5EC0737D1B9EB2B8006D425D /* television12.png in Resources */,
@@ -926,7 +930,7 @@
 					"$(PROJECT_DIR)/RSSReader/GoogleAnalytics",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.mhx.Curation;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.fig.mario-maker.Curation";
 				PRODUCT_NAME = Curation;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RSSReader/RSSReader-Bridging-Header.h";
@@ -958,7 +962,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/RSSReader/GoogleAnalytics",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.mhx.Curation;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.fig.mario-maker.Curation";
 				PRODUCT_NAME = Curation;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RSSReader/RSSReader-Bridging-Header.h";
