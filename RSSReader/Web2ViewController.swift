@@ -29,11 +29,6 @@ class Web2ViewController: UIViewController , AdstirMraidViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Andランキング"
-        
-        
-        
-        
-        
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
         self.inter!.spot = Constants.inter_ad.spot

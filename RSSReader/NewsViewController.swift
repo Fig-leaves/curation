@@ -147,7 +147,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self.inter!.showTypeC(self)
         }
         
-        TrackingManager.sendEventTracking("ブログ", action:"Push", label:"閲覧", value:NSNumber(), screen:"ニュース")
+        TrackingManager.sendEventTracking("ニュース", action:"Push", label:"閲覧", value:NSNumber(), screen: item["title"] as! String)
         click_count++;
 
         self.navigationController?.pushViewController( Snippet.setTapAction(item, mode: "blog"), animated: true)

@@ -21,7 +21,6 @@
                         <segue destination="TLd-rI-Clq" kind="relationship" relationship="viewControllers" id="4wZ-Gk-ZZm"/>
                         <segue destination="GP5-yS-yzr" kind="relationship" relationship="viewControllers" id="Gwc-C0-8El"/>
                         <segue destination="SeK-7S-YrG" kind="relationship" relationship="viewControllers" id="mBg-N3-KTa"/>
-                        <segue destination="mfh-xp-6fX" kind="relationship" relationship="viewControllers" id="bEr-Im-OCB"/>
                         <segue destination="9Ei-XR-hEC" kind="relationship" relationship="viewControllers" id="Cxd-bI-D74"/>
                     </connections>
                 </tabBarController>
@@ -67,11 +66,11 @@
             </objects>
             <point key="canvasLocation" x="773.5" y="1433.5"/>
         </scene>
-        <!--討伐動画-->
+        <!--プレイ動画-->
         <scene sceneID="amY-W8-fnl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SeK-7S-YrG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="討伐動画" image="movie43.png" id="vJt-FU-hNa"/>
+                    <tabBarItem key="tabBarItem" title="プレイ動画" image="movie43.png" id="vJt-FU-hNa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GSZ-at-82b">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -216,7 +215,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Clj-xP-aqu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jzu-IX-0cr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1nc-Br-7yL">

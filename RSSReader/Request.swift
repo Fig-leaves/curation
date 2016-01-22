@@ -270,18 +270,30 @@ class Request {
                 content[Constants.board.LINK] = news.objectForKey(Constants.article_data.HREF) as! NSString
             } else {
                 content[Constants.board.TITLE] = object.objectForKey("title") as! NSString
-                content[Constants.board.LINK] = object.objectForKey("url") as! NSString
+                content[Constants.board.LINK] = object.objectForKey("link") as! NSString
             }
             
-            if(object.objectForKey("last") is NSDictionary) {
-                var date = object.objectForKey("last") as! NSDictionary
-                content[Constants.board.LAST] = date.objectForKey("text")
+            print(object)
+            if let date = object.objectForKey("last") as? NSDictionary {
+                content[Constants.board.LAST] = date.objectForKey("text") as! NSString
             } else {
-                content[Constants.board.LAST] = object.objectForKey("last")
+                if  object.objectForKey("post") == nil {
+                    content[Constants.board.LAST] = ""
+                } else {
+                    content[Constants.board.LAST] = object.objectForKey("last") as! NSString
+                }
             }
 
-            
-            content[Constants.board.POST] = object.objectForKey("post")
+            if let date = object.objectForKey("post") as? NSDictionary {
+                content[Constants.board.LAST] = date.objectForKey("text") as! NSString
+            } else {
+                if  object.objectForKey("post") == nil {
+                    content[Constants.board.POST] = ""
+                } else {
+                    content[Constants.board.POST] = object.objectForKey("post") as! NSString
+                }
+            }
+
             
             print(content["title"])
             if (content["title"] as! String).hasSuffix("一覧") {

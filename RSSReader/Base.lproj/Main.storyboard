@@ -16,12 +16,12 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="qEa-hp-pq6" kind="relationship" relationship="viewControllers" id="Wx1-0u-7q9"/>
                         <segue destination="1CV-ir-oM9" kind="relationship" relationship="viewControllers" id="cpC-kd-65c"/>
                         <segue destination="bz0-li-6w3" kind="relationship" relationship="viewControllers" id="iKr-1K-cgJ"/>
-                        <segue destination="qEa-hp-pq6" kind="relationship" relationship="viewControllers" id="Wx1-0u-7q9"/>
                         <segue destination="7Kz-Il-eSu" kind="relationship" relationship="viewControllers" id="gqN-s4-mvS"/>
                         <segue destination="Ovg-vh-dPw" kind="relationship" relationship="viewControllers" id="b7G-wR-OgT"/>
-                        <segue destination="hRs-6y-9XU" kind="relationship" relationship="viewControllers" id="TIP-ZI-5xO"/>
+                        <segue destination="hRs-6y-9XU" kind="relationship" relationship="viewControllers" id="FlE-Xd-sfR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJn-lC-3h0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -63,11 +63,11 @@
             </objects>
             <point key="canvasLocation" x="458" y="1465"/>
         </scene>
-        <!--ニュース-->
+        <!--トロフィー-->
         <scene sceneID="4pm-OG-Qey">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1CV-ir-oM9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ニュース" image="purchase1.png" id="zAD-iD-3iO"/>
+                    <tabBarItem key="tabBarItem" title="トロフィー" image="trophy36.png" id="zAD-iD-3iO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pe7-nd-UBk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -171,11 +171,11 @@
             </objects>
             <point key="canvasLocation" x="458" y="2191"/>
         </scene>
-        <!--モンスター-->
+        <!--データ-->
         <scene sceneID="Qez-ik-rPm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hRs-6y-9XU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="モンスター" image="dragon.png" id="reD-Pk-d2F"/>
+                    <tabBarItem key="tabBarItem" title="データ" image="data-storage4.png" id="reD-Pk-d2F"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hzM-gG-FgH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -225,11 +225,11 @@
             </objects>
             <point key="canvasLocation" x="458" y="95"/>
         </scene>
-        <!--討伐動画-->
+        <!--実況動画-->
         <scene sceneID="Vx1-0Y-WXy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Kz-Il-eSu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="討伐動画" image="movie43.png" id="U8a-NG-psz"/>
+                    <tabBarItem key="tabBarItem" title="実況動画" image="movie43.png" id="U8a-NG-psz"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="80z-XE-2Lz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JkE-jH-5Il">
@@ -280,11 +280,11 @@
             </objects>
             <point key="canvasLocation" x="-566" y="2191"/>
         </scene>
-        <!--武器-->
+        <!--ギアMOD-->
         <scene sceneID="a0C-Q0-VIn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ovg-vh-dPw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="武器" image="bow1.png" id="yyG-ka-enD"/>
+                    <tabBarItem key="tabBarItem" title="ギアMOD" image="settings48.png" id="yyG-ka-enD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="be6-3E-jBi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -736,13 +736,13 @@ Cg
     <resources>
         <image name="blackboard14 (1).png" width="24" height="24"/>
         <image name="books8 (1).png" width="32" height="32"/>
-        <image name="bow1.png" width="32" height="32"/>
-        <image name="dragon.png" width="32" height="32"/>
+        <image name="data-storage4.png" width="32" height="32"/>
         <image name="information3.png" width="32" height="32"/>
         <image name="movie43.png" width="32" height="32"/>
-        <image name="purchase1.png" width="32" height="32"/>
         <image name="rank-and.png" width="32" height="32"/>
         <image name="rank_ios.png" width="32" height="32"/>
+        <image name="settings48.png" width="32" height="32"/>
+        <image name="trophy36.png" width="32" height="32"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

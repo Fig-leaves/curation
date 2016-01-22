@@ -130,8 +130,7 @@ class BoardViewController: UIViewController, UITableViewDataSource, UITableViewD
             self.inter!.showTypeC(self)
         }
         click_count++;
-        TrackingManager.sendEventTracking("Board", action:"Push", label:"閲覧", value:NSNumber(), screen:"掲示板")
-
+        TrackingManager.sendEventTracking("Board", action:"Push", label:"閲覧", value:NSNumber(), screen: item["title"] as! String)
 
         self.navigationController?.pushViewController( Snippet.setTapAction(item, mode: "blog"), animated: true)
     }

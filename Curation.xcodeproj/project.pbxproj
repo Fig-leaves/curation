@@ -86,6 +86,9 @@
 		5EA31EAD1C293E04002CEEF4 /* bow1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EA31EAB1C293E04002CEEF4 /* bow1.png */; };
 		5EA67BF21ACC1BAB0021A1E8 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA67BF01ACC1BAB0021A1E8 /* EmptyTableViewCell.swift */; };
 		5EA67BF31ACC1BAB0021A1E8 /* EmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA67BF11ACC1BAB0021A1E8 /* EmptyTableViewCell.xib */; };
+		5EBD853A1C5234EB008638E2 /* trophy36.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD85391C5234EB008638E2 /* trophy36.png */; };
+		5EBD853C1C5235CC008638E2 /* settings48.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD853B1C5235CC008638E2 /* settings48.png */; };
+		5EBD853E1C5235FD008638E2 /* data-storage4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD853D1C5235FD008638E2 /* data-storage4.png */; };
 		5EC073751B9E9E87006D425D /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC073741B9E9E87006D425D /* ChannelViewController.swift */; };
 		5EC073771B9EADAB006D425D /* RadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC073761B9EADAB006D425D /* RadioViewController.swift */; };
 		5EC073791B9EB269006D425D /* technology34 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC073781B9EB269006D425D /* technology34 (1).png */; };
@@ -223,6 +226,9 @@
 		5EA31EAB1C293E04002CEEF4 /* bow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bow1.png; sourceTree = "<group>"; };
 		5EA67BF01ACC1BAB0021A1E8 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
 		5EA67BF11ACC1BAB0021A1E8 /* EmptyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyTableViewCell.xib; sourceTree = "<group>"; };
+		5EBD85391C5234EB008638E2 /* trophy36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy36.png; sourceTree = "<group>"; };
+		5EBD853B1C5235CC008638E2 /* settings48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings48.png; sourceTree = "<group>"; };
+		5EBD853D1C5235FD008638E2 /* data-storage4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "data-storage4.png"; sourceTree = "<group>"; };
 		5EC073741B9E9E87006D425D /* ChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		5EC073761B9EADAB006D425D /* RadioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioViewController.swift; sourceTree = "<group>"; };
 		5EC073781B9EB269006D425D /* technology34 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "technology34 (1).png"; sourceTree = "<group>"; };
@@ -319,6 +325,9 @@
 		5ECD67731AB6BF2E009F5CCF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				5EBD853D1C5235FD008638E2 /* data-storage4.png */,
+				5EBD853B1C5235CC008638E2 /* settings48.png */,
+				5EBD85391C5234EB008638E2 /* trophy36.png */,
 				5E444F7B1C05433600A0259E /* disc6.png */,
 				5E8217B31C1986D30054DCC5 /* rank_ios.png */,
 				5E8217B51C1987EA0054DCC5 /* rank-and.png */,
@@ -639,8 +648,10 @@
 				5EC073791B9EB269006D425D /* technology34 (1).png in Resources */,
 				5E8CA85C1C15627200A908D6 /* EventTableViewCell.xib in Resources */,
 				5E444F781C0541B300A0259E /* instrument27.png in Resources */,
+				5EBD853C1C5235CC008638E2 /* settings48.png in Resources */,
 				5ECD677F1AB6C9D8009F5CCF /* TicketTableViewCell.xib in Resources */,
 				5E2CEE2C1BE7373F00A0CD04 /* soccer72.png in Resources */,
+				5EBD853E1C5235FD008638E2 /* data-storage4.png in Resources */,
 				5EC0737B1B9EB288006D425D /* technology34.png in Resources */,
 				5E15FDDF1AB198FC005BD1B4 /* blog1.png in Resources */,
 				5E15FDD51AB196C2005BD1B4 /* movie43.svg in Resources */,
@@ -668,6 +679,7 @@
 				5E8CA86A1C159F7900A908D6 /* cross6.png in Resources */,
 				5E2CEE211BE6F99600A0CD04 /* iphone6.storyboard in Resources */,
 				5EA31EAC1C293E04002CEEF4 /* dragon.png in Resources */,
+				5EBD853A1C5234EB008638E2 /* trophy36.png in Resources */,
 				5E525A751C48C04300B4971E /* information3.png in Resources */,
 				5E444F7C1C05433600A0259E /* disc6.png in Resources */,
 				5E8217B61C1987EA0054DCC5 /* rank-and.png in Resources */,

@@ -10,12 +10,12 @@ import Foundation
 
 struct Constants {
     struct article_url {
-        static let NEWS_SITE1 = "https://www.kimonolabs.com/api/d0f2oxje?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let NEWS_SITE1 = "https://www.kimonolabs.com/api/4i02mb1m?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
         static let NEWS_SITE2 = ""
         static let NEWS_SITE3 = ""
     }
     struct other_article_url {
-        static let article2 = "https://www.kimonolabs.com/api/dyrwfamm?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let article2 = "https://www.kimonolabs.com/api/eglrbu56?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
         static let article3 = "https://www.kimonolabs.com/api/dyrwfamm?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
         static let article4 = ""
         static let article5 = ""
@@ -35,19 +35,19 @@ struct Constants {
     }
     
     struct ad {
-        static let id = "MEDIA-6238b456"
+        static let id = "MEDIA-b6fdd85d"
         static let spot:UInt = 1
         static let ENABLE_VIEW = false
 
     }
     struct inter_ad {
-        static let id = "MEDIA-6238b456"
-        static let spot:UInt = 3
-        static let click_count = 7
+        static let id = "MEDIA-b6fdd85d"
+        static let spot:UInt = 2
+        static let click_count = 5
     }
     
     struct analytics {
-        static let TRACK_ID = "UA-70168853-7"
+        static let TRACK_ID = "UA-70168853-11"
     }
     
     struct blog {
@@ -61,14 +61,14 @@ struct Constants {
     }
     
     struct board_site {
-        static let URL = "https://www.kimonolabs.com/api/4rwljkca?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let URL = "https://www.kimonolabs.com/api/asp7tu9m?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
         static let URL2 = "https://www.kimonolabs.com/api/45xfk0zs?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
-        static let URL3 = "https://www.kimonolabs.com/api/6kym55ty?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let URL3 = "https://www.kimonolabs.com/api/bk6a9cio?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
     }
     
     struct youtube {
         static let API_KEY = "AIzaSyCcfEgQ_6qLIV5STXnZnLo040NzEmZuVZ4"
-        static let WORD = "モンハン　討伐"
+        static let WORD = "コードオブビューティーbp3"
         static let RADIO = "Avicii LIVE"
         static let CHANNEL = "UC1SqP7_RfOC9Jf9L_GRHANg"
     }
