@@ -28,7 +28,7 @@ class Boardtype2ViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TrackingManager.sendScreenTracking("モンスター一覧")
+        TrackingManager.sendScreenTracking("データ")
         
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
@@ -43,7 +43,7 @@ class Boardtype2ViewController: UIViewController, UITableViewDataSource, UITable
         // NavigationControllerのNavigationItemの色
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
         
-        self.title = "モンスター一覧"
+        self.title = "データ"
         
         articles = Request.fetchFromBoard(Constants.board_site.URL2, items: articles)
         
@@ -86,11 +86,7 @@ class Boardtype2ViewController: UIViewController, UITableViewDataSource, UITable
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! BoardTableViewCell
         let item = self.articles[indexPath.row] as! NSDictionary
         
-        if((item["title"] as! String).hasPrefix("一覧")) {
-            return cell
-        } else {
-            return CellPreference.setValueToBoardtype2ViewCell(cell, item: item)
-        }
+        return CellPreference.setValueToBoardtype2ViewCell(cell, item: item)
     }
     
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -101,7 +97,7 @@ class Boardtype2ViewController: UIViewController, UITableViewDataSource, UITable
             self.inter!.showTypeC(self)
         }
         click_count++;
-        TrackingManager.sendEventTracking("モンスター一覧", action:"Push", label:"閲覧", value:NSNumber(), screen: item["title"] as! String)
+        TrackingManager.sendEventTracking("データ", action:"Push", label:"閲覧", value:NSNumber(), screen: item["title"] as! String)
         
         self.navigationController?.pushViewController( Snippet.setTapAction(item, mode: "blog"), animated: true)
     }

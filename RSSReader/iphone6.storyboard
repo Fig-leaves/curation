@@ -17,11 +17,12 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="GP5-yS-yzr" kind="relationship" relationship="viewControllers" id="Gwc-C0-8El"/>
                         <segue destination="aao-1f-EHi" kind="relationship" relationship="viewControllers" id="PNP-B5-jZK"/>
                         <segue destination="TLd-rI-Clq" kind="relationship" relationship="viewControllers" id="4wZ-Gk-ZZm"/>
-                        <segue destination="GP5-yS-yzr" kind="relationship" relationship="viewControllers" id="Gwc-C0-8El"/>
                         <segue destination="SeK-7S-YrG" kind="relationship" relationship="viewControllers" id="mBg-N3-KTa"/>
                         <segue destination="9Ei-XR-hEC" kind="relationship" relationship="viewControllers" id="Cxd-bI-D74"/>
+                        <segue destination="mfh-xp-6fX" kind="relationship" relationship="viewControllers" id="nqj-ln-fOU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TdP-5r-emy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -66,11 +67,11 @@
             </objects>
             <point key="canvasLocation" x="773.5" y="1433.5"/>
         </scene>
-        <!--プレイ動画-->
+        <!--実況動画-->
         <scene sceneID="amY-W8-fnl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SeK-7S-YrG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="プレイ動画" image="movie43.png" id="vJt-FU-hNa"/>
+                    <tabBarItem key="tabBarItem" title="実況動画" image="movie43.png" id="vJt-FU-hNa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GSZ-at-82b">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -88,7 +89,7 @@
         <!--youtube-->
         <scene sceneID="UO4-19-OOv">
             <objects>
-                <viewController title="youtube" id="KXx-UM-W8j" customClass="NewsViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="youtube" id="KXx-UM-W8j" customClass="TorophyViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w0b-w7-8gh"/>
                         <viewControllerLayoutGuide type="bottom" id="HR5-Gj-fPO"/>
@@ -116,18 +117,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="CLz-EA-1md"/>
                     <connections>
-                        <outlet property="table" destination="Uff-2V-aUx" id="Yo3-Me-Q1H"/>
+                        <outlet property="tableView" destination="Uff-2V-aUx" id="inZ-AC-Nvj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uKi-l6-5Eo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="773.5" y="664.5"/>
         </scene>
-        <!--ニュース-->
+        <!--トロフィー-->
         <scene sceneID="soa-mI-GQW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aao-1f-EHi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ニュース" image="purchase1.png" id="Ow8-DG-0Gp"/>
+                    <tabBarItem key="tabBarItem" title="トロフィー" image="trophy36.png" id="Ow8-DG-0Gp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SeP-DI-HC2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -215,7 +216,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Clj-xP-aqu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jzu-IX-0cr">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1nc-Br-7yL">
@@ -244,11 +245,11 @@
             </objects>
             <point key="canvasLocation" x="913.5" y="-21.5"/>
         </scene>
-        <!--モンスター-->
+        <!--データ-->
         <scene sceneID="iOx-My-rHc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mfh-xp-6fX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="モンスター" image="dragon.png" id="32y-uU-oQe"/>
+                    <tabBarItem key="tabBarItem" title="データ" image="data-storage4.png" id="32y-uU-oQe"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ups-rw-lhp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="o6z-5O-pKs">
@@ -455,11 +456,11 @@
             </objects>
             <point key="canvasLocation" x="-1335" y="1074"/>
         </scene>
-        <!--武器一覧-->
+        <!--ギアMOD-->
         <scene sceneID="msL-a2-FDa">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Ei-XR-hEC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="武器一覧" image="bow1.png" id="jkx-KP-wum"/>
+                    <tabBarItem key="tabBarItem" title="ギアMOD" image="settings48.png" id="jkx-KP-wum"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="sno-AB-5y8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9AM-69-l61">
@@ -699,12 +700,12 @@ Cg
     <resources>
         <image name="blackboard14 (1).png" width="24" height="24"/>
         <image name="books8 (1).png" width="32" height="32"/>
-        <image name="bow1.png" width="32" height="32"/>
-        <image name="dragon.png" width="32" height="32"/>
+        <image name="data-storage4.png" width="32" height="32"/>
         <image name="information3.png" width="32" height="32"/>
         <image name="movie43.png" width="32" height="32"/>
-        <image name="purchase1.png" width="32" height="32"/>
         <image name="rank-and.png" width="32" height="32"/>
         <image name="rank_ios.png" width="32" height="32"/>
+        <image name="settings48.png" width="32" height="32"/>
+        <image name="trophy36.png" width="32" height="32"/>
     </resources>
 </document>

@@ -89,6 +89,7 @@
 		5EBD853A1C5234EB008638E2 /* trophy36.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD85391C5234EB008638E2 /* trophy36.png */; };
 		5EBD853C1C5235CC008638E2 /* settings48.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD853B1C5235CC008638E2 /* settings48.png */; };
 		5EBD853E1C5235FD008638E2 /* data-storage4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD853D1C5235FD008638E2 /* data-storage4.png */; };
+		5EBD85401C523940008638E2 /* TorophyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBD853F1C523940008638E2 /* TorophyViewController.swift */; };
 		5EC073751B9E9E87006D425D /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC073741B9E9E87006D425D /* ChannelViewController.swift */; };
 		5EC073771B9EADAB006D425D /* RadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC073761B9EADAB006D425D /* RadioViewController.swift */; };
 		5EC073791B9EB269006D425D /* technology34 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC073781B9EB269006D425D /* technology34 (1).png */; };
@@ -229,6 +230,7 @@
 		5EBD85391C5234EB008638E2 /* trophy36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy36.png; sourceTree = "<group>"; };
 		5EBD853B1C5235CC008638E2 /* settings48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings48.png; sourceTree = "<group>"; };
 		5EBD853D1C5235FD008638E2 /* data-storage4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "data-storage4.png"; sourceTree = "<group>"; };
+		5EBD853F1C523940008638E2 /* TorophyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorophyViewController.swift; sourceTree = "<group>"; };
 		5EC073741B9E9E87006D425D /* ChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		5EC073761B9EADAB006D425D /* RadioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioViewController.swift; sourceTree = "<group>"; };
 		5EC073781B9EB269006D425D /* technology34 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "technology34 (1).png"; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 				5E8CA8671C158F1E00A908D6 /* CardListViewController.swift */,
 				5E96CF871C168330008C5BC9 /* RankViewController.swift */,
 				5E525A761C48C0EC00B4971E /* EulaViewController.swift */,
+				5EBD853F1C523940008638E2 /* TorophyViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -787,6 +790,7 @@
 				5EFE7D481B972233006D43E3 /* Snippet.swift in Sources */,
 				5ED4C0EA1AB2CC4E00D2BF8A /* YoutubeTableViewCell.swift in Sources */,
 				5EC0D4681BA82B59004221F8 /* CellPreference.swift in Sources */,
+				5EBD85401C523940008638E2 /* TorophyViewController.swift in Sources */,
 				5E96CF881C168330008C5BC9 /* RankViewController.swift in Sources */,
 				5ECD677E1AB6C9D8009F5CCF /* TicketTableViewCell.swift in Sources */,
 				5EC073771B9EADAB006D425D /* RadioViewController.swift in Sources */,
@@ -938,7 +942,7 @@
 					"$(PROJECT_DIR)/RSSReader/GoogleAnalytics",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.mhx.Curation;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.jc3.Curation;
 				PRODUCT_NAME = Curation;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RSSReader/RSSReader-Bridging-Header.h";
@@ -970,7 +974,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/RSSReader/GoogleAnalytics",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.mhx.Curation;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.jc3.Curation;
 				PRODUCT_NAME = Curation;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RSSReader/RSSReader-Bridging-Header.h";

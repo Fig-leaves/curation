@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YoutubeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdstirMraidViewDelegate {
+class TorophyViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdstirMraidViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     var items = NSMutableArray()
     var refresh: UIRefreshControl!
@@ -18,7 +18,7 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
     var nextPageToken:NSString!
     var inter: AdstirInterstitial? = nil
     var click_count = 0;
-
+    
     var adView: AdstirMraidView? = nil
     deinit {
         
@@ -30,10 +30,10 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "実況動画"
+        self.title = "トロフィー"
         
-        TrackingManager.sendScreenTracking("実況動画")
-
+        TrackingManager.sendScreenTracking("トロフィー")
+        
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
         self.inter!.spot = Constants.inter_ad.spot
@@ -57,23 +57,16 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
             self.adView = adView
         }
         
-
-        
-
-        self.nextPageToken = "nil"
+        self.items = Request.fetchFromTorophy( Constants.trophy.URL, items: self.items)
+    
         self.navigationController?.navigationBar.barTintColor = UIColor(netHex: 0x000000)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-
-        items = NSMutableArray()
-        let nibName = UINib(nibName: "YoutubeTableViewCell", bundle:nil)
+        
+        let nibName = UINib(nibName: "NewsTableViewCell", bundle:nil)
         tableView.registerNib(nibName, forCellReuseIdentifier: "Cell")
         tableView.delegate = self
         tableView.dataSource = self
-        self.refresh = UIRefreshControl()
-        self.refresh.attributedTitle = NSAttributedString(string: Constants.message.UPDATING)
-        self.refresh.addTarget(self, action: "viewWillAppear:", forControlEvents: UIControlEvents.ValueChanged)
-        self.tableView.addSubview(refresh)
         
     }
     
@@ -83,38 +76,22 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        items = NSMutableArray()
-        request(false)
-        self.adView?.start()
-        
-        self.refresh?.endRefreshing()
+        self.tableView.reloadData()
     }
     
-    func request(next: Bool) {
-        Request.fetchFromYoutube(next, word: WORD, nextPageToken: self.nextPageToken as String, items: self.items, callback: {
-            (data, token) in
-            self.items = data
-            self.nextPageToken = token
-        })
-        self.tableView.reloadData()
-        self.loading = false
-    }
+    
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        if(self.tableView.contentOffset.y >= (self.tableView.contentSize.height - self.tableView.bounds.size.height)
-            && self.nextPageToken != nil
-            && loading == false) {
-            loading = true
+        if(self.tableView.contentOffset.y >= (self.tableView.contentSize.height - self.tableView.bounds.size.height) && self.loading == false) {
             SVProgressHUD.showWithStatus(Constants.message.LOADING)
-                
+            self.loading = true
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                if(self.nextPageToken == nil) {
-                } else {
-                    self.request(true)                
-                    SVProgressHUD.dismiss()
-                }
+
+                sleep(1)
+                SVProgressHUD.dismiss()
             })
         }
+
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -126,22 +103,31 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! YoutubeTableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! NewsTableViewCell
         let item = self.items[indexPath.row] as! NSDictionary
         
-        return CellPreference.setValueToYoutubeViewCell(cell, item: item)
+        return CellPreference.setValueToTrophyCell(cell, item: item)
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let item = self.items[indexPath.row] as! NSDictionary
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-
-        TrackingManager.sendEventTracking("Youtube", action:"Push", label:"閲覧", value:NSNumber(), screen:"実況動画")
-
+        
+        TrackingManager.sendEventTracking("トロフィー", action:"Push", label:"閲覧", value:NSNumber(), screen:"トロフィー情報")
+        
         if click_count % Constants.inter_ad.click_count == 0 {
             self.inter!.showTypeC(self)
         }
         click_count++;
-        self.navigationController?.pushViewController(Snippet.setTapAction(item, mode: "movie"), animated: true)
+        
+        var alertController = UIAlertController(title: item["title"] as! String, message: item["description"] as! String, preferredStyle: .Alert)
+        
+        let otherAction = UIAlertAction(title: "OK", style: .Default) {
+            action in NSLog("はいボタンが押されました")
+        }
+        alertController.addAction(otherAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
+
     }
 }

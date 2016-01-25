@@ -28,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="-823" y="388"/>
         </scene>
-        <!--News View Controller-->
+        <!--Torophy View Controller-->
         <scene sceneID="Uv2-sx-dIf">
             <objects>
-                <viewController id="b72-iv-5qL" customClass="NewsViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="b72-iv-5qL" customClass="TorophyViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UFo-XV-a58">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,7 +56,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="qHD-Kl-3rI"/>
                     <connections>
-                        <outlet property="table" destination="keB-e2-AXM" id="9s7-Zh-n9H"/>
+                        <outlet property="tableView" destination="keB-e2-AXM" id="PhS-N4-0Ty"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1M-Pq-ce0" userLabel="First Responder" sceneMemberID="firstResponder"/>

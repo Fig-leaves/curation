@@ -270,7 +270,7 @@ class Request {
                 content[Constants.board.LINK] = news.objectForKey(Constants.article_data.HREF) as! NSString
             } else {
                 content[Constants.board.TITLE] = object.objectForKey("title") as! NSString
-                content[Constants.board.LINK] = object.objectForKey("link") as! NSString
+                content[Constants.board.LINK] = object.objectForKey("url") as! NSString
             }
             
             print(object)
@@ -296,9 +296,9 @@ class Request {
 
             
             print(content["title"])
-            if (content["title"] as! String).hasSuffix("一覧") {
+            if (content["title"] as! String).hasSuffix("") {
                 print("一覧あり ")
-            } else if (content["title"] as! String).hasSuffix("一覧表") {
+            } else if (content["title"] as! String).hasSuffix("") {
                 print("一覧表あり ")
             } else if (content["title"] as! String).hasSuffix("方法") {
             } else if (content["title"] as! String).hasPrefix("【モンハンクロス】") {
@@ -309,10 +309,6 @@ class Request {
             }
 
         })
-        
-        
-        
-        
         return items
     }
  
@@ -346,6 +342,56 @@ class Request {
             }
             callback(items)
         })
+    }
+    
+    class func fetchFromTorophy(url: String, items:NSMutableArray) -> NSMutableArray {
+
+        
+        var urlString:String
+        urlString = url as String
+        let url:NSURL! = NSURL(string:urlString)
+        let urlRequest:NSURLRequest = NSURLRequest(URL:url)
+        
+        var data:NSData
+        var dic: NSDictionary = NSDictionary()
+        
+        do {
+            data = try NSURLConnection.sendSynchronousRequest(urlRequest, returningResponse: nil)
+            dic = try NSJSONSerialization.JSONObjectWithData(
+                data,
+                options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
+        } catch {
+            print("ERROR")
+        }
+        
+        let result: NSDictionary = dic.objectForKey("results") as! NSDictionary
+        let itemsArray: NSArray = result.objectForKey("collection1") as! NSArray
+        var content: Dictionary<String, AnyObject> = ["" : ""]
+        
+        itemsArray.enumerateObjectsUsingBlock({ object, index, stop in
+            
+            if let news = object.objectForKey("rank") as? NSDictionary {
+                content["rank"] = news.objectForKey(Constants.article_data.TEXT) as! NSString
+            } else {
+                content["rank"] = object.objectForKey("rank") as! NSString
+            }
+            
+            if let date = object.objectForKey("title") as? NSDictionary {
+                content["title"] = date.objectForKey("text") as! NSString
+            } else {
+                content["title"] = object.objectForKey("title") as! NSString
+            }
+            
+            content["description"] = object.objectForKey("description") as! NSString
+            content["pubDate"] = ""
+            
+            
+            items.addObject(content)
+            
+        })
+        print(items)
+        return items
+        
     }
     
 

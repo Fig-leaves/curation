@@ -90,8 +90,6 @@ class BoardType4ViewController: UIViewController, UITableViewDataSource, UITable
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! BoardTableViewCell
         let item = self.articles[indexPath.row] as! NSDictionary
         
-        
-        
         return CellPreference.setValueToBoardtype2ViewCell(cell, item: item)
     }
     

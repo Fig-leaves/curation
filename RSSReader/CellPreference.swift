@@ -79,6 +79,16 @@ class CellPreference {
         return cell
     }
     
+    
+    class func setValueToTrophyCell(cell: NewsTableViewCell, item: NSDictionary) -> NewsTableViewCell {
+        cell.titleLabel.text = item["title"] as! String
+        cell.authorLabel.text = item["rank"] as! String
+        cell.dateLabel.text = item["pubDate"] as! String
+        
+        return cell
+    }
+    
+    
     class func setValueToTicketViewCell(cell: TicketTableViewCell, items: NSMutableArray, indexPath: NSIndexPath) -> TicketTableViewCell {
         var str = items[indexPath.row][Constants.article_data.TITLE] as? String
         
@@ -112,8 +122,5 @@ class CellPreference {
         
         return cell
     }
-    
-    
-    
     
 }
