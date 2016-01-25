@@ -56,9 +56,6 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
             self.view.addSubview(adView)
             self.adView = adView
         }
-        
-
-        
 
         self.nextPageToken = "nil"
         self.navigationController?.navigationBar.barTintColor = UIColor(netHex: 0x000000)
