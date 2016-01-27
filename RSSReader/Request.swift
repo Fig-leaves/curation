@@ -381,13 +381,10 @@ class Request {
             } else {
                 content["title"] = object.objectForKey("title") as! NSString
             }
-            
             content["description"] = object.objectForKey("description") as! NSString
             content["pubDate"] = ""
             
-            
             items.addObject(content)
-            
         })
         print(items)
         return items
