@@ -15,7 +15,7 @@ struct Constants {
         static let NEWS_SITE3 = ""
     }
     struct other_article_url {
-        static let article2 = "https://www.kimonolabs.com/api/65n81rp0?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let article2 = "https://www.kimonolabs.com/api/7itkrqjo?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
         static let article3 = "https://www.kimonolabs.com/api/dyrwfamm?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
         static let article4 = ""
         static let article5 = ""
@@ -39,19 +39,19 @@ struct Constants {
     }
     
     struct ad {
-        static let id = "MEDIA-a8a66447"
+        static let id = "MEDIA-ede54f7a"
         static let spot:UInt = 1
         static let ENABLE_VIEW = false
 
     }
     struct inter_ad {
-        static let id = "MEDIA-a8a66447"
+        static let id = "MEDIA-ede54f7a"
         static let spot:UInt = 2
         static let click_count = 5
     }
     
     struct analytics {
-        static let TRACK_ID = "UA-70168853-12"
+        static let TRACK_ID = "UA-70168853-15"
     }
     
     struct blog {
@@ -65,14 +65,14 @@ struct Constants {
     }
     
     struct board_site {
-        static let URL = "https://www.kimonolabs.com/api/21dhjwcy?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
-        static let URL2 = "https://www.kimonolabs.com/api/37xdqg6g?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
-        static let URL3 = "https://www.kimonolabs.com/api/9e77r3p8?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let URL = "https://www.kimonolabs.com/api/a56b0dpu?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let URL2 = "https://www.kimonolabs.com/api/3c87ii54?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let URL3 = "https://www.kimonolabs.com/api/9yvwzxdi?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
     }
     
     struct youtube {
         static let API_KEY = "AIzaSyCcfEgQ_6qLIV5STXnZnLo040NzEmZuVZ4"
-        static let WORD = "Just Cause3 実況"
+        static let WORD = "龍が如く極み 実況"
         static let RADIO = "Avicii LIVE"
         static let CHANNEL = "UC1SqP7_RfOC9Jf9L_GRHANg"
     }

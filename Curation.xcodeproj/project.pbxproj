@@ -35,6 +35,10 @@
 		5E2CEE301BE73D5A00A0CD04 /* UIColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CEE2F1BE73D5A00A0CD04 /* UIColorExtention.swift */; };
 		5E2CEE321BE740DF00A0CD04 /* blackboard14 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 5E2CEE311BE740DF00A0CD04 /* blackboard14 (1).png */; };
 		5E2CEE341BE749F800A0CD04 /* blackboard14 (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 5E2CEE331BE749F800A0CD04 /* blackboard14 (2).png */; };
+		5E2FC6691C5E2D7700A9839F /* map-kamurochou.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E2FC6681C5E2D7700A9839F /* map-kamurochou.jpg */; };
+		5E2FC66B1C5E2F2600A9839F /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FC66A1C5E2F2600A9839F /* ImageViewController.swift */; };
+		5E2FC66D1C5E319C00A9839F /* placeholder8.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E2FC66C1C5E319C00A9839F /* placeholder8.png */; };
+		5E2FC66F1C5E31D400A9839F /* reading22.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E2FC66E1C5E31D400A9839F /* reading22.png */; };
 		5E444F5F1BFE01B400A0259E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E444F5E1BFE01B400A0259E /* GoogleService-Info.plist */; };
 		5E444F611C0535A500A0259E /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E444F601C0535A500A0259E /* TwitterViewController.swift */; };
 		5E444F641C0535DA00A0259E /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E444F621C0535DA00A0259E /* TweetTableViewCell.swift */; };
@@ -161,6 +165,10 @@
 		5E2CEE2F1BE73D5A00A0CD04 /* UIColorExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtention.swift; sourceTree = "<group>"; };
 		5E2CEE311BE740DF00A0CD04 /* blackboard14 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackboard14 (1).png"; sourceTree = "<group>"; };
 		5E2CEE331BE749F800A0CD04 /* blackboard14 (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackboard14 (2).png"; sourceTree = "<group>"; };
+		5E2FC6681C5E2D7700A9839F /* map-kamurochou.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "map-kamurochou.jpg"; sourceTree = "<group>"; };
+		5E2FC66A1C5E2F2600A9839F /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		5E2FC66C1C5E319C00A9839F /* placeholder8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder8.png; sourceTree = "<group>"; };
+		5E2FC66E1C5E31D400A9839F /* reading22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reading22.png; sourceTree = "<group>"; };
 		5E444F5E1BFE01B400A0259E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E444F601C0535A500A0259E /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		5E444F621C0535DA00A0259E /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
@@ -327,7 +335,10 @@
 		5ECD67731AB6BF2E009F5CCF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				5E2FC66E1C5E31D400A9839F /* reading22.png */,
 				5EBD853D1C5235FD008638E2 /* data-storage4.png */,
+				5E2FC6681C5E2D7700A9839F /* map-kamurochou.jpg */,
+				5E2FC66C1C5E319C00A9839F /* placeholder8.png */,
 				5EBD853B1C5235CC008638E2 /* settings48.png */,
 				5EBD85391C5234EB008638E2 /* trophy36.png */,
 				5E444F7B1C05433600A0259E /* disc6.png */,
@@ -427,6 +438,7 @@
 				5E96CF871C168330008C5BC9 /* RankViewController.swift */,
 				5E525A761C48C0EC00B4971E /* EulaViewController.swift */,
 				5EBD853F1C523940008638E2 /* TorophyViewController.swift */,
+				5E2FC66A1C5E2F2600A9839F /* ImageViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -664,6 +676,7 @@
 				5E8CA86E1C159FDB00A908D6 /* square234.png in Resources */,
 				5E96CF8A1C16A760008C5BC9 /* mac7.png in Resources */,
 				5E56E7041ABA8CD700FA6753 /* film51.png in Resources */,
+				5E2FC6691C5E2D7700A9839F /* map-kamurochou.jpg in Resources */,
 				5EA31EAD1C293E04002CEEF4 /* bow1.png in Resources */,
 				AAC02B3A193DF344003997F3 /* Podfile in Resources */,
 				5E96CF8C1C16A766008C5BC9 /* system1.png in Resources */,
@@ -683,6 +696,8 @@
 				5E2CEE211BE6F99600A0CD04 /* iphone6.storyboard in Resources */,
 				5EA31EAC1C293E04002CEEF4 /* dragon.png in Resources */,
 				5EBD853A1C5234EB008638E2 /* trophy36.png in Resources */,
+				5E2FC66D1C5E319C00A9839F /* placeholder8.png in Resources */,
+				5E2FC66F1C5E31D400A9839F /* reading22.png in Resources */,
 				5E525A751C48C04300B4971E /* information3.png in Resources */,
 				5E444F7C1C05433600A0259E /* disc6.png in Resources */,
 				5E8217B61C1987EA0054DCC5 /* rank-and.png in Resources */,
@@ -773,6 +788,7 @@
 				5ECD677B1AB6C9B6009F5CCF /* TicketViewController.swift in Sources */,
 				5E56E6F81AB7C26F00FA6753 /* OtherViewController.swift in Sources */,
 				5EC0D46A1BA8311C004221F8 /* Request.swift in Sources */,
+				5E2FC66B1C5E2F2600A9839F /* ImageViewController.swift in Sources */,
 				5E96CF8F1C194668008C5BC9 /* News2ViewController.swift in Sources */,
 				5E8CA85E1C15666500A908D6 /* EventViewController.swift in Sources */,
 				5ED4C0E61AB2CA0900D2BF8A /* NewsTableViewCell.swift in Sources */,
@@ -942,7 +958,7 @@
 					"$(PROJECT_DIR)/RSSReader/GoogleAnalytics",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.jc3.Curation;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.ryu.Curation;
 				PRODUCT_NAME = Curation;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RSSReader/RSSReader-Bridging-Header.h";
@@ -974,7 +990,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/RSSReader/GoogleAnalytics",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.jc3.Curation;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.ryu.Curation;
 				PRODUCT_NAME = Curation;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RSSReader/RSSReader-Bridging-Header.h";

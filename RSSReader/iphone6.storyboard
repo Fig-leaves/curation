@@ -20,8 +20,8 @@
                         <segue destination="GP5-yS-yzr" kind="relationship" relationship="viewControllers" id="Gwc-C0-8El"/>
                         <segue destination="aao-1f-EHi" kind="relationship" relationship="viewControllers" id="PNP-B5-jZK"/>
                         <segue destination="TLd-rI-Clq" kind="relationship" relationship="viewControllers" id="4wZ-Gk-ZZm"/>
+                        <segue destination="Q8E-jM-s4o" kind="relationship" relationship="viewControllers" id="hag-9P-F1G"/>
                         <segue destination="SeK-7S-YrG" kind="relationship" relationship="viewControllers" id="mBg-N3-KTa"/>
-                        <segue destination="9Ei-XR-hEC" kind="relationship" relationship="viewControllers" id="Cxd-bI-D74"/>
                         <segue destination="mfh-xp-6fX" kind="relationship" relationship="viewControllers" id="nqj-ln-fOU"/>
                     </connections>
                 </tabBarController>
@@ -89,7 +89,7 @@
         <!--youtube-->
         <scene sceneID="UO4-19-OOv">
             <objects>
-                <viewController title="youtube" id="KXx-UM-W8j" customClass="TorophyViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="youtube" id="KXx-UM-W8j" customClass="BoardType3ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w0b-w7-8gh"/>
                         <viewControllerLayoutGuide type="bottom" id="HR5-Gj-fPO"/>
@@ -124,11 +124,11 @@
             </objects>
             <point key="canvasLocation" x="773.5" y="664.5"/>
         </scene>
-        <!--トロフィー-->
+        <!--サブストーリー-->
         <scene sceneID="soa-mI-GQW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aao-1f-EHi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="トロフィー" image="trophy36.png" id="Ow8-DG-0Gp"/>
+                    <tabBarItem key="tabBarItem" title="サブストーリー" image="reading22.png" id="Ow8-DG-0Gp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SeP-DI-HC2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -373,36 +373,32 @@
         <!--ミムッター-->
         <scene sceneID="Td4-hC-0LZ">
             <objects>
-                <viewController title="ミムッター" id="IGz-je-TxJ" customClass="WebViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ミムッター" id="IGz-je-TxJ" customClass="ImageViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ytX-v5-Cdd"/>
                         <viewControllerLayoutGuide type="bottom" id="t6u-HL-eey"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Nnn-QH-wwJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Adx-0S-eAA">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="map-kamurochou.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="K3p-xR-mmJ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="412"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Skv-cf-QN5"/>
-                    <connections>
-                        <outlet property="webView" destination="Adx-0S-eAA" id="jjY-eh-zOU"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PQy-HY-RB9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-371" y="-606"/>
+            <point key="canvasLocation" x="-371.5" y="-606.5"/>
         </scene>
-        <!--IOSランキング-->
+        <!--MAP-->
         <scene sceneID="buM-fF-41y">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q8E-jM-s4o" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="IOSランキング" image="rank_ios.png" id="DuZ-GG-B0c"/>
+                    <tabBarItem key="tabBarItem" title="MAP" image="placeholder8.png" id="DuZ-GG-B0c"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="LDp-ef-eQo"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kh5-G0-R1d">
@@ -427,7 +423,7 @@
                         <viewControllerLayoutGuide type="bottom" id="gSM-Mh-XGc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bdA-DN-1C6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="W5a-3a-c6X">
@@ -702,10 +698,11 @@ Cg
         <image name="books8 (1).png" width="32" height="32"/>
         <image name="data-storage4.png" width="32" height="32"/>
         <image name="information3.png" width="32" height="32"/>
+        <image name="map-kamurochou.jpg" width="647" height="714"/>
         <image name="movie43.png" width="32" height="32"/>
+        <image name="placeholder8.png" width="32" height="32"/>
         <image name="rank-and.png" width="32" height="32"/>
-        <image name="rank_ios.png" width="32" height="32"/>
+        <image name="reading22.png" width="32" height="32"/>
         <image name="settings48.png" width="32" height="32"/>
-        <image name="trophy36.png" width="32" height="32"/>
     </resources>
 </document>
