@@ -28,7 +28,7 @@ class Boardtype2ViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TrackingManager.sendScreenTracking("データ")
+        TrackingManager.sendScreenTracking("アイテム")
         
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
@@ -43,7 +43,7 @@ class Boardtype2ViewController: UIViewController, UITableViewDataSource, UITable
         // NavigationControllerのNavigationItemの色
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
         
-        self.title = "データ"
+        self.title = "アイテム"
         
         articles = Request.fetchFromBoard(Constants.board_site.URL2, items: articles)
         
@@ -97,7 +97,7 @@ class Boardtype2ViewController: UIViewController, UITableViewDataSource, UITable
             self.inter!.showTypeC(self)
         }
         click_count++;
-        TrackingManager.sendEventTracking("データ", action:"Push", label:"閲覧", value:NSNumber(), screen: item["title"] as! String)
+        TrackingManager.sendEventTracking("アイテム", action:"Push", label:"閲覧", value:NSNumber(), screen: item["title"] as! String)
         
         self.navigationController?.pushViewController( Snippet.setTapAction(item, mode: "blog"), animated: true)
     }

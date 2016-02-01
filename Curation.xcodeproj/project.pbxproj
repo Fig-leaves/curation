@@ -39,6 +39,7 @@
 		5E2FC66B1C5E2F2600A9839F /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FC66A1C5E2F2600A9839F /* ImageViewController.swift */; };
 		5E2FC66D1C5E319C00A9839F /* placeholder8.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E2FC66C1C5E319C00A9839F /* placeholder8.png */; };
 		5E2FC66F1C5E31D400A9839F /* reading22.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E2FC66E1C5E31D400A9839F /* reading22.png */; };
+		5E2FC6711C5F29AE00A9839F /* BoardType5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FC6701C5F29AE00A9839F /* BoardType5ViewController.swift */; };
 		5E444F5F1BFE01B400A0259E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E444F5E1BFE01B400A0259E /* GoogleService-Info.plist */; };
 		5E444F611C0535A500A0259E /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E444F601C0535A500A0259E /* TwitterViewController.swift */; };
 		5E444F641C0535DA00A0259E /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E444F621C0535DA00A0259E /* TweetTableViewCell.swift */; };
@@ -169,6 +170,7 @@
 		5E2FC66A1C5E2F2600A9839F /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		5E2FC66C1C5E319C00A9839F /* placeholder8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder8.png; sourceTree = "<group>"; };
 		5E2FC66E1C5E31D400A9839F /* reading22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reading22.png; sourceTree = "<group>"; };
+		5E2FC6701C5F29AE00A9839F /* BoardType5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardType5ViewController.swift; sourceTree = "<group>"; };
 		5E444F5E1BFE01B400A0259E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E444F601C0535A500A0259E /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		5E444F621C0535DA00A0259E /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
@@ -434,6 +436,7 @@
 				5E8CA8651C15877A00A908D6 /* Boardtype2ViewController.swift */,
 				5E81C85C1C2B8C10004A9DED /* BoardType3ViewController.swift */,
 				5E81C85E1C2B90BD004A9DED /* BoardType4ViewController.swift */,
+				5E2FC6701C5F29AE00A9839F /* BoardType5ViewController.swift */,
 				5E8CA8671C158F1E00A908D6 /* CardListViewController.swift */,
 				5E96CF871C168330008C5BC9 /* RankViewController.swift */,
 				5E525A761C48C0EC00B4971E /* EulaViewController.swift */,
@@ -796,6 +799,7 @@
 				5E9F62671AE542D400C72ED4 /* Constants.swift in Sources */,
 				5E8CA8681C158F1E00A908D6 /* CardListViewController.swift in Sources */,
 				5E444F611C0535A500A0259E /* TwitterViewController.swift in Sources */,
+				5E2FC6711C5F29AE00A9839F /* BoardType5ViewController.swift in Sources */,
 				5E525A771C48C0EC00B4971E /* EulaViewController.swift in Sources */,
 				5EA67BF21ACC1BAB0021A1E8 /* EmptyTableViewCell.swift in Sources */,
 				5E161A721AC2B73700B039F8 /* OriginalTabBarController.swift in Sources */,

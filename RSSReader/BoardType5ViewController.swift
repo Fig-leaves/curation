@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BoardType3ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdstirMraidViewDelegate {
+class BoardType5ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdstirMraidViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     var articles = NSMutableArray()
@@ -28,7 +28,7 @@ class BoardType3ViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TrackingManager.sendScreenTracking("ストーリー")
+        TrackingManager.sendScreenTracking("装備")
         
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
@@ -43,9 +43,9 @@ class BoardType3ViewController: UIViewController, UITableViewDataSource, UITable
         // NavigationControllerのNavigationItemの色
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
         
-        self.title = "ストーリー"
+        self.title = "装備"
         
-        articles = Request.fetchFromBoard(Constants.board_site.URL3, items: articles)
+        articles = Request.fetchFromBoard(Constants.other_article_url.article4, items: articles)
         
         
         tableView.delegate = self
@@ -83,18 +83,14 @@ class BoardType3ViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(table: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.articles.count - 4
+        return self.articles.count
     }
     
     func tableView(table: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! BoardTableViewCell
         let item = self.articles[indexPath.row] as! NSDictionary
         
-        if((item["title"] as! String).hasPrefix("一覧")) {
-            return cell
-        } else {
-            return CellPreference.setValueToBoardtype2ViewCell(cell, item: item)
-        }
+        return CellPreference.setValueToBoardtype2ViewCell(cell, item: item)
     }
     
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -105,7 +101,7 @@ class BoardType3ViewController: UIViewController, UITableViewDataSource, UITable
             self.inter!.showTypeC(self)
         }
         click_count++;
-        TrackingManager.sendEventTracking("ストーリー", action:"Push", label:"閲覧", value:NSNumber(), screen:"ストーリー")
+        TrackingManager.sendEventTracking("装備", action:"Push", label:"閲覧", value:NSNumber(), screen:item["title"] as! String)
         
         self.navigationController?.pushViewController( Snippet.setTapAction(item, mode: "blog"), animated: true)
     }

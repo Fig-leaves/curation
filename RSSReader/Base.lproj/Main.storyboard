@@ -19,9 +19,9 @@
                         <segue destination="qEa-hp-pq6" kind="relationship" relationship="viewControllers" id="Wx1-0u-7q9"/>
                         <segue destination="1CV-ir-oM9" kind="relationship" relationship="viewControllers" id="cpC-kd-65c"/>
                         <segue destination="bz0-li-6w3" kind="relationship" relationship="viewControllers" id="iKr-1K-cgJ"/>
-                        <segue destination="T7B-kV-wGG" kind="relationship" relationship="viewControllers" id="m4V-6c-1RE"/>
                         <segue destination="7Kz-Il-eSu" kind="relationship" relationship="viewControllers" id="gqN-s4-mvS"/>
                         <segue destination="hRs-6y-9XU" kind="relationship" relationship="viewControllers" id="FlE-Xd-sfR"/>
+                        <segue destination="Ovg-vh-dPw" kind="relationship" relationship="viewControllers" id="OWC-QW-BAS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJn-lC-3h0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -63,11 +63,11 @@
             </objects>
             <point key="canvasLocation" x="458" y="1465"/>
         </scene>
-        <!--サブストーリー-->
+        <!--ストーリー-->
         <scene sceneID="4pm-OG-Qey">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1CV-ir-oM9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="サブストーリー" image="reading22.png" id="zAD-iD-3iO"/>
+                    <tabBarItem key="tabBarItem" title="ストーリー" image="reading22.png" id="zAD-iD-3iO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pe7-nd-UBk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -117,11 +117,11 @@
             </objects>
             <point key="canvasLocation" x="458" y="781"/>
         </scene>
-        <!--攻略情報-->
+        <!--ニュース-->
         <scene sceneID="IW5-Kd-4kp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qEa-hp-pq6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="攻略情報" image="books8 (1).png" id="vJ1-4x-1AN"/>
+                    <tabBarItem key="tabBarItem" title="ニュース" image="newspaper11 (1).png" id="vJ1-4x-1AN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IwQ-0n-Hs7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -171,11 +171,11 @@
             </objects>
             <point key="canvasLocation" x="458" y="2191"/>
         </scene>
-        <!--データ-->
+        <!--アイテム-->
         <scene sceneID="Qez-ik-rPm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hRs-6y-9XU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="データ" image="data-storage4.png" id="reD-Pk-d2F"/>
+                    <tabBarItem key="tabBarItem" title="アイテム" image="data-storage4.png" id="reD-Pk-d2F"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hzM-gG-FgH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -245,10 +245,10 @@
             </objects>
             <point key="canvasLocation" x="-24" y="95"/>
         </scene>
-        <!--Board Type3 View Controller-->
+        <!--Board Type5 View Controller-->
         <scene sceneID="22X-Fn-Eou">
             <objects>
-                <viewController id="dJy-TV-wgX" customClass="BoardType3ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dJy-TV-wgX" customClass="BoardType5ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4P6-rl-TKT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -280,11 +280,11 @@
             </objects>
             <point key="canvasLocation" x="-566" y="2191"/>
         </scene>
-        <!--MAP-->
+        <!--装備-->
         <scene sceneID="a0C-Q0-VIn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ovg-vh-dPw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="MAP" image="settings48.png" id="yyG-ka-enD"/>
+                    <tabBarItem key="tabBarItem" title="装備" image="bow1.png" id="yyG-ka-enD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="be6-3E-jBi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -731,15 +731,15 @@ Cg
     </scenes>
     <resources>
         <image name="blackboard14 (1).png" width="24" height="24"/>
-        <image name="books8 (1).png" width="32" height="32"/>
+        <image name="bow1.png" width="32" height="32"/>
         <image name="data-storage4.png" width="32" height="32"/>
         <image name="information3.png" width="32" height="32"/>
         <image name="map-kamurochou.jpg" width="647" height="714"/>
         <image name="movie43.png" width="32" height="32"/>
+        <image name="newspaper11 (1).png" width="32" height="32"/>
         <image name="placeholder8.png" width="32" height="32"/>
         <image name="rank-and.png" width="32" height="32"/>
         <image name="reading22.png" width="32" height="32"/>
-        <image name="settings48.png" width="32" height="32"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -277,7 +277,7 @@ class Request {
             if let date = object.objectForKey("last") as? NSDictionary {
                 content[Constants.board.LAST] = date.objectForKey("text") as! NSString
             } else {
-                if  object.objectForKey("post") == nil {
+                if  object.objectForKey("last") == nil {
                     content[Constants.board.LAST] = ""
                 } else {
                     content[Constants.board.LAST] = object.objectForKey("last") as! NSString
