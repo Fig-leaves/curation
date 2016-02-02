@@ -40,6 +40,8 @@
 		5E2FC66D1C5E319C00A9839F /* placeholder8.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E2FC66C1C5E319C00A9839F /* placeholder8.png */; };
 		5E2FC66F1C5E31D400A9839F /* reading22.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E2FC66E1C5E31D400A9839F /* reading22.png */; };
 		5E2FC6711C5F29AE00A9839F /* BoardType5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FC6701C5F29AE00A9839F /* BoardType5ViewController.swift */; };
+		5E2FC6781C60771700A9839F /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FC6761C60771700A9839F /* CharacterTableViewCell.swift */; };
+		5E2FC6791C60771700A9839F /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E2FC6771C60771700A9839F /* CharacterTableViewCell.xib */; };
 		5E444F5F1BFE01B400A0259E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E444F5E1BFE01B400A0259E /* GoogleService-Info.plist */; };
 		5E444F611C0535A500A0259E /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E444F601C0535A500A0259E /* TwitterViewController.swift */; };
 		5E444F641C0535DA00A0259E /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E444F621C0535DA00A0259E /* TweetTableViewCell.swift */; };
@@ -171,6 +173,8 @@
 		5E2FC66C1C5E319C00A9839F /* placeholder8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder8.png; sourceTree = "<group>"; };
 		5E2FC66E1C5E31D400A9839F /* reading22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reading22.png; sourceTree = "<group>"; };
 		5E2FC6701C5F29AE00A9839F /* BoardType5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardType5ViewController.swift; sourceTree = "<group>"; };
+		5E2FC6761C60771700A9839F /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
+		5E2FC6771C60771700A9839F /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterTableViewCell.xib; sourceTree = "<group>"; };
 		5E444F5E1BFE01B400A0259E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E444F601C0535A500A0259E /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		5E444F621C0535DA00A0259E /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
@@ -394,6 +398,8 @@
 		5ED4C0DB1AB2C9C300D2BF8A /* cell */ = {
 			isa = PBXGroup;
 			children = (
+				5E2FC6761C60771700A9839F /* CharacterTableViewCell.swift */,
+				5E2FC6771C60771700A9839F /* CharacterTableViewCell.xib */,
 				5ED4C0E41AB2CA0900D2BF8A /* NewsTableViewCell.swift */,
 				5ED4C0E51AB2CA0900D2BF8A /* NewsTableViewCell.xib */,
 				5ED4C0E81AB2CC4E00D2BF8A /* YoutubeTableViewCell.swift */,
@@ -684,6 +690,7 @@
 				AAC02B3A193DF344003997F3 /* Podfile in Resources */,
 				5E96CF8C1C16A766008C5BC9 /* system1.png in Resources */,
 				5E2CEE341BE749F800A0CD04 /* blackboard14 (2).png in Resources */,
+				5E2FC6791C60771700A9839F /* CharacterTableViewCell.xib in Resources */,
 				5E444F651C0535DA00A0259E /* TweetTableViewCell.xib in Resources */,
 				5E8CA86C1C159FA500A908D6 /* purchase1.png in Resources */,
 				5ED4C0EB1AB2CC4E00D2BF8A /* YoutubeTableViewCell.xib in Resources */,
@@ -808,6 +815,7 @@
 				5E2959D51AAD3FC4009872AF /* NewsViewController.swift in Sources */,
 				AAC02B1B193DEEFE003997F3 /* BlogViewController.swift in Sources */,
 				5EFE7D481B972233006D43E3 /* Snippet.swift in Sources */,
+				5E2FC6781C60771700A9839F /* CharacterTableViewCell.swift in Sources */,
 				5ED4C0EA1AB2CC4E00D2BF8A /* YoutubeTableViewCell.swift in Sources */,
 				5EC0D4681BA82B59004221F8 /* CellPreference.swift in Sources */,
 				5EBD85401C523940008638E2 /* TorophyViewController.swift in Sources */,
