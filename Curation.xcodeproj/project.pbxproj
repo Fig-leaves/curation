@@ -42,6 +42,7 @@
 		5E2FC6711C5F29AE00A9839F /* BoardType5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FC6701C5F29AE00A9839F /* BoardType5ViewController.swift */; };
 		5E2FC6781C60771700A9839F /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FC6761C60771700A9839F /* CharacterTableViewCell.swift */; };
 		5E2FC6791C60771700A9839F /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E2FC6771C60771700A9839F /* CharacterTableViewCell.xib */; };
+		5E2FC67B1C60778100A9839F /* CharactorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FC67A1C60778100A9839F /* CharactorViewController.swift */; };
 		5E444F5F1BFE01B400A0259E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E444F5E1BFE01B400A0259E /* GoogleService-Info.plist */; };
 		5E444F611C0535A500A0259E /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E444F601C0535A500A0259E /* TwitterViewController.swift */; };
 		5E444F641C0535DA00A0259E /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E444F621C0535DA00A0259E /* TweetTableViewCell.swift */; };
@@ -175,6 +176,7 @@
 		5E2FC6701C5F29AE00A9839F /* BoardType5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardType5ViewController.swift; sourceTree = "<group>"; };
 		5E2FC6761C60771700A9839F /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
 		5E2FC6771C60771700A9839F /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterTableViewCell.xib; sourceTree = "<group>"; };
+		5E2FC67A1C60778100A9839F /* CharactorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactorViewController.swift; sourceTree = "<group>"; };
 		5E444F5E1BFE01B400A0259E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E444F601C0535A500A0259E /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		5E444F621C0535DA00A0259E /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
@@ -448,6 +450,7 @@
 				5E525A761C48C0EC00B4971E /* EulaViewController.swift */,
 				5EBD853F1C523940008638E2 /* TorophyViewController.swift */,
 				5E2FC66A1C5E2F2600A9839F /* ImageViewController.swift */,
+				5E2FC67A1C60778100A9839F /* CharactorViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -795,6 +798,7 @@
 				5E8217B21C1970DF0054DCC5 /* Web2ViewController.swift in Sources */,
 				5E8CA85B1C15627200A908D6 /* EventTableViewCell.swift in Sources */,
 				5E81C85F1C2B90BD004A9DED /* BoardType4ViewController.swift in Sources */,
+				5E2FC67B1C60778100A9839F /* CharactorViewController.swift in Sources */,
 				5ECD677B1AB6C9B6009F5CCF /* TicketViewController.swift in Sources */,
 				5E56E6F81AB7C26F00FA6753 /* OtherViewController.swift in Sources */,
 				5EC0D46A1BA8311C004221F8 /* Request.swift in Sources */,
