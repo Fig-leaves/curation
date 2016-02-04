@@ -9,6 +9,52 @@
 import Foundation
 
 class Request {
+    
+    class func fetchFromSectionData(url: String, items:NSMutableArray) -> NSMutableArray  {
+        var urlString:String
+        urlString = url as String
+        let url:NSURL! = NSURL(string:urlString)
+        let urlRequest:NSURLRequest = NSURLRequest(URL:url)
+        
+        var data:NSData
+        var dic: NSDictionary = NSDictionary()
+        
+        do {
+            data = try NSURLConnection.sendSynchronousRequest(urlRequest, returningResponse: nil)
+            dic = try NSJSONSerialization.JSONObjectWithData(
+                data,
+                options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
+        } catch {
+            print("ERROR")
+        }
+        
+        let result: NSDictionary = dic.objectForKey("results") as! NSDictionary
+        print(result)
+        let itemsArray: NSArray = result.objectForKey("collection1") as! NSArray
+        print(itemsArray)
+//        var content: Dictionary<String, AnyObject> = ["" : ""]
+//        
+//        itemsArray.enumerateObjectsUsingBlock({ object, index, stop in
+//            
+//            if let news = object.objectForKey("title") as? NSDictionary {
+//                content[Constants.board.TITLE] = news.objectForKey(Constants.article_data.TEXT) as! NSString
+//            } else {
+//                content[Constants.board.TITLE] = object.objectForKey("title") as! NSString
+//            }
+//            
+//            if(object.objectForKey("link") is NSDictionary) {
+//                var date = object.objectForKey("link") as! NSDictionary
+//                content[Constants.board.LINK] = "http://www.db.yugioh-card.com/yugiohdb/" + (date.objectForKey("value") as! String)
+//            } else {
+//                content[Constants.board.LINK] = "http://www.db.yugioh-card.com/yugiohdb/" + (object.objectForKey("value") as! String)
+//            }
+//            print(content)
+//            items.addObject(content)
+//        })
+        return items
+    }
+    
+    
     class func fetchFromYoutube(next: Bool, word: String, nextPageToken:String, items: NSMutableArray,callback: (NSMutableArray, String) -> Void) {
         var token = nextPageToken
         let API_KEY = Constants.youtube.API_KEY
