@@ -31,6 +31,14 @@ class CellPreference {
         return cell
     }
     
+    class func setValueToCharaViewCell(cell: CharaTableViewCell, item: NSDictionary) -> CharaTableViewCell {
+        cell.titleLabel.text = item["title"] as! String
+        cell.stageLabel.text = item["property1"] as! String
+        cell.monsterLabel.text = item["property2"] as! String
+        
+        return cell
+    }
+    
     class func setValueToNewsViewCell(cell: NewsTableViewCell, item: NSDictionary) -> NewsTableViewCell {
         cell.titleLabel.text = item[Constants.article_data.TITLE] as! NSString as String
         cell.dateLabel.text = item[Constants.news_json_key.pubDate] as! NSString as String

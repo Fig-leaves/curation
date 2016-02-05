@@ -54,6 +54,45 @@ class Request {
         return items
     }
     
+    class func fetchFromChara(url: String, items:NSMutableArray) -> NSMutableArray {
+        var urlString:String
+        urlString = url as String
+        let url:NSURL! = NSURL(string:urlString)
+        let urlRequest:NSURLRequest = NSURLRequest(URL:url)
+        
+        var data:NSData
+        var dic: NSDictionary = NSDictionary()
+        
+        do {
+            data = try NSURLConnection.sendSynchronousRequest(urlRequest, returningResponse: nil)
+            dic = try NSJSONSerialization.JSONObjectWithData(
+                data,
+                options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
+        } catch {
+            print("ERROR")
+        }
+        
+        var news_name = dic.objectForKey("name") as! NSString
+        let result: NSDictionary = dic.objectForKey("results") as! NSDictionary
+        let itemsArray: NSArray = result.objectForKey("collection1") as! NSArray
+        var content: Dictionary<String, AnyObject> = ["" : ""]
+        
+        itemsArray.enumerateObjectsUsingBlock({ object, index, stop in
+            
+            if let news = object.objectForKey("name") as? NSDictionary {
+                content[Constants.article_data.TITLE] = news.objectForKey(Constants.article_data.TEXT) as! NSString
+                content[Constants.article_data.LINK] = news.objectForKey(Constants.article_data.HREF) as! NSString
+            } else {
+                content[Constants.article_data.TITLE] = object.objectForKey("name") as! NSString
+            }
+            content["property1"] = object.objectForKey("property1") as! NSString
+            content["property2"] = object.objectForKey("property2") as! NSString
+            
+            items.addObject(content)
+        })
+        return items
+    }
+    
     
     class func fetchFromYoutube(next: Bool, word: String, nextPageToken:String, items: NSMutableArray,callback: (NSMutableArray, String) -> Void) {
         var token = nextPageToken
@@ -316,7 +355,7 @@ class Request {
                 content[Constants.board.LINK] = news.objectForKey(Constants.article_data.HREF) as! NSString
             } else {
                 content[Constants.board.TITLE] = object.objectForKey("title") as! NSString
-                content[Constants.board.LINK] = object.objectForKey("url") as! NSString
+                content[Constants.board.LINK] = object.objectForKey("link") as! NSString
             }
             
             print(object)

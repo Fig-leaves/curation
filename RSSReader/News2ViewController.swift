@@ -29,7 +29,7 @@ class News2ViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        TrackingManager.sendScreenTracking("Andトピック")
+        TrackingManager.sendScreenTracking("ニュース")
         
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
@@ -65,7 +65,7 @@ class News2ViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.refresh = UIRefreshControl()
         self.refresh.attributedTitle = NSAttributedString(string: Constants.message.UPDATING)
         
-        self.title = "Andトピック"
+        self.title = "ニュース"
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -76,7 +76,6 @@ class News2ViewController: UIViewController, UITableViewDataSource, UITableViewD
             articles = NSMutableArray()
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.get_article()
-                print(self.articles)
 
                 self.table.reloadData()
                 self.refresh?.endRefreshing()
@@ -110,7 +109,7 @@ class News2ViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func request(url: NSString) {
-        self.articles = Request.fetchFromNews(url as String, items: articles, isNormalize: true)
+        self.articles = Request.fetchFromNews(url as String, items: articles, isNormalize: false)
         
     }
     

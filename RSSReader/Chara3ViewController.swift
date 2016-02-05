@@ -8,19 +8,16 @@
 
 import UIKit
 
-class OtherViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MWFeedParserDelegate, AdstirMraidViewDelegate {
+class Chara3ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MWFeedParserDelegate, AdstirMraidViewDelegate {
+    var articles = NSMutableArray()
     
-    var keys: NSArray = ["武器SSR",
-                         "武器SR",
-                         ]
-    var values: NSArray = ["http://gbf-wiki.com/index.php?%C9%F0%B4%EFSSR",
-                           "http://gbf-wiki.com/index.php?%C9%F0%B4%EFSR",
-                        ]
     @IBOutlet weak var tableView: UITableView!
     
     var adView: AdstirMraidView? = nil
     deinit {
+        // デリゲートを解放します。解放を忘れるとクラッシュする可能性があります。
         self.adView?.delegate = nil
+        // 広告ビューを解放します。
         self.adView = nil
     }
     
@@ -35,19 +32,18 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         // NavigationControllerのNavigationItemの色
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-
-        let nibName = UINib(nibName: "OtherTableViewCell", bundle:nil)
-        tableView.registerNib(nibName, forCellReuseIdentifier: "Cell")
         
-        let emptyCell = UINib(nibName: "EmptyTableViewCell", bundle:nil)
-        tableView.registerNib(emptyCell, forCellReuseIdentifier: "EmptyCell")
+        let nibName = UINib(nibName: "CharaTableViewCell", bundle:nil)
+        tableView.registerNib(nibName, forCellReuseIdentifier: "Cell")
         
         tableView.delegate = self
         tableView.dataSource = self
         
-        self.title = "武器"
-        TrackingManager.sendScreenTracking("武器")
-
+        self.title = "Extra"
+        TrackingManager.sendScreenTracking("Extra")
+        
+        articles = Request.fetchFromChara(Constants.chara.chara3, items: articles)
+        
         let originY = self.view.frame.height
         let originX = (self.view.frame.size.width - kAdstirAdSize320x50.size.width) / 2
         let adView = AdstirMraidView(adSize: kAdstirAdSize320x50, origin: CGPointMake(originX, originY - 100), media: Constants.ad.id, spot:Constants.ad.spot)
@@ -58,10 +54,13 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
         // 広告ビューを親ビューに追加します。
         self.view.addSubview(adView)
         self.adView = adView
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -69,7 +68,7 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(table: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 40
+        return 70
     }
     
     func numberOfSectionsInTableView(table: UITableView) -> Int {
@@ -77,32 +76,33 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(table: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.keys.count
+        return self.articles.count
     }
-
+    
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath!) {
         tableView?.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let item = self.articles[indexPath.row] as! NSDictionary
         let con = KINWebBrowserViewController()
-        let URL = NSURL(string: values[indexPath.row] as! NSString as String)
+        let URL = NSURL(string: item["link"] as! NSString as String)
         con.loadURL(URL)
         
-        TrackingManager.sendEventTracking("武器", action:"Push", label:"閲覧", value:NSNumber(), screen:"武器")
-
+        TrackingManager.sendEventTracking("データ", action:"Push", label:"閲覧", value:NSNumber(), screen:"カードリスト")
+        
+        
         self.navigationController?.pushViewController(con, animated: true)
-
     }
-
+    
     
     func tableView(table: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! OtherTableViewCell
-        cell.titleLabel.text = keys[indexPath.row] as! NSString as String
-        return cell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! CharaTableViewCell
+        let item = self.articles[indexPath.row] as! NSDictionary
+        
+        return CellPreference.setValueToCharaViewCell(cell, item: item)
     }
     // セルの選択を禁止する
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
         return indexPath
     }
-
-    
     
 }

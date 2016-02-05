@@ -14,10 +14,6 @@ class DataViewController: UIViewController, UITableViewDataSource, UITableViewDe
         "武器",
         "召喚石" 
     ]
-    var values: NSArray = ["http://mushiking.boy.jp/cardlist-2/#M-2",
-        "http://mushiking.boy.jp/cardlist-2/2",
-        "http://mushiking.boy.jp/cardlist/",
-    ]
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -87,15 +83,18 @@ class DataViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath!) {
         tableView?.deselectRowAtIndexPath(indexPath, animated: true)
+        var key = self.keys[indexPath.row] as! String
+        if(key == "人物図鑑") {
+            performSegueWithIdentifier("chara", sender: nil)
+        } else if (key == "召喚石") {
+            performSegueWithIdentifier("beast", sender: nil)            
+        } else if(key == "武器"){
+            performSegueWithIdentifier("weapon", sender: nil)
+        }
         
-        let con = KINWebBrowserViewController()
-        let URL = NSURL(string: values[indexPath.row] as! NSString as String)
-        con.loadURL(URL)
         
         TrackingManager.sendEventTracking("データ", action:"Push", label:"閲覧", value:NSNumber(), screen:"カードリスト")
         
-        
-        self.navigationController?.pushViewController(con, animated: true)
     }
     
     

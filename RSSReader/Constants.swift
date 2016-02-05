@@ -16,9 +16,15 @@ struct Constants {
     }
     struct other_article_url {
         static let article2 = "https://www.kimonolabs.com/api/71lqlpya?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
-        static let article3 = "https://www.kimonolabs.com/api/dyrwfamm?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let article3 = "https://www.kimonolabs.com/api/bk1lv1fa?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
         static let article4 = "https://www.kimonolabs.com/api/9v7i1wqq?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
         static let article5 = ""
+    }
+    
+    struct chara {
+        static let chara = "https://www.kimonolabs.com/api/dobbovba?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let chara2 = "https://www.kimonolabs.com/api/24ai83fk?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let chara3 = "https://www.kimonolabs.com/api/89w9dlyy?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
     }
     
     struct trophy {
@@ -65,14 +71,14 @@ struct Constants {
     }
     
     struct board_site {
-        static let URL = "https://www.kimonolabs.com/api/ar5hums6?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
-        static let URL2 = "https://www.kimonolabs.com/api/dje0bxlo?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
-        static let URL3 = "https://www.kimonolabs.com/api/43w3luuc?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let URL = "https://www.kimonolabs.com/api/2rbedzt4?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let URL2 = "https://www.kimonolabs.com/api/atlq92jo?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let URL3 = "https://www.kimonolabs.com/api/3kagp8qc?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
     }
     
     struct youtube {
         static let API_KEY = "AIzaSyCcfEgQ_6qLIV5STXnZnLo040NzEmZuVZ4"
-        static let WORD = "ドラゴンクエストビルダーズ 実況"
+        static let WORD = "グラブル 実況"
         static let RADIO = "Avicii LIVE"
         static let CHANNEL = "UC1SqP7_RfOC9Jf9L_GRHANg"
     }

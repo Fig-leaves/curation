@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="-823" y="388"/>
         </scene>
-        <!--Board Type3 View Controller-->
+        <!--News2 View Controller-->
         <scene sceneID="Uv2-sx-dIf">
             <objects>
-                <viewController id="b72-iv-5qL" customClass="BoardType3ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="b72-iv-5qL" customClass="News2ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UFo-XV-a58">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,7 +55,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="qHD-Kl-3rI"/>
                     <connections>
-                        <outlet property="tableView" destination="keB-e2-AXM" id="PhS-N4-0Ty"/>
+                        <outlet property="table" destination="keB-e2-AXM" id="CSz-pw-CNV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1M-Pq-ce0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -135,10 +135,10 @@
             </objects>
             <point key="canvasLocation" x="-24" y="781"/>
         </scene>
-        <!--Section Data View Controller-->
+        <!--Data View Controller-->
         <scene sceneID="9jF-2P-otP">
             <objects>
-                <viewController id="RgT-Wz-YaB" customClass="SectionDataViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RgT-Wz-YaB" customClass="DataViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="88v-rT-mtb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,11 +164,39 @@
                     <navigationItem key="navigationItem" id="VM9-mY-Fsp"/>
                     <connections>
                         <outlet property="tableView" destination="hxD-iv-01d" id="1rb-0J-moJ"/>
+                        <segue destination="RdT-DI-9rb" kind="push" identifier="chara" id="nw0-IU-78M"/>
+                        <segue destination="Wjr-rz-IQt" kind="push" identifier="beast" id="cCa-Rh-wPi"/>
+                        <segue destination="zUF-Aa-5bM" kind="push" identifier="weapon" id="Kw4-FP-4ju"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SX7-W1-1v4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="458" y="2191"/>
+        </scene>
+        <!--Board Type3 View Controller-->
+        <scene sceneID="pwq-Qg-f6h">
+            <objects>
+                <viewController id="RdT-DI-9rb" customClass="BoardType3ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mk9-CT-wSF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vaB-2w-ujW">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VmV-kW-F3c"/>
+                    <connections>
+                        <outlet property="tableView" destination="vaB-2w-ujW" id="0eT-xg-DfY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QbY-WQ-SDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279" y="2943"/>
         </scene>
         <!--データ-->
         <scene sceneID="Qez-ik-rPm">
@@ -244,10 +272,10 @@
             </objects>
             <point key="canvasLocation" x="-24" y="95"/>
         </scene>
-        <!--Board Type5 View Controller-->
+        <!--Data2 View Controller-->
         <scene sceneID="22X-Fn-Eou">
             <objects>
-                <viewController id="dJy-TV-wgX" customClass="BoardType5ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dJy-TV-wgX" customClass="Data2ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4P6-rl-TKT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -273,11 +301,39 @@
                     <navigationItem key="navigationItem" id="AjD-8Z-kmM"/>
                     <connections>
                         <outlet property="tableView" destination="s3N-bH-hn9" id="wdD-J7-CNN"/>
+                        <segue destination="dQO-aW-sNe" kind="push" identifier="normal" id="dtc-Iy-NUI"/>
+                        <segue destination="myl-Zq-V99" kind="push" identifier="hard" id="Gn6-bi-84H"/>
+                        <segue destination="Cyk-6y-6By" kind="push" identifier="extra" id="A22-UC-eqW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nsx-mR-IlC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-566" y="2191"/>
+        </scene>
+        <!--Chara View Controller-->
+        <scene sceneID="rTb-g8-AyH">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Xl-zz-EZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="normal" id="dQO-aW-sNe" customClass="CharaViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7xp-x7-uca">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zDv-MI-6Ws">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="573"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ldP-Q1-SJQ"/>
+                    <connections>
+                        <outlet property="tableView" destination="zDv-MI-6Ws" id="jx4-Hs-qyo"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-906" y="2943"/>
         </scene>
         <!--共闘クエスト-->
         <scene sceneID="a0C-Q0-VIn">
@@ -726,6 +782,106 @@ Cg
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgl-0f-Ph2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-976" y="-619"/>
+        </scene>
+        <!--Chara2 View Controller-->
+        <scene sceneID="Axe-Ep-BX6">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h17-KH-A7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="myl-Zq-V99" customClass="Chara2ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ejd-fI-pvI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8aP-nI-vKk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="573"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LRG-wN-00S"/>
+                    <connections>
+                        <outlet property="tableView" destination="8aP-nI-vKk" id="V8W-EM-Zbp"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-557" y="2943"/>
+        </scene>
+        <!--Chara3 View Controller-->
+        <scene sceneID="s0g-b3-wYt">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xMs-aC-wpz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Cyk-6y-6By" customClass="Chara3ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Ef-RG-dU2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fVS-0Y-UkX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="573"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GIb-84-Dpm"/>
+                    <connections>
+                        <outlet property="tableView" destination="fVS-0Y-UkX" id="bTk-HD-Vzc"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-208" y="2943"/>
+        </scene>
+        <!--Boardtype2 View Controller-->
+        <scene sceneID="qrg-9n-FxI">
+            <objects>
+                <viewController id="Wjr-rz-IQt" customClass="Boardtype2ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YhR-ld-0Zv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UZj-dQ-FDj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FZZ-fT-GuW"/>
+                    <connections>
+                        <outlet property="tableView" destination="UZj-dQ-FDj" id="n0J-DO-VOe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vRH-iC-TD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="625" y="2943"/>
+        </scene>
+        <!--Other View Controller-->
+        <scene sceneID="WEc-6V-YdM">
+            <objects>
+                <viewController id="zUF-Aa-5bM" customClass="OtherViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y8g-M3-hrP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="DFp-rr-fSM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wJu-7F-yRS"/>
+                    <connections>
+                        <outlet property="tableView" destination="DFp-rr-fSM" id="SZG-4A-Geh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vKT-qD-YFs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992" y="2943"/>
         </scene>
     </scenes>
     <resources>

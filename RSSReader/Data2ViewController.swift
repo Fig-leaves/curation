@@ -8,19 +8,24 @@
 
 import UIKit
 
-class OtherViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MWFeedParserDelegate, AdstirMraidViewDelegate {
+class Data2ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MWFeedParserDelegate, AdstirMraidViewDelegate {
     
-    var keys: NSArray = ["武器SSR",
-                         "武器SR",
-                         ]
-    var values: NSArray = ["http://gbf-wiki.com/index.php?%C9%F0%B4%EFSSR",
-                           "http://gbf-wiki.com/index.php?%C9%F0%B4%EFSR",
-                        ]
+    var keys: NSArray = ["Normal Stage",
+        "Hard Stage",
+        "Extra Stage"
+    ]
+    var values: NSArray = ["http://mushiking.boy.jp/cardlist-2/#M-2",
+        "http://mushiking.boy.jp/cardlist-2/2",
+        "http://mushiking.boy.jp/cardlist/",
+    ]
+    
     @IBOutlet weak var tableView: UITableView!
     
     var adView: AdstirMraidView? = nil
     deinit {
+        // デリゲートを解放します。解放を忘れるとクラッシュする可能性があります。
         self.adView?.delegate = nil
+        // 広告ビューを解放します。
         self.adView = nil
     }
     
@@ -35,19 +40,16 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         // NavigationControllerのNavigationItemの色
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-
+        
         let nibName = UINib(nibName: "OtherTableViewCell", bundle:nil)
         tableView.registerNib(nibName, forCellReuseIdentifier: "Cell")
-        
-        let emptyCell = UINib(nibName: "EmptyTableViewCell", bundle:nil)
-        tableView.registerNib(emptyCell, forCellReuseIdentifier: "EmptyCell")
         
         tableView.delegate = self
         tableView.dataSource = self
         
-        self.title = "武器"
-        TrackingManager.sendScreenTracking("武器")
-
+        self.title = "共闘クエスト"
+        TrackingManager.sendScreenTracking("共闘クエスト")
+        
         let originY = self.view.frame.height
         let originX = (self.view.frame.size.width - kAdstirAdSize320x50.size.width) / 2
         let adView = AdstirMraidView(adSize: kAdstirAdSize320x50, origin: CGPointMake(originX, originY - 100), media: Constants.ad.id, spot:Constants.ad.spot)
@@ -58,10 +60,13 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
         // 広告ビューを親ビューに追加します。
         self.view.addSubview(adView)
         self.adView = adView
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -79,19 +84,23 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(table: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.keys.count
     }
-
+    
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath!) {
         tableView?.deselectRowAtIndexPath(indexPath, animated: true)
-        let con = KINWebBrowserViewController()
-        let URL = NSURL(string: values[indexPath.row] as! NSString as String)
-        con.loadURL(URL)
         
-        TrackingManager.sendEventTracking("武器", action:"Push", label:"閲覧", value:NSNumber(), screen:"武器")
-
-        self.navigationController?.pushViewController(con, animated: true)
-
+        var key = keys[indexPath.row] as! String
+        if(key == "Normal Stage") {
+            performSegueWithIdentifier("normal", sender: nil)
+        } else if(key == "Hard Stage") {
+            performSegueWithIdentifier("hard", sender: nil)
+        } else {
+            performSegueWithIdentifier("extra", sender: nil)
+        }
+        
+        TrackingManager.sendEventTracking("データ", action:"Push", label:"閲覧", value:NSNumber(), screen:"カードリスト")
+        
     }
-
+    
     
     func tableView(table: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! OtherTableViewCell
@@ -102,7 +111,5 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
         return indexPath
     }
-
-    
     
 }

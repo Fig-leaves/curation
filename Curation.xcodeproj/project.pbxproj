@@ -45,6 +45,12 @@
 		5E2FC67B1C60778100A9839F /* CharactorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FC67A1C60778100A9839F /* CharactorViewController.swift */; };
 		5E2FC67D1C61BAB800A9839F /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FC67C1C61BAB800A9839F /* DataViewController.swift */; };
 		5E2FC6801C61C18000A9839F /* SectionDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FC67F1C61C18000A9839F /* SectionDataViewController.swift */; };
+		5E3A56521C62FA8700654820 /* Data2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A56511C62FA8700654820 /* Data2ViewController.swift */; };
+		5E3A56571C62FF5000654820 /* CharaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A56551C62FF5000654820 /* CharaTableViewCell.swift */; };
+		5E3A56581C62FF5000654820 /* CharaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E3A56561C62FF5000654820 /* CharaTableViewCell.xib */; };
+		5E3A565A1C6302C600654820 /* CharaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A56591C6302C600654820 /* CharaViewController.swift */; };
+		5E3A565C1C6310B300654820 /* Chara2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A565B1C6310B300654820 /* Chara2ViewController.swift */; };
+		5E3A565E1C6310D000654820 /* Chara3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A565D1C6310D000654820 /* Chara3ViewController.swift */; };
 		5E444F5F1BFE01B400A0259E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E444F5E1BFE01B400A0259E /* GoogleService-Info.plist */; };
 		5E444F611C0535A500A0259E /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E444F601C0535A500A0259E /* TwitterViewController.swift */; };
 		5E444F641C0535DA00A0259E /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E444F621C0535DA00A0259E /* TweetTableViewCell.swift */; };
@@ -181,6 +187,12 @@
 		5E2FC67A1C60778100A9839F /* CharactorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactorViewController.swift; sourceTree = "<group>"; };
 		5E2FC67C1C61BAB800A9839F /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		5E2FC67F1C61C18000A9839F /* SectionDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionDataViewController.swift; sourceTree = "<group>"; };
+		5E3A56511C62FA8700654820 /* Data2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data2ViewController.swift; sourceTree = "<group>"; };
+		5E3A56551C62FF5000654820 /* CharaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharaTableViewCell.swift; sourceTree = "<group>"; };
+		5E3A56561C62FF5000654820 /* CharaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharaTableViewCell.xib; sourceTree = "<group>"; };
+		5E3A56591C6302C600654820 /* CharaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharaViewController.swift; sourceTree = "<group>"; };
+		5E3A565B1C6310B300654820 /* Chara2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chara2ViewController.swift; sourceTree = "<group>"; };
+		5E3A565D1C6310D000654820 /* Chara3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chara3ViewController.swift; sourceTree = "<group>"; };
 		5E444F5E1BFE01B400A0259E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E444F601C0535A500A0259E /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		5E444F621C0535DA00A0259E /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
@@ -323,6 +335,9 @@
 			isa = PBXGroup;
 			children = (
 				5E2FC67F1C61C18000A9839F /* SectionDataViewController.swift */,
+				5E3A56591C6302C600654820 /* CharaViewController.swift */,
+				5E3A565B1C6310B300654820 /* Chara2ViewController.swift */,
+				5E3A565D1C6310D000654820 /* Chara3ViewController.swift */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -432,6 +447,8 @@
 				5E8CA85A1C15627200A908D6 /* EventTableViewCell.xib */,
 				5E8CA8611C15845F00A908D6 /* BoardTableViewCell.swift */,
 				5E8CA8621C15845F00A908D6 /* BoardTableViewCell.xib */,
+				5E3A56551C62FF5000654820 /* CharaTableViewCell.swift */,
+				5E3A56561C62FF5000654820 /* CharaTableViewCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -465,6 +482,7 @@
 				5E2FC66A1C5E2F2600A9839F /* ImageViewController.swift */,
 				5E2FC67A1C60778100A9839F /* CharactorViewController.swift */,
 				5E2FC67C1C61BAB800A9839F /* DataViewController.swift */,
+				5E3A56511C62FA8700654820 /* Data2ViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -689,6 +707,7 @@
 				5EC073791B9EB269006D425D /* technology34 (1).png in Resources */,
 				5E8CA85C1C15627200A908D6 /* EventTableViewCell.xib in Resources */,
 				5E444F781C0541B300A0259E /* instrument27.png in Resources */,
+				5E3A56581C62FF5000654820 /* CharaTableViewCell.xib in Resources */,
 				5EBD853C1C5235CC008638E2 /* settings48.png in Resources */,
 				5ECD677F1AB6C9D8009F5CCF /* TicketTableViewCell.xib in Resources */,
 				5E2CEE2C1BE7373F00A0CD04 /* soccer72.png in Resources */,
@@ -813,6 +832,7 @@
 				5E8217B21C1970DF0054DCC5 /* Web2ViewController.swift in Sources */,
 				5E8CA85B1C15627200A908D6 /* EventTableViewCell.swift in Sources */,
 				5E81C85F1C2B90BD004A9DED /* BoardType4ViewController.swift in Sources */,
+				5E3A565A1C6302C600654820 /* CharaViewController.swift in Sources */,
 				5E2FC67B1C60778100A9839F /* CharactorViewController.swift in Sources */,
 				5ECD677B1AB6C9B6009F5CCF /* TicketViewController.swift in Sources */,
 				5E56E6F81AB7C26F00FA6753 /* OtherViewController.swift in Sources */,
@@ -826,6 +846,7 @@
 				5E8CA8681C158F1E00A908D6 /* CardListViewController.swift in Sources */,
 				5E444F611C0535A500A0259E /* TwitterViewController.swift in Sources */,
 				5E2FC6711C5F29AE00A9839F /* BoardType5ViewController.swift in Sources */,
+				5E3A56571C62FF5000654820 /* CharaTableViewCell.swift in Sources */,
 				5E525A771C48C0EC00B4971E /* EulaViewController.swift in Sources */,
 				5EA67BF21ACC1BAB0021A1E8 /* EmptyTableViewCell.swift in Sources */,
 				5E161A721AC2B73700B039F8 /* OriginalTabBarController.swift in Sources */,
@@ -843,15 +864,18 @@
 				5EC073771B9EADAB006D425D /* RadioViewController.swift in Sources */,
 				5E04D4121BFA0A1200399EA4 /* TrackingManager.swift in Sources */,
 				5E96CF911C195D7D008C5BC9 /* Blog2ViewController.swift in Sources */,
+				5E3A565C1C6310B300654820 /* Chara2ViewController.swift in Sources */,
 				5E2CEE281BE72B2100A0CD04 /* BoardViewController.swift in Sources */,
 				5E81C85D1C2B8C10004A9DED /* BoardType3ViewController.swift in Sources */,
 				5E2CEE301BE73D5A00A0CD04 /* UIColorExtention.swift in Sources */,
 				5E96CF931C19668E008C5BC9 /* News3ViewController.swift in Sources */,
 				5ECBC6A51AB08BB100F75649 /* YoutubeViewController.swift in Sources */,
+				5E3A565E1C6310D000654820 /* Chara3ViewController.swift in Sources */,
 				5EC073751B9E9E87006D425D /* ChannelViewController.swift in Sources */,
 				AAC02B19193DEEFE003997F3 /* AppDelegate.swift in Sources */,
 				5E8CA8661C15877A00A908D6 /* Boardtype2ViewController.swift in Sources */,
 				5E2FC6801C61C18000A9839F /* SectionDataViewController.swift in Sources */,
+				5E3A56521C62FA8700654820 /* Data2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

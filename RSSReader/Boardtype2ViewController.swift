@@ -28,7 +28,7 @@ class Boardtype2ViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TrackingManager.sendScreenTracking("アイテム")
+        TrackingManager.sendScreenTracking("召喚石")
         
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
@@ -43,7 +43,7 @@ class Boardtype2ViewController: UIViewController, UITableViewDataSource, UITable
         // NavigationControllerのNavigationItemの色
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
         
-        self.title = "アイテム"
+        self.title = "召喚石"
         
         articles = Request.fetchFromBoard(Constants.board_site.URL2, items: articles)
         

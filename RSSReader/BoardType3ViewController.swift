@@ -28,7 +28,7 @@ class BoardType3ViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TrackingManager.sendScreenTracking("ストーリー")
+        TrackingManager.sendScreenTracking("キャラクター")
         
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
@@ -43,7 +43,7 @@ class BoardType3ViewController: UIViewController, UITableViewDataSource, UITable
         // NavigationControllerのNavigationItemの色
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
         
-        self.title = "ストーリー"
+        self.title = "キャラクター"
         
         articles = Request.fetchFromBoard(Constants.board_site.URL3, items: articles)
         
