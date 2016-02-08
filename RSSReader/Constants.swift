@@ -45,19 +45,19 @@ struct Constants {
     }
     
     struct ad {
-        static let id = "MEDIA-ede54f7a"
+        static let id = "MEDIA-a34f3489"
         static let spot:UInt = 1
         static let ENABLE_VIEW = false
 
     }
     struct inter_ad {
-        static let id = "MEDIA-ede54f7a"
+        static let id = "MEDIA-a34f3489"
         static let spot:UInt = 2
         static let click_count = 5
     }
     
     struct analytics {
-        static let TRACK_ID = "UA-70168853-15"
+        static let TRACK_ID = "UA-70168853-18"
     }
     
     struct blog {
