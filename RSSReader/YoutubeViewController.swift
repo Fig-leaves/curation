@@ -43,12 +43,10 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
         
         // 広告表示位置: タブバーの下でセンタリング、広告サイズ: 320,50 の場合
         let originY = self.view.frame.height
-        let originX = (self.view.frame.size.width - kAdstirAdSize320x50.size.width) / 2
+        let originX = (self.view.frame.size.width - kAdstirAdSize320x100.size.width) / 2
         let adView = AdstirMraidView(adSize: kAdstirAdSize320x100, origin: CGPointMake(originX, originY - 100), media: Constants.ad.id, spot:Constants.ad.spot)
         
-        // リフレッシュ秒数を設定します。
         adView.intervalTime = 3
-        // デリゲートを設定します。
         adView.delegate = self
         
         if(Constants.ad.ENABLE_VIEW) {
@@ -56,9 +54,6 @@ class YoutubeViewController: UIViewController, UITableViewDataSource, UITableVie
             self.view.addSubview(adView)
             self.adView = adView
         }
-        
-
-        
 
         self.nextPageToken = "nil"
         self.navigationController?.navigationBar.barTintColor = UIColor(netHex: 0x000000)
