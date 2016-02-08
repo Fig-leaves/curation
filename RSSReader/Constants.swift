@@ -10,9 +10,9 @@ import Foundation
 
 struct Constants {
     struct article_url {
-        static let NEWS_SITE1 = "https://www.kimonolabs.com/api/d0f2oxje?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
+        static let NEWS_SITE1 = "https://www.kimonolabs.com/api/6j6ltsd8?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
         static let NEWS_SITE2 = ""
-        static let NEWS_SITE3 = ""
+        static let NEWS_SITE3 = "https://www.kimonolabs.com/api/ah69iom4?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"
     }
     struct other_article_url {
         static let article2 = "https://www.kimonolabs.com/api/dyrwfamm?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu"

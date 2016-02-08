@@ -109,7 +109,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if(Constants.article_url.NEWS_SITE2 != "") {
             self.request(Constants.article_url.NEWS_SITE2)
         } else if(Constants.article_url.NEWS_SITE3 != "") {
-            self.request(Constants.article_url.NEWS_SITE3)
+//            self.request(Constants.article_url.NEWS_SITE3)
         }
         
         for item in self.items {

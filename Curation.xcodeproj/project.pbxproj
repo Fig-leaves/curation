@@ -13,6 +13,8 @@
 		5E04D4101BFA089500399EA4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E04D40F1BFA089500399EA4 /* libsqlite3.tbd */; };
 		5E04D4121BFA0A1200399EA4 /* TrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E04D4111BFA0A1200399EA4 /* TrackingManager.swift */; };
 		5E04D4141BFA193700399EA4 /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E04D4131BFA193700399EA4 /* libAdIdAccess.a */; };
+		5E13538C1C6830AE00032023 /* WithImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E13538B1C6830AE00032023 /* WithImageViewController.swift */; };
+		5E13538E1C683B3800032023 /* fork5.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E13538D1C683B3800032023 /* fork5.png */; };
 		5E15FDD51AB196C2005BD1B4 /* movie43.svg in Resources */ = {isa = PBXBuildFile; fileRef = 5E15FDD41AB196C2005BD1B4 /* movie43.svg */; };
 		5E15FDD91AB1983E005BD1B4 /* movie43.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E15FDD81AB1983E005BD1B4 /* movie43.png */; };
 		5E15FDDD1AB198B8005BD1B4 /* newspaper11 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 5E15FDDC1AB198B8005BD1B4 /* newspaper11 (1).png */; };
@@ -134,6 +136,8 @@
 		5E04D40F1BFA089500399EA4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		5E04D4111BFA0A1200399EA4 /* TrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingManager.swift; sourceTree = "<group>"; };
 		5E04D4131BFA193700399EA4 /* libAdIdAccess.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdIdAccess.a; sourceTree = "<group>"; };
+		5E13538B1C6830AE00032023 /* WithImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithImageViewController.swift; sourceTree = "<group>"; };
+		5E13538D1C683B3800032023 /* fork5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fork5.png; sourceTree = "<group>"; };
 		5E15FDD41AB196C2005BD1B4 /* movie43.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = movie43.svg; sourceTree = "<group>"; };
 		5E15FDD81AB1983E005BD1B4 /* movie43.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = movie43.png; sourceTree = "<group>"; };
 		5E15FDDC1AB198B8005BD1B4 /* newspaper11 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newspaper11 (1).png"; sourceTree = "<group>"; };
@@ -319,6 +323,7 @@
 		5ECD67731AB6BF2E009F5CCF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				5E13538D1C683B3800032023 /* fork5.png */,
 				5E444F7B1C05433600A0259E /* disc6.png */,
 				5E8217B31C1986D30054DCC5 /* rank_ios.png */,
 				5E8217B51C1987EA0054DCC5 /* rank-and.png */,
@@ -415,6 +420,7 @@
 				5E8CA8671C158F1E00A908D6 /* CardListViewController.swift */,
 				5E96CF871C168330008C5BC9 /* RankViewController.swift */,
 				5E525A761C48C0EC00B4971E /* EulaViewController.swift */,
+				5E13538B1C6830AE00032023 /* WithImageViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -651,6 +657,7 @@
 				5E96CF8A1C16A760008C5BC9 /* mac7.png in Resources */,
 				5E56E7041ABA8CD700FA6753 /* film51.png in Resources */,
 				5EA31EAD1C293E04002CEEF4 /* bow1.png in Resources */,
+				5E13538E1C683B3800032023 /* fork5.png in Resources */,
 				AAC02B3A193DF344003997F3 /* Podfile in Resources */,
 				5E96CF8C1C16A766008C5BC9 /* system1.png in Resources */,
 				5E2CEE341BE749F800A0CD04 /* blackboard14 (2).png in Resources */,
@@ -771,6 +778,7 @@
 				5EC0D4661BA8253F004221F8 /* MultiViewController.swift in Sources */,
 				5ECD67841AB751EF009F5CCF /* SwiftyJSON.swift in Sources */,
 				5E2959D51AAD3FC4009872AF /* NewsViewController.swift in Sources */,
+				5E13538C1C6830AE00032023 /* WithImageViewController.swift in Sources */,
 				AAC02B1B193DEEFE003997F3 /* BlogViewController.swift in Sources */,
 				5EFE7D481B972233006D43E3 /* Snippet.swift in Sources */,
 				5ED4C0EA1AB2CC4E00D2BF8A /* YoutubeTableViewCell.swift in Sources */,

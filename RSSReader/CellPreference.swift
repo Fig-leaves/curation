@@ -10,20 +10,20 @@ import Foundation
 
 class CellPreference {
     class func setValueToYoutubeViewCell(cell: YoutubeTableViewCell, item: NSDictionary) -> YoutubeTableViewCell {
-        let date = item[Constants.article_data.PUBLISH_AT] as! String
-        let length = date.characters.count
-        
-        var startIndex:String.Index
-        var endIndex:String.Index
-        
-        startIndex = date.startIndex.advancedBy(0)
-        endIndex = date.startIndex.advancedBy(length - 14)
-        let newString = date.substringWithRange(Range(start:startIndex ,end:endIndex))
+//        let date = item[Constants.article_data.PUBLISH_AT] as! String
+//        let length = date.characters.count
+//        
+//        var startIndex:String.Index
+//        var endIndex:String.Index
+//
+//        startIndex = date.startIndex.advancedBy(0)
+//        endIndex = date.startIndex.advancedBy(length - 14)
+//        let newString = date.substringWithRange(Range(start:startIndex ,end:endIndex))
 
         cell.movieTitleLabel.text = item[Constants.article_data.TITLE] as? String
         cell.movieTitleLabel.numberOfLines = 0;
         cell.movieTitleLabel.sizeToFit()
-        cell.dateLabel.text = newString
+        cell.dateLabel.text = item["pubDate"] as! String
         cell.dateLabel.textColor = UIColor(netHex: 0x808080)
         let imgURL: NSURL? = NSURL(string: item[Constants.article_data.IMAGE_URL] as! String)
         cell.movieImage.setImageWithURL(imgURL)

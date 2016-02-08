@@ -198,6 +198,62 @@ class Request {
         return items
     }
     
+    class func fetchFromWithImage(url: String, items:NSMutableArray) -> NSMutableArray {
+        var urlString:String
+        urlString = url as String
+        let url:NSURL! = NSURL(string:urlString)
+        let urlRequest:NSURLRequest = NSURLRequest(URL:url)
+        
+        var data:NSData
+        var dic: NSDictionary = NSDictionary()
+        
+        do {
+            data = try NSURLConnection.sendSynchronousRequest(urlRequest, returningResponse: nil)
+            dic = try NSJSONSerialization.JSONObjectWithData(
+                data,
+                options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
+        } catch {
+            print("ERROR")
+        }
+        
+        let result: NSDictionary = dic.objectForKey("results") as! NSDictionary
+        let itemsArray: NSArray = result.objectForKey("collection1") as! NSArray
+        var content: Dictionary<String, AnyObject> = ["" : ""]
+        
+        itemsArray.enumerateObjectsUsingBlock({ object, index, stop in
+            
+            if let news = object.objectForKey("property1") as? NSDictionary {
+                content[Constants.article_data.TITLE] = news.objectForKey(Constants.article_data.TEXT) as! NSString
+                content[Constants.article_data.LINK] = news.objectForKey(Constants.article_data.HREF) as! NSString
+            } else {
+                content[Constants.article_data.TITLE] = object.objectForKey("property1") as! NSString
+                content[Constants.article_data.LINK] = object.objectForKey("link") as! NSString
+            }
+            
+            var day:NSString!
+            if(object.objectForKey(Constants.news_json_key.pubDate) is NSDictionary) {
+                var date = object.objectForKey(Constants.news_json_key.pubDate) as! NSDictionary
+                day = date.objectForKey(Constants.article_data.TEXT) as! NSString
+            } else {
+                day = object.objectForKey(Constants.news_json_key.pubDate) as! NSString;
+            }
+            content["pubDate"] = day
+            print(object)
+
+            if(object.objectForKey("thum_ima") is NSDictionary) {
+                var date = object.objectForKey("thum_ima") as! NSDictionary
+                content["image_url"] = date.objectForKey("src") as! NSString
+            } else {
+                content["image_url"] = object.objectForKey("thum_ima") as! NSString
+            }
+            
+            
+            items.addObject(content)
+        })
+        return items
+        
+    }
+    
     class func fetchFromCardList(url: String, items:NSMutableArray) -> NSMutableArray {
         var urlString:String
         urlString = url as String
@@ -297,10 +353,6 @@ class Request {
             }
 
         })
-        
-        
-        
-        
         return items
     }
  
