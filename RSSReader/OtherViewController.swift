@@ -10,11 +10,13 @@ import UIKit
 
 class OtherViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MWFeedParserDelegate, AdstirMraidViewDelegate {
     
-    var keys: NSArray = ["武器SSR",
-                         "武器SR",
+    var keys: NSArray = ["必殺技一覧",
+                         "スキル一覧",
+                         "切替技一覧"
                          ]
-    var values: NSArray = ["http://gbf-wiki.com/index.php?%C9%F0%B4%EFSSR",
-                           "http://gbf-wiki.com/index.php?%C9%F0%B4%EFSR",
+    var values: NSArray = ["http://grimmnotes.gamerch.com/%E5%BF%85%E6%AE%BA%E6%8A%80%E4%B8%80%E8%A6%A7",
+                           "http://grimmnotes.gamerch.com/%E3%82%B9%E3%82%AD%E3%83%AB%E4%B8%80%E8%A6%A7",
+                           "http://grimmnotes.gamerch.com/%E5%88%87%E6%9B%BF%E6%8A%80%E4%B8%80%E8%A6%A7"
                         ]
     @IBOutlet weak var tableView: UITableView!
     
@@ -45,8 +47,8 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         
-        self.title = "武器"
-        TrackingManager.sendScreenTracking("武器")
+        self.title = "データ"
+        TrackingManager.sendScreenTracking("データ")
 
         let originY = self.view.frame.height
         let originX = (self.view.frame.size.width - kAdstirAdSize320x50.size.width) / 2

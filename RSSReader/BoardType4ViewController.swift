@@ -28,7 +28,7 @@ class BoardType4ViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TrackingManager.sendScreenTracking("ニュース")
+        TrackingManager.sendScreenTracking("イベント")
         
         self.inter = AdstirInterstitial()
         self.inter!.media = Constants.inter_ad.id
@@ -43,7 +43,7 @@ class BoardType4ViewController: UIViewController, UITableViewDataSource, UITable
         // NavigationControllerのNavigationItemの色
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
         
-        self.title = "ニュース"
+        self.title = "イベント"
         
         articles = Request.fetchFromBoard(Constants.other_article_url.article2, items: articles)
         
@@ -67,10 +67,6 @@ class BoardType4ViewController: UIViewController, UITableViewDataSource, UITable
             self.view.addSubview(adView)
             self.adView = adView
         }
-        
-        
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -101,9 +97,9 @@ class BoardType4ViewController: UIViewController, UITableViewDataSource, UITable
             self.inter!.showTypeC(self)
         }
         click_count++;
-        TrackingManager.sendEventTracking("ニュース", action:"Push", label:"閲覧", value:NSNumber(), screen:item["title"] as! String)
+        TrackingManager.sendEventTracking("イベント", action:"Push", label:"閲覧", value:NSNumber(), screen:item["title"] as! String)
         
-        self.navigationController?.pushViewController( Snippet.setTapAction(item, mode: "blog"), animated: true)
+        self.navigationController?.pushViewController( Snippet.setTapAction(item, mode: "other"), animated: true)
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {

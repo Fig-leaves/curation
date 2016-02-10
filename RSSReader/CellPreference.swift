@@ -31,6 +31,20 @@ class CellPreference {
         return cell
     }
     
+    
+    class func setValueToWithImageViewCell(cell: YoutubeTableViewCell, item: NSDictionary) -> YoutubeTableViewCell {
+        
+        cell.movieTitleLabel.text = item[Constants.article_data.TITLE] as? String
+        cell.movieTitleLabel.numberOfLines = 0;
+        cell.movieTitleLabel.sizeToFit()
+        cell.dateLabel.text = item["pubDate"] as! String
+        cell.dateLabel.textColor = UIColor(netHex: 0x808080)
+        let imgURL: NSURL? = NSURL(string: item[Constants.article_data.IMAGE_URL] as! String)
+        cell.movieImage.setImageWithURL(imgURL)
+        
+        return cell
+    }
+    
     class func setValueToCharaViewCell(cell: CharaTableViewCell, item: NSDictionary) -> CharaTableViewCell {
         cell.titleLabel.text = item["title"] as! String
         cell.stageLabel.text = item["property1"] as! String

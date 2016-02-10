@@ -13,6 +13,9 @@
 		5E04D4101BFA089500399EA4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E04D40F1BFA089500399EA4 /* libsqlite3.tbd */; };
 		5E04D4121BFA0A1200399EA4 /* TrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E04D4111BFA0A1200399EA4 /* TrackingManager.swift */; };
 		5E04D4141BFA193700399EA4 /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E04D4131BFA193700399EA4 /* libAdIdAccess.a */; };
+		5E071DC51C6AD546008FD7BB /* WithImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E071DC41C6AD546008FD7BB /* WithImageViewController.swift */; };
+		5E071DC71C6B22A5008FD7BB /* election.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E071DC61C6B22A5008FD7BB /* election.png */; };
+		5E071DC91C6B233A008FD7BB /* bird29.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E071DC81C6B233A008FD7BB /* bird29.png */; };
 		5E15FDD51AB196C2005BD1B4 /* movie43.svg in Resources */ = {isa = PBXBuildFile; fileRef = 5E15FDD41AB196C2005BD1B4 /* movie43.svg */; };
 		5E15FDD91AB1983E005BD1B4 /* movie43.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E15FDD81AB1983E005BD1B4 /* movie43.png */; };
 		5E15FDDD1AB198B8005BD1B4 /* newspaper11 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 5E15FDDC1AB198B8005BD1B4 /* newspaper11 (1).png */; };
@@ -154,6 +157,9 @@
 		5E04D40F1BFA089500399EA4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		5E04D4111BFA0A1200399EA4 /* TrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingManager.swift; sourceTree = "<group>"; };
 		5E04D4131BFA193700399EA4 /* libAdIdAccess.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdIdAccess.a; sourceTree = "<group>"; };
+		5E071DC41C6AD546008FD7BB /* WithImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithImageViewController.swift; sourceTree = "<group>"; };
+		5E071DC61C6B22A5008FD7BB /* election.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = election.png; sourceTree = "<group>"; };
+		5E071DC81C6B233A008FD7BB /* bird29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird29.png; sourceTree = "<group>"; };
 		5E15FDD41AB196C2005BD1B4 /* movie43.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = movie43.svg; sourceTree = "<group>"; };
 		5E15FDD81AB1983E005BD1B4 /* movie43.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = movie43.png; sourceTree = "<group>"; };
 		5E15FDDC1AB198B8005BD1B4 /* newspaper11 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newspaper11 (1).png"; sourceTree = "<group>"; };
@@ -370,6 +376,8 @@
 		5ECD67731AB6BF2E009F5CCF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				5E071DC81C6B233A008FD7BB /* bird29.png */,
+				5E071DC61C6B22A5008FD7BB /* election.png */,
 				5E2FC66E1C5E31D400A9839F /* reading22.png */,
 				5EBD853D1C5235FD008638E2 /* data-storage4.png */,
 				5E2FC6681C5E2D7700A9839F /* map-kamurochou.jpg */,
@@ -483,6 +491,7 @@
 				5E2FC67A1C60778100A9839F /* CharactorViewController.swift */,
 				5E2FC67C1C61BAB800A9839F /* DataViewController.swift */,
 				5E3A56511C62FA8700654820 /* Data2ViewController.swift */,
+				5E071DC41C6AD546008FD7BB /* WithImageViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -699,6 +708,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EA67BF31ACC1BAB0021A1E8 /* EmptyTableViewCell.xib in Resources */,
+				5E071DC91C6B233A008FD7BB /* bird29.png in Resources */,
 				AA8AA144194362C900C3888B /* logo.png in Resources */,
 				5E56E70E1ABA961A00FA6753 /* ima.png in Resources */,
 				5E56E6F61AB7C22F00FA6753 /* more23.png in Resources */,
@@ -754,6 +764,7 @@
 				5ECD67751AB6BF5E009F5CCF /* ticket3.png in Resources */,
 				5E81C8611C2B9258004A9DED /* books8 (1).png in Resources */,
 				5EFEE2D71BD292FB00A18582 /* 100px-Ruby_logo.svg.png in Resources */,
+				5E071DC71C6B22A5008FD7BB /* election.png in Resources */,
 				5EF014001BDF7A13002DB31B /* logo95.png in Resources */,
 				5EC0737D1B9EB2B8006D425D /* television12.png in Resources */,
 				5E444F7A1C05420C00A0259E /* quaver11.png in Resources */,
@@ -864,6 +875,7 @@
 				5EC073771B9EADAB006D425D /* RadioViewController.swift in Sources */,
 				5E04D4121BFA0A1200399EA4 /* TrackingManager.swift in Sources */,
 				5E96CF911C195D7D008C5BC9 /* Blog2ViewController.swift in Sources */,
+				5E071DC51C6AD546008FD7BB /* WithImageViewController.swift in Sources */,
 				5E3A565C1C6310B300654820 /* Chara2ViewController.swift in Sources */,
 				5E2CEE281BE72B2100A0CD04 /* BoardViewController.swift in Sources */,
 				5E81C85D1C2B8C10004A9DED /* BoardType3ViewController.swift in Sources */,
@@ -1004,7 +1016,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = RSSReader/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1014,7 +1026,7 @@
 					"$(PROJECT_DIR)/RSSReader/GoogleAnalytics",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.gran.Curation;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.grim.Curation;
 				PRODUCT_NAME = Curation;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RSSReader/RSSReader-Bridging-Header.h";
@@ -1037,7 +1049,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = RSSReader/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1046,7 +1058,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/RSSReader/GoogleAnalytics",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.gran.Curation;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.fig.grim.Curation;
 				PRODUCT_NAME = Curation;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RSSReader/RSSReader-Bridging-Header.h";

@@ -10,11 +10,14 @@ import UIKit
 
 class DataViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MWFeedParserDelegate, AdstirMraidViewDelegate {
     
-    var keys: NSArray = ["人物図鑑",
-        "武器",
-        "召喚石" 
+    var keys: NSArray = ["星7",
+        "星6",
+        "星5",
+        "星4",
+        "星3"
     ]
-    
+    var url: String = "";
+    var title_str: String = ""
     @IBOutlet weak var tableView: UITableView!
     
     var adView: AdstirMraidView? = nil
@@ -43,8 +46,8 @@ class DataViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.delegate = self
         tableView.dataSource = self
         
-        self.title = "データ"
-        TrackingManager.sendScreenTracking("データ")
+        self.title = "キャラクター"
+        TrackingManager.sendScreenTracking("キャラクター")
         
         let originY = self.view.frame.height
         let originX = (self.view.frame.size.width - kAdstirAdSize320x50.size.width) / 2
@@ -84,17 +87,28 @@ class DataViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath!) {
         tableView?.deselectRowAtIndexPath(indexPath, animated: true)
         var key = self.keys[indexPath.row] as! String
-        if(key == "人物図鑑") {
+        if(key == "星7") {
+            title_str = "星7"
+            url = "https://www.kimonolabs.com/api/aq2c637o?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu";
             performSegueWithIdentifier("chara", sender: nil)
-        } else if (key == "召喚石") {
-            performSegueWithIdentifier("beast", sender: nil)            
-        } else if(key == "武器"){
-            performSegueWithIdentifier("weapon", sender: nil)
+        } else if (key == "星6") {
+            title_str = "星6"
+            url = "https://www.kimonolabs.com/api/2k0oimh2?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu";
+            performSegueWithIdentifier("chara", sender: nil)
+        } else if(key == "星5") {
+            title_str = "星5"
+           url = "https://www.kimonolabs.com/api/54af2iz6?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu";
+            performSegueWithIdentifier("chara", sender: nil)
+        } else if(key == "星4") {
+            title_str = "星4"
+            url = "https://www.kimonolabs.com/api/4kf9i8ce?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu";
+            performSegueWithIdentifier("chara", sender: nil)
+        } else if(key == "星3") {
+            title_str = "星3"
+            url = "https://www.kimonolabs.com/api/c7uw06fs?apikey=O1LWGKfEhBnwnOmTTuxzTO5UiTYhLuLu";
+            performSegueWithIdentifier("chara", sender: nil)
         }
-        
-        
-        TrackingManager.sendEventTracking("データ", action:"Push", label:"閲覧", value:NSNumber(), screen:"カードリスト")
-        
+        TrackingManager.sendEventTracking("キャラクター", action:"Push", label:"閲覧", value:NSNumber(), screen:"キャラクター")
     }
     
     
@@ -103,9 +117,14 @@ class DataViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.titleLabel.text = keys[indexPath.row] as! NSString as String
         return cell
     }
-    // セルの選択を禁止する
+    
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
         return indexPath
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var withImageViewControlelr = segue.destinationViewController as! WithImageViewController
+        withImageViewControlelr.kimono_url = self.url
+        withImageViewControlelr.title_str = self.title_str
+    }
 }

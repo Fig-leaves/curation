@@ -227,8 +227,12 @@ class Snippet {
         if mode == "movie" {
             let youtube_url = "https://www.youtube.com/watch?v=" + (item[Constants.article_data.VIDEO_ID] as! String)
             URL = NSURL(string: youtube_url)
+        } else if mode == "blog"{
+            var str = item[Constants.article_data.LINK] as! String
+            URL = NSURL(string: str.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)
         } else {
-            URL = NSURL(string: item[Constants.article_data.LINK] as! NSString as String)
+            let str = item[Constants.article_data.LINK] as! String
+            URL = NSURL(string: str)
         }
         con.loadURL(URL)
         
