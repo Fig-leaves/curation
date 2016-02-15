@@ -18,8 +18,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="GP5-yS-yzr" kind="relationship" relationship="viewControllers" id="Gwc-C0-8El"/>
-                        <segue destination="mfh-xp-6fX" kind="relationship" relationship="viewControllers" id="nqj-ln-fOU"/>
+                        <segue destination="4li-0z-Elq" kind="relationship" relationship="viewControllers" id="9kr-Nt-wJl"/>
                         <segue destination="TLd-rI-Clq" kind="relationship" relationship="viewControllers" id="4wZ-Gk-ZZm"/>
+                        <segue destination="mfh-xp-6fX" kind="relationship" relationship="viewControllers" id="nqj-ln-fOU"/>
                         <segue destination="9Ei-XR-hEC" kind="relationship" relationship="viewControllers" id="aaE-9V-zbp"/>
                         <segue destination="SeK-7S-YrG" kind="relationship" relationship="viewControllers" id="mBg-N3-KTa"/>
                     </connections>
@@ -239,18 +240,16 @@
                     <connections>
                         <outlet property="tableView" destination="1nc-Br-7yL" id="Wnv-wx-t0i"/>
                         <segue destination="i7l-Yr-zEb" kind="push" identifier="chara" id="5It-tQ-Yga"/>
-                        <segue destination="0iI-wQ-IfA" kind="push" identifier="beast" id="afX-aO-pIo"/>
-                        <segue destination="M6P-2V-el2" kind="push" identifier="weapon" id="wPt-xu-ATm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWh-8e-H0A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="913.5" y="-21.5"/>
         </scene>
-        <!--Board Type3 View Controller-->
+        <!--With Image View Controller-->
         <scene sceneID="YlL-dI-Pgg">
             <objects>
-                <viewController id="i7l-Yr-zEb" customClass="BoardType3ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="i7l-Yr-zEb" customClass="WithImageViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fSO-Kj-eqP"/>
                         <viewControllerLayoutGuide type="bottom" id="7jb-LQ-wve"/>
@@ -275,11 +274,11 @@
             </objects>
             <point key="canvasLocation" x="1539.5" y="470.5"/>
         </scene>
-        <!--データ-->
+        <!--キャラクター-->
         <scene sceneID="iOx-My-rHc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mfh-xp-6fX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="データ" image="data-storage4.png" id="32y-uU-oQe"/>
+                    <tabBarItem key="tabBarItem" title="キャラクター" image="bird29.png" id="32y-uU-oQe"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ups-rw-lhp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="o6z-5O-pKs">
@@ -295,10 +294,10 @@
             </objects>
             <point key="canvasLocation" x="292" y="-21"/>
         </scene>
-        <!--Board Type4 View Controller-->
+        <!--News2 View Controller-->
         <scene sceneID="Nc5-So-eyV">
             <objects>
-                <viewController id="epo-qX-pQv" customClass="BoardType4ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="epo-qX-pQv" customClass="News2ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xXi-PX-Okp"/>
                         <viewControllerLayoutGuide type="bottom" id="cy3-kJ-FjT"/>
@@ -326,7 +325,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="QBs-Hw-daT"/>
                     <connections>
-                        <outlet property="tableView" destination="7j5-ge-uJ6" id="Diy-4z-X6k"/>
+                        <outlet property="table" destination="7j5-ge-uJ6" id="uaO-9b-MSk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Gf-Sa-y3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -477,19 +476,17 @@
                     <connections>
                         <outlet property="tableView" destination="W5a-3a-c6X" id="ZZI-n7-4lF"/>
                         <segue destination="jFY-gS-HCw" kind="push" identifier="normal" id="dOc-Qr-AFq"/>
-                        <segue destination="Xcf-6E-3c8" kind="push" identifier="hard" id="7Wj-cB-QlS"/>
-                        <segue destination="9jS-lh-HLC" kind="push" identifier="extra" id="QOt-4K-9sx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Qh-qG-sDm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1335" y="1074"/>
         </scene>
-        <!--共闘クエスト-->
+        <!--武器-->
         <scene sceneID="msL-a2-FDa">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Ei-XR-hEC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="共闘クエスト" image="bow1.png" id="jkx-KP-wum"/>
+                    <tabBarItem key="tabBarItem" title="武器" image="bow1.png" id="jkx-KP-wum"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="sno-AB-5y8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9AM-69-l61">
@@ -734,7 +731,7 @@ Cg
                         <viewControllerLayoutGuide type="bottom" id="utY-PG-msc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="n4I-Pb-qRH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qaf-wp-HQz">
@@ -762,7 +759,7 @@ Cg
                         <viewControllerLayoutGuide type="bottom" id="jp2-n2-Rfi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jPj-uf-gmW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wt7-fC-Ihr">
@@ -781,10 +778,10 @@ Cg
             </objects>
             <point key="canvasLocation" x="1539.5" y="-424.5"/>
         </scene>
-        <!--Chara View Controller-->
+        <!--With Image View Controller-->
         <scene sceneID="4kB-gG-paB">
             <objects>
-                <viewController id="jFY-gS-HCw" customClass="CharaViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jFY-gS-HCw" customClass="WithImageViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tEp-Zv-T6J"/>
                         <viewControllerLayoutGuide type="bottom" id="gpe-0A-CzF"/>
@@ -818,7 +815,7 @@ Cg
                         <viewControllerLayoutGuide type="bottom" id="msQ-a3-6gy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aeA-kI-Ycp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b6j-zc-bKv">
@@ -846,7 +843,7 @@ Cg
                         <viewControllerLayoutGuide type="bottom" id="gq6-Nu-FI8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="E2l-3d-U3G">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qEO-no-Gxt">
@@ -865,11 +862,70 @@ Cg
             </objects>
             <point key="canvasLocation" x="-1141" y="2310"/>
         </scene>
+        <!--Board Type4 View Controller-->
+        <scene sceneID="d0F-E1-5s0">
+            <objects>
+                <viewController id="Ghh-Hw-NId" customClass="BoardType4ViewController" customModule="Curation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PZX-N5-CML"/>
+                        <viewControllerLayoutGuide type="bottom" id="BPS-0C-X96"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RG2-hJ-PF8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="k7g-Ul-H2p">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="uBj-D5-rZj">
+                                        <rect key="frame" x="0.0" y="86" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uBj-D5-rZj" id="LON-U2-s1S">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Rb0-6W-Bh2"/>
+                    <connections>
+                        <outlet property="tableView" destination="k7g-Ul-H2p" id="nfF-sn-tz3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="67s-cs-E16" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1287" y="22"/>
+        </scene>
+        <!--イベント-->
+        <scene sceneID="liD-Rl-ADh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4li-0z-Elq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="イベント" image="election.png" id="RO3-1m-Jrl"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="xxU-II-DnD"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dSq-hh-EXA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ghh-Hw-NId" kind="relationship" relationship="rootViewController" id="UCM-m9-VKi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bSQ-xH-a8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1908" y="23"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="bird29.png" width="32" height="32"/>
         <image name="blackboard14 (1).png" width="24" height="24"/>
         <image name="bow1.png" width="32" height="32"/>
-        <image name="data-storage4.png" width="32" height="32"/>
+        <image name="election.png" width="32" height="32"/>
         <image name="information3.png" width="32" height="32"/>
         <image name="map-kamurochou.jpg" width="647" height="714"/>
         <image name="movie43.png" width="32" height="32"/>
